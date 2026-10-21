@@ -65,3 +65,17 @@ class ProximaRetirada(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+@unittest.skipUnless(apoio.TEM_DADOS, apoio.SEM_DADOS)
+class EmpateKmFlutuante(unittest.TestCase):
+    def test_km_iguais_pela_devolucao_desempatam_por_id(self):
+        # MG4 (299 km) e JAC (181 km) devolvidos com 101 km cada: empate exato em km -> menor id primeiro
+        # (caso real do juiz em Bangkok, seg 25/10 08:00)
+        cen = apoio.cenario([apoio.veiculo("V01542", "MG4 Urban Comfort"), apoio.veiculo("V00634", "JAC E-JS1")])
+        m = apoio.motor(cen, {"ac_7": 1}, politica={"prioridade": "menor_soc"})
+        mg4, jac = m.veiculos["V01542"], m.veiculos["V00634"]
+        mg4.soc, jac.soc = 101 / 299 * 100, 101 / 181 * 100
+        m.fila = [mg4, jac]
+        m.ordenar_fila(0)
+        self.assertEqual([v.id for v in m.fila], ["V00634", "V01542"])

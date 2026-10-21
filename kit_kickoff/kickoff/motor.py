@@ -314,9 +314,12 @@ class Motor:
         if pr == "chegada":
             return (v.entrou_fila_t, v.id)
         if pr == "menor_soc":
-            return (v.modelo.autonomia_km * v.soc / 100.0, v.id)
+            # km arredondado: o SOC de devolução vem de km/autonomia*100, e o caminho de volta
+            # (autonomia*SOC/100) erra no ponto flutuante — sem isso, empates exatos em km (desempate
+            # por id, 6.3.3) viram desigualdades espúrias.
+            return (round(v.modelo.autonomia_km * v.soc / 100.0, 6), v.id)
         r = self._proxima_reserva(v.rank)
-        return (math.inf if r is None else r, -v.soc, v.id)
+        return (math.inf if r is None else r, -round(v.soc, 9), v.id)
 
     def _proxima_reserva(self, rank: int) -> Optional[float]:
         """Horário do primeiro contrato ainda não retirado com categoria <= `rank` (None se não houver)."""

@@ -1,0 +1,41 @@
+{
+ "agencia": "Bangkok",
+ "fase": "neblina",
+ "atualizado_em": "2026-10-21",
+ "fonte": "37 testes grátis em Bangkok (resultados/juiz/Bangkok, resultados/bateria_bangkok.log); cada custo isolado por diferença contra 1x dc_30 b3_45 (nota 565)",
+ "status": "confirmado — todas as notas do juiz reproduzidas exatamente",
+ "formula": "nota = 15*certos + 8*upgrades - 200*nao_atendidos - 0.5*kWh_ponta - 2*kW_contratados - custo_obra",
+ "pesos": {
+  "certo": 15,
+  "upgrade": 8,
+  "nao_atendido": -200,
+  "energia_ponta_kwh": -0.5,
+  "demanda_contratada": -2
+ },
+ "custo_obra_em_pontos": {
+  "carregadores": {
+   "ac_7": 250,
+   "ac_11": 1100,
+   "ac_22x2": 1500,
+   "dc_30": 3500,
+   "dc_60x2": 7300,
+   "dc_120x2": 15800
+  },
+  "entradas": {
+   "existente": 0,
+   "b3_75": 5000,
+   "a4_150": 6500,
+   "a4_225": 8200,
+   "a4_300": 10000,
+   "se_500": 18800,
+   "se_750": 24400,
+   "se_1000": 30000,
+   "se_1500": 41200,
+   "se_2000": 52500
+  }
+ },
+ "ressalvas": [
+  "Pesos de Bangkok; a organização pode usar pesos diferentes por agência (validar com 1 teste pago por agência quando autorizado).",
+  "Custos se_* derivados com 30 kW de demanda (60 pts) descontados; valores redondos confirmados."
+ ]
+}
