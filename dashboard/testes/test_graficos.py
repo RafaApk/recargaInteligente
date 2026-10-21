@@ -79,6 +79,13 @@ class GraficosComExemplo(unittest.TestCase):
         self.assertAlmostEqual(sum(tr.y), self.com_pontos["pontos"]["nota"], places=6)
         self.assertEqual(len(tr.x), len(itens) + 1)  # itens + barra de total
 
+    def test_cascata_estimada_vem_marcada(self):
+        fig = graficos.cascata(self.com_pontos["pontos"]["itens"], None, estimado=True)
+        self.assertIn("estimado", fig.data[0].name)
+        self.assertTrue(any("ESTIMADO" in a.text for a in fig.layout.annotations))
+        self.assertFalse(any("ESTIMADO" in a.text for a in graficos.cascata(
+            self.com_pontos["pontos"]["itens"], None).layout.annotations))
+
     def test_cascata_compara_com_o_juiz(self):
         itens = self.com_pontos["pontos"]["itens"]
         fig = graficos.cascata(itens, itens)
@@ -89,6 +96,10 @@ class GraficosComExemplo(unittest.TestCase):
         fig = graficos.ocupacao(self.series, 6, 8)
         ys = sorted(s.y0 for s in fig.layout.shapes if s.type == "line")
         self.assertEqual(ys, [6, 8])
+
+    def test_ocupacao_saidas_iguais_as_vagas_tem_uma_linha_so(self):
+        fig = graficos.ocupacao(self.series, 6, 6)
+        self.assertEqual([s.y0 for s in fig.layout.shapes if s.type == "line"], [6])
 
     def test_soc_tem_linha_em_80(self):
         fig = graficos.soc_retirada(self.series["soc_retirada"])
@@ -112,6 +123,15 @@ class GraficosComExemplo(unittest.TestCase):
         self.assertEqual(len(graficos.pesos_vs_reais(est, None).data), 1)
 
 
+class Obra(unittest.TestCase):
+    def test_barras_por_agencia_com_origem(self):
+        fig = graficos.obra_por_agencia({"Bangkok": (57, "juiz"), "Lima": (30.5, "estimado")})
+        barra = fig.data[0]
+        self.assertEqual(list(barra.x), ["Bangkok", "Lima"])
+        self.assertEqual(list(barra.y), [57, 30.5])
+        self.assertEqual(len(fig.data), 3)  # barras + uma legenda por origem
+
+
 class FigurasVazias(unittest.TestCase):
     def test_tudo_funciona_vazio(self):
         figs = [
@@ -128,6 +148,7 @@ class FigurasVazias(unittest.TestCase):
             graficos.curva_demanda([], None),
             graficos.pesos_vs_reais({}, None),
             graficos.pesos_vs_reais({}, {}),
+            graficos.obra_por_agencia({}),
         ]
         for f in figs:
             self.assertIsInstance(f, go.Figure)

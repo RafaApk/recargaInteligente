@@ -160,5 +160,77 @@ class PontuacaoEstimada(unittest.TestCase):
         self.assertIsNone(dados.pontuar_estimado({}, self.EST, self.SUB))
 
 
+class Formatacao(unittest.TestCase):
+    def test_fmt_brasileiro(self):
+        self.assertEqual(dados.fmt(1234.567, 1), "1.234,6")
+        self.assertEqual(dados.fmt(-5, 0, sinal=True), "-5")
+        self.assertEqual(dados.fmt(5, 0, sinal=True), "+5")
+        self.assertEqual(dados.fmt(-0.0, 0, sinal=True), "0")
+        self.assertEqual(dados.fmt(-0.004, 1, sinal=True), "0,0")
+        self.assertEqual(dados.fmt(None), "—")
+        self.assertEqual(dados.fmt("x"), "—")
+
+    def test_total_obra(self):
+        self.assertEqual(dados.total_obra({"carregadores": 1, "entrada": 2, "total": 3}), 3)
+        self.assertEqual(dados.total_obra(57), 57)
+        self.assertIsNone(dados.total_obra("pendente"))
+        self.assertIsNone(dados.total_obra(None))
+
+
+class Fidelidade(unittest.TestCase):
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        exemplo.gerar(Path(self._tmp.name))
+        self.juiz = dados.respostas_juiz(self._tmp.name, "Bangkok")
+        self.sim = dados.simulacoes(self._tmp.name, "Bangkok")
+        self.h_ok = exemplo.hash_sub(exemplo.SUB_A)
+        self.h_div = exemplo.hash_sub(exemplo.SUB_B)
+
+    def tearDown(self):
+        self._tmp.cleanup()
+
+    def _comparar(self, h):
+        return dados.fidelidade(self.sim[h]["metricas"], self.juiz[h]["metricas"],
+                                dados.normalizar_series(self.sim[h]["series"]),
+                                dados.normalizar_series(self.juiz[h]["series"]))
+
+    def test_bate_com_o_juiz(self):
+        f = self._comparar(self.h_ok)
+        self.assertTrue(f["ok"])
+        self.assertEqual(f["divergencias"], [])
+        self.assertIn("Pico de 15 min (kW)", {ln["metrica"] for ln in f["linhas"]})
+        self.assertTrue(all(ln["ok"] for ln in f["linhas"]))
+
+    def test_aponta_metrica_e_primeira_janela_divergente(self):
+        f = self._comparar(self.h_div)
+        self.assertFalse(f["ok"])
+        self.assertIn("pico_kw", f["divergencias"])
+        self.assertTrue(any(d.startswith("series.potencia_kw@") for d in f["divergencias"]))
+        self.assertIn("primeira divergência", f["series"])
+        pico = next(ln for ln in f["linhas"] if ln["chave"] == "pico_kw")
+        self.assertFalse(pico["ok"])
+        self.assertAlmostEqual(pico["dif"], 0.03, places=4)
+
+    def test_sem_series(self):
+        f = dados.fidelidade({"pico_kw": 1.0}, {"pico_kw": 1.0}, {}, {})
+        self.assertTrue(f["ok"])
+        self.assertEqual(f["series"], "")
+
+
+class Justificativa(unittest.TestCase):
+    def test_texto_com_demanda_escolhida(self):
+        with tempfile.TemporaryDirectory() as d:
+            exemplo.gerar(Path(d))
+            texto = dados.justificativa(exemplo.SUB_A, dados.demanda(d, "Bangkok"))
+        self.assertIn("a4_150", texto)
+        self.assertIn("90", texto)
+        self.assertIn("máximo", texto)
+        self.assertIn("sem demanda", texto)
+
+    def test_sem_dados_nao_quebra(self):
+        self.assertEqual(dados.justificativa(None, []), "")
+        self.assertIn("b3_45", dados.justificativa({"entrada": "b3_45"}, []))
+
+
 if __name__ == "__main__":
     unittest.main()

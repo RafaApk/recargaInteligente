@@ -12,6 +12,7 @@ from recarga import RAIZ  # noqa: F401  (garante `kickoff` no sys.path)
 from kickoff import tempo
 
 from .dados import ALIAS_PESOS, ITENS, ROTULOS, hora
+from .dados import fmt as _n
 
 COR = {
     "principal": "#2A9D8F",   # verde-azulado: operação normal, nosso modelo
@@ -29,12 +30,6 @@ DIAS_CURTOS = ("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom")
 def rgba(cor: str, alfa: float) -> str:
     h = cor.lstrip("#")
     return f"rgba({int(h[0:2], 16)},{int(h[2:4], 16)},{int(h[4:6], 16)},{alfa})"
-
-
-def _n(x, casas: int = 1, sinal: bool = False) -> str:
-    """Número no formato brasileiro (1.234,5)."""
-    s = f"{x:{'+' if sinal else ''},.{casas}f}"
-    return s.replace(",", "\0").replace(".", ",").replace("\0", ".")
 
 
 def _dt(t) -> datetime:
@@ -72,10 +67,14 @@ def _linha_h(fig, y, cor, dash, texto=None, nome=None):
                            showarrow=False, font=dict(size=11, color=cor))
 
 
-def _legenda(fig, nome, cor, simbolo="square"):
+def _legenda(fig, nome, cor, simbolo="square", dash=None):
     """Entrada de legenda para formas (retângulos/linhas), que não aparecem na legenda sozinhas."""
-    fig.add_trace(go.Scatter(x=[None], y=[None], mode="markers", name=nome, hoverinfo="skip",
-                             marker=dict(symbol=simbolo, size=11, color=cor)))
+    if dash:
+        fig.add_trace(go.Scatter(x=[None], y=[None], mode="lines", name=nome, hoverinfo="skip",
+                                 line=dict(color=cor, width=2, dash=dash)))
+    else:
+        fig.add_trace(go.Scatter(x=[None], y=[None], mode="markers", name=nome, hoverinfo="skip",
+                                 marker=dict(symbol=simbolo, size=11, color=cor)))
 
 
 # --- cascata ---------------------------------------------------------------------------------
@@ -99,18 +98,25 @@ def _trace_cascata(itens: list, nome: str, opacidade: float) -> go.Waterfall:
         connector=dict(line=dict(color=COR["neutra"], width=1, dash="dot")))
 
 
-def cascata(itens_meu: list, itens_juiz: list | None) -> go.Figure:
-    """Cascata de pontos ganhos e perdidos (`pontos.itens`: [item, qtd, peso, pontos])."""
+def cascata(itens_meu: list, itens_juiz: list | None, estimado: bool = False) -> go.Figure:
+    """Cascata de pontos ganhos e perdidos (`pontos.itens`: [item, qtd, peso, pontos]).
+
+    `estimado=True` marca o modelo da equipe como calculado com pesos estimados (antes de H4).
+    """
     fig = _novo(380)
     if not itens_meu and not itens_juiz:
         return _vazio(fig)
     duas = bool(itens_meu) and bool(itens_juiz)
     if itens_meu:
-        fig.add_trace(_trace_cascata(itens_meu, "Modelo da equipe", 1.0))
+        fig.add_trace(_trace_cascata(itens_meu, "Modelo da equipe (estimado)" if estimado else "Modelo da equipe", 1.0))
     if itens_juiz:
         fig.add_trace(_trace_cascata(itens_juiz, "Juiz", 0.55 if duas else 1.0))
-    fig.update_layout(waterfallmode="group", waterfallgap=0.25, showlegend=duas,
+    fig.update_layout(waterfallmode="group", waterfallgap=0.25, showlegend=duas or estimado,
                       margin=dict(l=8, r=8, t=36, b=8))
+    if estimado:
+        fig.add_annotation(text="ESTIMADO: pesos estimados na Neblina", xref="paper", yref="paper", x=1, y=1.02,
+                           xanchor="right", yanchor="bottom", showarrow=False,
+                           font=dict(size=11, color=COR["ponta"]))
     fig.update_yaxes(title_text="Pontos")
     return fig
 
@@ -189,7 +195,7 @@ def potencia(series: dict, limite_kw: float | None, horario: list, semana: int |
     topo = max(max(pot), limite_kw or 0)
     if limite_kw:
         _linha_h(fig, limite_kw, COR["alerta"], "dash", f"Limite {_n(limite_kw, 1)} kW", "limite")
-        _legenda(fig, "Limite (entrada ou demanda)", COR["alerta"], "line-ew")
+        _legenda(fig, "Limite (entrada ou demanda)", COR["alerta"], dash="dash")
     _legenda(fig, "Ponta (seg–sex, 18h–21h)", rgba(COR["ponta"], 0.7))
     _legenda(fig, "Agência fechada", rgba(COR["neutra"], 0.6))
     fig.update_yaxes(title_text="kW", range=[0, (topo or 1) * 1.12])
@@ -214,10 +220,13 @@ def ocupacao(series: dict, saidas: int | None, vagas: int | None, semana: int | 
             line=dict(color=cor, width=1, shape="hv"), fillcolor=rgba(cor, 0.45),
             hovertext=texto[:len(ys)], hovertemplate="%{hovertext}<br>" + nome + ": %{y}<extra></extra>"))
     topo = max(vagas or 0, saidas or 0, max((a + b for a, b in zip(plug, fila)), default=0))
-    if saidas:
-        _linha_h(fig, saidas, COR["azul"], "dot", f"Saídas dos carregadores ({saidas})")
-    if vagas:
-        _linha_h(fig, vagas, COR["alerta"], "dash", f"Vagas do pátio ({vagas})")
+    if saidas and saidas == vagas:
+        _linha_h(fig, vagas, COR["alerta"], "dash", f"Saídas dos carregadores = vagas do pátio ({vagas})")
+    else:
+        if saidas:
+            _linha_h(fig, saidas, COR["azul"], "dot", f"Saídas dos carregadores ({saidas})")
+        if vagas:
+            _linha_h(fig, vagas, COR["alerta"], "dash", f"Vagas do pátio ({vagas})")
     fig.update_yaxes(title_text="Carros", range=[0, (topo or 1) * 1.2], dtick=1 if topo <= 12 else None)
     _eixo_tempo(fig, ini, n, passo, semana)
     return fig
@@ -265,7 +274,7 @@ def perdas(nao_atendidos_min: list, inicio_min: float) -> go.Figure:
     fig.add_trace(go.Heatmap(
         z=z, x=list(range(24)), y=list(DIAS_CURTOS), xgap=2, ygap=2, zmin=0,
         text=[["" if v == 0 else str(v) for v in linha] for linha in z], texttemplate="%{text}",
-        textfont=dict(size=11, color="white"),
+        textfont=dict(size=11),
         colorscale=[[0, rgba(COR["alerta"], 0.07)], [1, rgba(COR["alerta"], 1.0)]],
         colorbar=dict(title="Perdas", thickness=10, len=0.9),
         hovertemplate="%{y}, %{x}h<br>%{z} clientes perdidos<extra></extra>"))
@@ -317,7 +326,7 @@ def gastos(ledger: list) -> go.Figure:
             color=COR["azul"], width=2, shape="hv"), marker=dict(size=6),
             hovertemplate="Saldo: %{y} m7Coins<extra></extra>"), secondary_y=True)
     fig.update_yaxes(title_text="Taxa por chamada", secondary_y=False, rangemode="tozero")
-    fig.update_yaxes(title_text="Saldo", secondary_y=True, showgrid=False)
+    fig.update_yaxes(title_text="Saldo", secondary_y=True, showgrid=False, rangemode="tozero")
     if usar_hora:
         fig.update_xaxes(tickformat="%H:%M")
     else:
@@ -403,6 +412,27 @@ def pesos_vs_reais(estimados: dict, reais: dict | None) -> go.Figure:
     if real:
         fig.add_trace(go.Bar(x=[r for _, r in ordem], y=[real.get(i) for i, _ in ordem], name="Real (catálogo)",
                              marker_color=COR["principal"], hovertemplate="%{x}<br>Real: %{y:.2f}<extra></extra>"))
-    fig.update_layout(barmode="group", bargap=0.25)
+    fig.update_layout(barmode="group", bargap=0.25, showlegend=True)
     fig.update_yaxes(title_text="Peso (módulo)")
+    return fig
+
+
+def obra_por_agencia(custos: dict) -> go.Figure:
+    """Custo de obra (pontos) por agência. `custos`: {agência: (pontos, origem)}, origem 'juiz', 'modelo' ou 'estimado'."""
+    fig = _novo(320)
+    itens = [(ag, v) for ag, v in sorted((custos or {}).items()) if _num(v[0]) is not None]
+    if not itens:
+        return _vazio(fig)
+    cor = {"juiz": COR["principal"], "modelo": COR["azul"], "estimado": COR["ponta"]}
+    nomes = {"juiz": "juiz", "modelo": "modelo da equipe", "estimado": "estimado"}
+    fig.add_trace(go.Bar(
+        name="Obra", showlegend=False, width=0.45,
+        x=[ag for ag, _ in itens], y=[v[0] for _, v in itens], marker_color=[cor.get(v[1], COR["neutra"]) for _, v in itens],
+        text=[_n(v[0], 0) for _, v in itens], textposition="outside", cliponaxis=False,
+        customdata=[nomes.get(v[1], v[1]) for _, v in itens],
+        hovertemplate="%{x}<br>%{y:,.1f} pontos<br>Origem: %{customdata}<extra></extra>"))
+    for origem in dict.fromkeys(v[1] for _, v in itens):
+        _legenda(fig, nomes.get(origem, origem).capitalize(), cor.get(origem, COR["neutra"]))
+    fig.update_layout(bargap=0.4)
+    fig.update_yaxes(title_text="Pontos de obra", rangemode="tozero")
     return fig

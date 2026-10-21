@@ -4,6 +4,8 @@ Toda função recebe `raiz` (padrão: variável `RESULTADOS_DIR` ou `recarga.RES
 Arquivo ausente ou corrompido devolve lista/dict vazio, nunca exceção: o dashboard sobe mesmo no
 início do dia, quando quase nada existe ainda.
 """
+import contextlib
+import io
 import json
 import os
 from datetime import datetime
@@ -29,6 +31,18 @@ METRICA_DO_ITEM = {
     "demanda_contratada": "demanda_contratada_kw",
     "energia_ponta_kwh": "energia_ponta_kwh",
     "infraestrutura": "custo_infra",
+}
+ROTULOS_METRICA = {
+    "contratos": "Contratos",
+    "atendimento_pct": "Atendimento (%)",
+    "pico_kw": "Pico de 15 min (kW)",
+    "energia_kwh": "Energia total (kWh)",
+    "certos": "Atendidos na categoria certa",
+    "upgrades": "Atendidos com upgrade",
+    "nao_atendidos": "Não atendidos",
+    "energia_ponta_kwh": "Energia na ponta (kWh)",
+    "demanda_contratada_kw": "Demanda contratada (kW)",
+    "custo_infra": "Custo de obra (pontos)",
 }
 # Nomes a..e usados na spec 5.1 para os cinco pesos de operação.
 ALIAS_PESOS = {"a": "certo", "b": "upgrade", "c": "nao_atendido", "d": "demanda_contratada",
@@ -211,6 +225,16 @@ def rotulo_submissao(sub: dict) -> str:
     return " · ".join(p for p in partes if p)
 
 
+def obra_estimada(estimativa: dict, sub: dict, entrada_existente: str | None = None) -> float:
+    """Custo de obra em pontos de nota: Σ qtd × k_carregador + k_entrada (a entrada existente custa 0)."""
+    custos = estimativa.get("custos") or {}
+    ck, ce = custos.get("carregadores") or {}, custos.get("entradas") or {}
+    obra = sum(n * ck.get(k, 0) for k, n in (sub.get("carregadores") or {}).items())
+    if sub.get("entrada") != entrada_existente:
+        obra += ce.get(sub.get("entrada"), 0)
+    return obra
+
+
 def pontuar_estimado(metricas: dict, estimativa: dict, sub: dict, entrada_existente: str | None = None):
     """Pontos no formato do juiz usando os pesos estimados (`pesos/estimativa.json`).
 
@@ -229,10 +253,92 @@ def pontuar_estimado(metricas: dict, estimativa: dict, sub: dict, entrada_existe
         qtd = metricas.get(METRICA_DO_ITEM[item]) or 0
         peso = sinal * abs(p[item])
         itens.append([item, qtd, peso, qtd * peso])
-    custos = estimativa.get("custos") or {}
-    ck, ce = custos.get("carregadores") or {}, custos.get("entradas") or {}
-    obra = sum(n * ck.get(k, 0) for k, n in (sub.get("carregadores") or {}).items())
-    if sub.get("entrada") != entrada_existente:
-        obra += ce.get(sub.get("entrada"), 0)
+    obra = obra_estimada(estimativa, sub, entrada_existente)
     itens.append(["infraestrutura", 1, -obra, -obra])
     return {"itens": itens, "nota": sum(i[3] for i in itens)}
+
+
+# --- apresentação ----------------------------------------------------------------------------
+
+def fmt(x, casas: int = 1, sinal: bool = False) -> str:
+    """Número no formato brasileiro (1.234,5); '—' quando não é número."""
+    if isinstance(x, bool) or not isinstance(x, (int, float)):
+        return "—"
+    if round(x, casas) == 0:
+        x = 0.0  # sem "-0" nem "+0"
+        sinal = False
+    s = f"{x:{'+' if sinal else ''},.{casas}f}"
+    return s.replace(",", "#").replace(".", ",").replace("#", ".")
+
+
+def total_obra(v):
+    """Custo de obra em pontos: número, ou o `total` de {'carregadores', 'entrada', 'total'}; senão None."""
+    if isinstance(v, dict):
+        v = v.get("total")
+    return v if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+
+def fidelidade(meu_metricas: dict, juiz_metricas: dict, meu_series: dict, juiz_series: dict) -> dict:
+    """Compara o nosso motor com o juiz reaproveitando `kit_kickoff/comparar.py` (a saída impressa é capturada).
+
+    Devolve {"linhas": [{chave, metrica, meu, juiz, dif, ok}], "divergencias": [...], "series": texto, "ok": bool,
+    "disponivel": bool}. As divergências usam os mesmos nomes do `comparar.py` (ex.: `pico_kw`,
+    `series.potencia_kw@Seg 18/10 09:15`).
+    """
+    try:
+        import comparar
+    except ImportError:
+        return {"linhas": [], "divergencias": [], "series": "", "ok": True, "disponivel": False}
+    diverge: list = []
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        comparar.comparar_metricas(meu_metricas or {}, juiz_metricas or {}, diverge)
+    linhas = []
+    for ln in buf.getvalue().splitlines()[1:]:  # a primeira linha é o cabeçalho
+        t = ln.split()
+        if len(t) < 4:
+            continue
+        linhas.append({"chave": t[0], "metrica": ROTULOS_METRICA.get(t[0], t[0]), "meu": float(t[1]),
+                       "juiz": float(t[2]), "dif": float(t[3]), "ok": "<--" not in t})
+    texto_series = ""
+    if meu_series and juiz_series:
+        buf = io.StringIO()
+        try:
+            with contextlib.redirect_stdout(buf):
+                comparar.comparar_series(meu_series, juiz_series, diverge)
+            texto_series = buf.getvalue().strip()
+        except (KeyError, TypeError):
+            texto_series = "séries incompletas: não foi possível comparar"
+    return {"linhas": linhas, "divergencias": diverge, "series": texto_series, "ok": not diverge,
+            "disponivel": True}
+
+
+def justificativa(sub: dict | None, curva: list, nota: float | None = None) -> str:
+    """Texto curto (Markdown) que justifica a entrada e a demanda contratada, a partir da varredura nota × demanda."""
+    if not sub or not sub.get("entrada"):
+        return ""
+    ent, dem = sub["entrada"], sub.get("demanda_contratada_kw")
+    if dem is None:
+        partes = [f"Entrada **{ent}** em baixa tensão, sem demanda contratada."]
+    else:
+        partes = [f"Entrada **{ent}** com demanda contratada de **{fmt(dem, 0)} kW**."]
+    com = [d for d in curva or [] if isinstance(d.get("demanda_kw"), (int, float)) and isinstance(d.get("nota"), (int, float))]
+    sem = [d for d in curva or [] if d.get("demanda_kw") is None and isinstance(d.get("nota"), (int, float))]
+    atual = next((d for d in com if d["demanda_kw"] == dem), None)
+    ref = atual["nota"] if atual else nota
+    if com and atual:
+        melhor = max(com, key=lambda d: d["nota"])
+        faixa = f"{fmt(min(d['demanda_kw'] for d in com), 0)} a {fmt(max(d['demanda_kw'] for d in com), 0)} kW"
+        base = f"Na varredura de {len(com)} valores ({faixa}), {fmt(dem, 0)} kW dá nota {fmt(atual['nota'], 1)}"
+        if melhor["demanda_kw"] == dem or melhor["nota"] <= atual["nota"]:
+            partes.append(base + ", o máximo da curva: menos demanda perde clientes e mais demanda custa por kW.")
+        else:
+            partes.append(base + f"; o máximo da curva é {fmt(melhor['demanda_kw'], 0)} kW "
+                          f"(nota {fmt(melhor['nota'], 1)}, diferença de {fmt(melhor['nota'] - atual['nota'], 1)} pontos).")
+    if sem and ref is not None:
+        alt = max(sem, key=lambda d: d["nota"])
+        dif = ref - alt["nota"]
+        nome = (alt.get("entrada") or "B3").upper().replace("_", " ")
+        partes.append(f"A alternativa sem demanda ({nome}) chega a {fmt(alt['nota'], 1)}, "
+                      f"{fmt(abs(dif), 1)} pontos {'abaixo' if dif >= 0 else 'acima'} da escolha.")
+    return " ".join(partes)
