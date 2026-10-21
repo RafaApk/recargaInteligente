@@ -6,12 +6,12 @@
  },
  "fase": "clara",
  "etapa": {
-  "n": 5,
-  "rotulo": "H5"
+  "n": 6,
+  "rotulo": "H6"
  },
- "agora": "2026-10-21T18:54:19.287350+00:00",
+ "agora": "2026-10-21T20:19:42.180663+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
- "saldo": 610,
+ "saldo": 450,
  "agencias": {
   "Bangkok": {
    "aberta": true,
@@ -23,37 +23,44 @@
   "Istanbul": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T18:58:56.686854+00:00",
+   "cooldown_final_ate": null,
    "envios": 2,
    "vigente": true
   },
   "Hanoi": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T18:58:58.074394+00:00",
+   "cooldown_final_ate": null,
    "envios": 2,
    "vigente": true
   },
   "Marrakech": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T18:58:55.443639+00:00",
+   "cooldown_final_ate": null,
    "envios": 1,
    "vigente": true
   },
   "Zurich": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": null,
-   "envios": 1,
+   "cooldown_final_ate": "2026-10-21T20:34:41.620093+00:00",
+   "envios": 2,
    "vigente": true
   },
   "Vienna": {
    "aberta": true,
-   "cooldown_teste_ate": "2026-10-21T18:59:12.416520+00:00",
-   "cooldown_final_ate": "2026-10-21T19:09:18.718941+00:00",
-   "envios": 1,
+   "cooldown_teste_ate": null,
+   "cooldown_final_ate": "2026-10-21T20:34:39.963217+00:00",
+   "envios": 2,
    "vigente": true
+  },
+  "Lisbon": {
+   "aberta": true,
+   "cooldown_teste_ate": null,
+   "cooldown_final_ate": null,
+   "envios": 0,
+   "vigente": false
   }
  },
  "cartas": [
@@ -61,9 +68,24 @@
    "n": 1,
    "titulo": "Pedido da concessionaria",
    "agencia": "Marrakech"
+  },
+  {
+   "n": 2,
+   "titulo": "Carregadores queimados",
+   "agencia": "Istanbul"
   }
  ],
  "eventos_ativos": [
+  {
+   "agencia": "Istanbul",
+   "params": [
+    "quebra_maiores",
+    "Istanbul",
+    2,
+    21600,
+    24480
+   ]
+  },
   {
    "agencia": "Marrakech",
    "params": [
