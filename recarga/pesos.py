@@ -68,7 +68,10 @@ def estimar(amostras: list) -> Estimativa:
     coef, _, posto, _ = np.linalg.lstsq(Xu, y, rcond=None)
     rms = float(np.sqrt(np.mean((Xu @ coef - y) ** 2)))
     ref = float(np.mean(np.abs(y)))
-    confiavel = bool(posto == Xu.shape[1] and rms <= CONFIANCA * ref)
+    # Item de operação sem peso (ex.: upgrade sempre 0 nas amostras) inutiliza a estimativa em outras agências:
+    # o otimizador daria -inf a toda sub com esse item. Nesse caso, não confiável -> modo lexicográfico.
+    operacao_ok = not any(i in nao for i in ITENS_OPERACAO)
+    confiavel = bool(operacao_ok and posto == Xu.shape[1] and rms <= CONFIANCA * ref)
     coefs = {c: float(v) for c, v in zip([c for c, u in zip(colunas, usadas) if u], coef)}
     return Estimativa(_pesos_de(coefs), rms, n, confiavel, nao)
 
@@ -160,8 +163,22 @@ def experimentos_bangkok() -> list:
             continue
         dem = 30 if e.kva > 75 else None
         out += [sub({"ac_7": 2}, e.id, dem), sub({"ac_11": 2}, e.id, dem)]
-    # Operação: infra fraca (muitas perdas) e forte.
+    # Operação: infra fraca (muitas perdas e upgrades; com o motor real, infra boa dá 100% e 0 upgrades
+    # em Bangkok) e forte.
+    ponta = {"evitar_ponta": True}
     out += [sub({"ac_7": 1}, existente, pol=P_PROX),
+            sub({"ac_7": 1}, existente, pol={**P_PADRAO, **ponta}),
+            sub({"ac_7": 1}, existente, pol={**P_CHEG, **ponta}),
+            sub({"ac_11": 1}, existente, pol=P_PROX),
+            sub({"ac_11": 1}, existente, pol={**P_PROX, **ponta}),
+            sub({"ac_7": 2}, existente, pol={**P_CHEG, **ponta}),
+            sub({"ac_7": 1, "ac_11": 1}, existente, pol={**P_PROX, "divisao": "igual", **ponta}),
+            # limite B3 pequeno (40,5 kW) com muitas saídas lentas
+            sub({"ac_7": 6}, existente, pol={**P_PADRAO, "divisao": "prioridade"}),
+            sub({"ac_7": 6}, existente, pol={**P_CHEG, **ponta}),
+            sub({"ac_11": 6}, existente, pol=P_PADRAO),
+            sub({"ac_7": 4, "ac_11": 2}, existente, pol={**P_PROX, **ponta}),
+            sub({"dc_120x2": 3}, "se_500", 450, P_PROX),
             sub({"dc_120x2": 3}, "se_500", 450, P_PROX),
             sub({"dc_60x2": 3}, "a4_300", 270, P_PROX),
             sub({"dc_120x2": 2, "dc_60x2": 1}, "a4_225", 200, P_CHEG)]

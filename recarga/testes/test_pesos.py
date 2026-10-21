@@ -88,6 +88,17 @@ class Estimar(unittest.TestCase):
         self.assertNotIn("dc_120x2", est.pesos.k_carregador)
         self.assertNotIn("car:ac_7", est.nao_identificados)
 
+    def test_item_de_operacao_nao_identificado_nao_confiavel(self):
+        # upgrade sempre 0 (motor real em Bangkok com infra boa): ajuste exato, mas sem peso de upgrade
+        amostras = []
+        for f, _ in amostras_sinteticas():
+            f = {**f, "nao_atendido": f["nao_atendido"] + f["upgrade"], "upgrade": 0}
+            amostras.append((f, sum(REAIS[k] * v for k, v in f.items())))
+        est = pesos.estimar(amostras)
+        self.assertIn("upgrade", est.nao_identificados)
+        self.assertLess(est.residuo_rms, 1e-6)
+        self.assertFalse(est.confiavel)
+
     def test_ruido_grande_nao_confiavel(self):
         rng = np.random.default_rng(1)
         amostras = [(f, y + rng.normal(0, 300)) for f, y in amostras_sinteticas()]
@@ -151,6 +162,16 @@ class Experimentos(unittest.TestCase):
         pares = list(itertools.combinations(self.norm, 2))
         self.assertTrue(any(so_difere(a, b, "demanda_contratada_kw") for a, b in pares))
         self.assertTrue(any(so_difere_ponta(a, b) for a, b in pares))
+
+    def test_experimentos_tem_infra_fraca(self):
+        """Com o motor real, infra boa dá 100% e 0 upgrades em Bangkok: precisa de configs fracas para variar
+        nao_atendido e upgrade."""
+        fracas = [n for n in self.norm if objetivo.kw_instalado(n, self.cen) <= 14]
+        self.assertGreaterEqual(len(fracas), 5)
+        self.assertTrue(any(n["politica"]["evitar_ponta"] for n in fracas))
+        self.assertIn({"ac_7": 1}, [n["carregadores"] for n in fracas])
+        # limite B3 pequeno com muitas saídas lentas
+        self.assertTrue(any(n["entrada"] == "b3_45" and sum(n["carregadores"].values()) >= 6 for n in self.norm))
 
     def test_experimentos_identificam_todas_as_colunas(self):
         """Com o desenho, a matriz de features (já que demanda/entrada/carregadores vêm da sub) tem posto cheio

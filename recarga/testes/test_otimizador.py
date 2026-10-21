@@ -112,6 +112,17 @@ class Objetivos(ComTemporarios):
         r120 = lote.avaliar("Bangkok", {**EXEMPLO, "carregadores": {"dc_120x2": 1}})
         self.assertEqual(obj(r120), -math.inf)
 
+    def test_estimativa_sem_peso_de_upgrade_cai_no_lexicografico(self):
+        from recarga.testes.test_pesos import REAIS, amostras_sinteticas
+        amostras = []
+        for f, _ in amostras_sinteticas():
+            f = {**f, "nao_atendido": f["nao_atendido"] + f["upgrade"], "upgrade": 0}
+            amostras.append((f, sum(REAIS[k] * v for k, v in f.items())))
+        pesos.salvar(pesos.estimar(amostras), pesos.ESTIMATIVA)
+        obj = otimizador.objetivo_padrao("Bangkok")
+        self.assertEqual(obj(self.r), objetivo.chave_lexicografica(self.r["metricas"], self.r["sub"],
+                                                                   lote.cenario("Bangkok")))
+
     def test_estimativa_nao_confiavel_e_ignorada(self):
         est = pesos.Estimativa(objetivo.Pesos({"certo": 1.0}), 99.0, 40, False, [])
         pesos.salvar(est, pesos.ESTIMATIVA)
