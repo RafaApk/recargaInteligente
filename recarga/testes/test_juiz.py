@@ -384,26 +384,34 @@ class Final(Base):
         self.assertEqual(len(self.falso.chamadas_final), 1)
 
     def test_final_violacao_no_nosso_motor_recusada(self):
-        falso_lote = mock.Mock()
-        falso_lote.avaliar.return_value = {"valido": True, "violacoes": ["x violou"]}
-        with mock.patch.object(mod, "lote", falso_lote):
-            with self.assertRaises(Recusado) as cm:
-                self.juiz.final("Teste", SUB, confirmar=True)
+        sim = mock.Mock(return_value={"valido": True, "violacoes": ["x"]})
+        juiz = self.novo(simulador=sim)
+        with self.assertRaises(Recusado) as cm:
+            juiz.final("Teste", SUB, confirmar=True)
         self.assertIn("violaç", str(cm.exception))
+        sim.assert_called_once()
         self.assertEqual(self.falso.chamadas_final, [])
 
-    def test_final_sem_lote_nao_simula(self):
-        with mock.patch.object(mod, "lote", None):
-            self.juiz.final("Teste", SUB, confirmar=True)
+    def test_final_sem_simulador_nao_simula(self):
+        self.assertIsNone(self.juiz.simulador)
+        self.juiz.final("Teste", SUB, confirmar=True)
         self.assertEqual(len(self.falso.chamadas_final), 1)
 
-    def test_final_com_lote_limpo_envia(self):
-        falso_lote = mock.Mock()
-        falso_lote.avaliar.return_value = {"valido": True, "violacoes": []}
-        with mock.patch.object(mod, "lote", falso_lote):
-            self.juiz.final("Teste", SUB, confirmar=True)
+    def test_final_com_simulador_limpo_envia(self):
+        sim = mock.Mock(return_value={"valido": True, "violacoes": []})
+        self.novo(simulador=sim).final("Teste", SUB, confirmar=True)
         self.assertEqual(len(self.falso.chamadas_final), 1)
-        falso_lote.avaliar.assert_called_once()
+        sim.assert_called_once()
+
+    def test_simulador_padrao_e_none_com_dados_alternativos(self):
+        self.assertNotEqual(self.tmp_dados.resolve(), Path(recarga.DADOS).resolve())
+        self.assertIsNone(Juiz(cliente=self.falso, raiz=self.raiz, dados=self.tmp_dados).simulador)
+
+    def test_simulador_padrao_e_lote_com_dados_globais(self):
+        fake = mock.Mock()
+        with mock.patch.object(mod, "lote", fake):
+            j = Juiz(cliente=self.falso, raiz=self.raiz, dados=recarga.DADOS)
+        self.assertIs(j.simulador, fake.avaliar)
 
 
 class ImportLote(unittest.TestCase):

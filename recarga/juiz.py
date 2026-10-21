@@ -116,9 +116,14 @@ def _linhas_jsonl(path: Path) -> list:
 
 class Juiz:
     def __init__(self, cliente=None, raiz=RESULTADOS, dados=DADOS, reserva=300, teto_por_agencia=None,
-                 autor=os.environ.get("USERNAME", "?"), limitador=None, dormir=time.sleep):
+                 autor=os.environ.get("USERNAME", "?"), limitador=None, dormir=time.sleep, simulador=None):
         self.cliente = cliente if cliente is not None else Cliente()
         self.raiz, self.dados = Path(raiz), Path(dados)
+        # simulador(ag, sub, eventos) -> dict no formato de `lote.avaliar`. O padrão só vale para os dados globais
+        # (`lote` carrega os cenários de `recarga.DADOS`); com outro diretório de dados, não simula.
+        if simulador is None and lote is not None and self.dados.resolve() == Path(DADOS).resolve():
+            simulador = lote.avaliar
+        self.simulador = simulador
         self.reserva = reserva
         self.teto_por_agencia = dict(teto_por_agencia or {})
         self.autor = autor
@@ -308,8 +313,8 @@ class Juiz:
                         if l.get("agencia") == ag), None)
         if vigente and (vigente.get("hash") in (h, h_sub) or vigente.get("hash_sub") == h_sub):
             raise Recusado(f"envio final idêntico ao vigente de {ag}")
-        if lote is not None:
-            r = lote.avaliar(ag, sub, ev)
+        if self.simulador is not None:
+            r = self.simulador(ag, sub, ev)
             if not r.get("valido", True) or r.get("violacoes"):
                 raise Recusado(f"violações no nosso motor: {r.get('violacoes') or r.get('erros')}")
         n = self._envios_anteriores(ag)
