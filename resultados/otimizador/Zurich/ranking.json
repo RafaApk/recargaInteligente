@@ -1,0 +1,2012 @@
+[
+ {
+  "agencia": "Zurich",
+  "hash": "77130044e470eff69f9f161aaf48506f760193d01d0653c8d5ca995a6808b8c1",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 840,
+   "upgrades": 21,
+   "nao_atendidos": 6,
+   "pico_kw": 67.00000000000003,
+   "energia_kwh": 14514.494608488656,
+   "energia_ponta_kwh": 2055.2622209161987,
+   "atendimento_pct": 99.30795847750865,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 192,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.0,
+    "energia_kwh": 3306.0906214736674,
+    "energia_ponta_kwh": 398.7435288085529,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 231,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 67.00000000000003,
+    "energia_kwh": 4118.91457055773,
+    "energia_ponta_kwh": 670.1182271014247,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 207,
+    "upgrades": 5,
+    "nao_atendidos": 6,
+    "pico_kw": 66.99999999999999,
+    "energia_kwh": 3737.687282568631,
+    "energia_ponta_kwh": 508.17025759725215,
+    "atendimento_pct": 97.24770642201835,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 210,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 66.99999999999953,
+    "energia_kwh": 3351.8021338886274,
+    "energia_ponta_kwh": 478.230207408969,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 2990.3688895419,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   97.24770642201835,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "22e670dd0179d4e0b90f436572d1754611040f73fdea5bd640496c3f4455e821",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 841,
+   "upgrades": 19,
+   "nao_atendidos": 7,
+   "pico_kw": 67.50000000000006,
+   "energia_kwh": 14492.698776302095,
+   "energia_ponta_kwh": 2219.0656347634094,
+   "atendimento_pct": 99.19261822376009,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 191,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3307.7809767160797,
+    "energia_ponta_kwh": 444.1857601148231,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 234,
+    "upgrades": 3,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000006,
+    "energia_kwh": 4109.78876421375,
+    "energia_ponta_kwh": 727.4810813127327,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 210,
+    "upgrades": 3,
+    "nao_atendidos": 5,
+    "pico_kw": 67.49999999999713,
+    "energia_kwh": 3764.1348688229496,
+    "energia_ponta_kwh": 537.8571929675325,
+    "atendimento_pct": 97.70642201834862,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 206,
+    "upgrades": 7,
+    "nao_atendidos": 2,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3310.994166549315,
+    "energia_ponta_kwh": 509.5416003683214,
+    "atendimento_pct": 99.06976744186046,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 2457.467182618295,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   97.70642201834862,
+   99.06976744186046
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "0671d2bc46729098980899415a1c6a7a2b2f72d3770ae7db3cd50f7c262ed8fd",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 834,
+   "upgrades": 24,
+   "nao_atendidos": 9,
+   "pico_kw": 67.50000000000006,
+   "energia_kwh": 14443.704403412998,
+   "energia_ponta_kwh": 2107.350783902581,
+   "atendimento_pct": 98.96193771626298,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 182,
+    "upgrades": 14,
+    "nao_atendidos": 1,
+    "pico_kw": 67.5,
+    "energia_kwh": 3343.0444334091417,
+    "energia_ponta_kwh": 401.3398880096479,
+    "atendimento_pct": 99.49238578680203,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 236,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000006,
+    "energia_kwh": 4070.607834818241,
+    "energia_ponta_kwh": 719.2381995127918,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 208,
+    "upgrades": 5,
+    "nao_atendidos": 5,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 3775.7990751640755,
+    "energia_ponta_kwh": 505.569647162668,
+    "atendimento_pct": 97.70642201834862,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 208,
+    "upgrades": 4,
+    "nao_atendidos": 3,
+    "pico_kw": 67.49999999999999,
+    "energia_kwh": 3254.25306002154,
+    "energia_ponta_kwh": 481.2030492174735,
+    "atendimento_pct": 98.6046511627907,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 2048.3246080487097,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   99.49238578680203,
+   100.0,
+   97.70642201834862,
+   98.6046511627907
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "cd77c84628e0dfd0e432143fd78a24965d414587fb366ca2d85a830fa2bb6e94",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 843,
+   "upgrades": 17,
+   "nao_atendidos": 7,
+   "pico_kw": 67.49999999999999,
+   "energia_kwh": 14360.393349254151,
+   "energia_ponta_kwh": 2002.956912073016,
+   "atendimento_pct": 99.19261822376009,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 191,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 67.4999999999997,
+    "energia_kwh": 3284.0224704428683,
+    "energia_ponta_kwh": 394.67715355530095,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 231,
+    "upgrades": 4,
+    "nao_atendidos": 2,
+    "pico_kw": 67.49999999999999,
+    "energia_kwh": 4071.6689924004395,
+    "energia_ponta_kwh": 653.7403786686093,
+    "atendimento_pct": 99.15611814345992,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 207,
+    "upgrades": 6,
+    "nao_atendidos": 5,
+    "pico_kw": 67.49999999999876,
+    "energia_kwh": 3741.8822932355783,
+    "energia_ponta_kwh": 503.14920457480036,
+    "atendimento_pct": 97.70642201834862,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 214,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.49999999999832,
+    "energia_kwh": 3262.8195931752643,
+    "energia_ponta_kwh": 451.39017527430536,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 1979.5215439634921,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   99.15611814345992,
+   97.70642201834862,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "d58f36e736dfece280cff0540fe4e2036b0acab2c7192069e08d926d071a71a4",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 840,
+   "upgrades": 20,
+   "nao_atendidos": 7,
+   "pico_kw": 67.50000000000004,
+   "energia_kwh": 14527.977350466967,
+   "energia_ponta_kwh": 2274.439434508453,
+   "atendimento_pct": 99.19261822376009,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 192,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 3328.502634838352,
+    "energia_ponta_kwh": 397.588839217437,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 232,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 4060.877551350543,
+    "energia_ponta_kwh": 762.7812361077794,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 207,
+    "upgrades": 5,
+    "nao_atendidos": 6,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3809.3321770539396,
+    "energia_ponta_kwh": 565.186935899349,
+    "atendimento_pct": 97.24770642201835,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 209,
+    "upgrades": 5,
+    "nao_atendidos": 1,
+    "pico_kw": 67.49999999999699,
+    "energia_kwh": 3329.2649872241327,
+    "energia_ponta_kwh": 548.8824232838876,
+    "atendimento_pct": 99.53488372093024,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 1422.7802827457745,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   97.24770642201835,
+   99.53488372093024
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "83378cb9cfaf15a90d5bee9029d71d6c241a5e97e77bee6be3342cf555ca28f9",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 837,
+   "upgrades": 22,
+   "nao_atendidos": 8,
+   "pico_kw": 67.5000000000001,
+   "energia_kwh": 14480.003967181263,
+   "energia_ponta_kwh": 2219.3121179234267,
+   "atendimento_pct": 99.07727797001154,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 183,
+    "upgrades": 13,
+    "nao_atendidos": 1,
+    "pico_kw": 67.5,
+    "energia_kwh": 3343.2922753349253,
+    "energia_ponta_kwh": 397.94006195483735,
+    "atendimento_pct": 99.49238578680203,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 235,
+    "upgrades": 2,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5000000000001,
+    "energia_kwh": 4078.899498451943,
+    "energia_ponta_kwh": 759.2885120023725,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 211,
+    "upgrades": 3,
+    "nao_atendidos": 4,
+    "pico_kw": 67.50000000000006,
+    "energia_kwh": 3789.1919543557415,
+    "energia_ponta_kwh": 523.3107408440242,
+    "atendimento_pct": 98.1651376146789,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 208,
+    "upgrades": 4,
+    "nao_atendidos": 3,
+    "pico_kw": 67.50000000000007,
+    "energia_kwh": 3268.6202390386534,
+    "energia_ponta_kwh": 538.7728031221927,
+    "atendimento_pct": 98.6046511627907,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 1221.343941038287,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   99.49238578680203,
+   100.0,
+   98.1651376146789,
+   98.6046511627907
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "c891871d702d7405a01b0cf041c9db0e2cf25b70a59dedc0b5e52a382651472d",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 837,
+   "upgrades": 21,
+   "nao_atendidos": 9,
+   "pico_kw": 67.50000000000001,
+   "energia_kwh": 14457.071585465987,
+   "energia_ponta_kwh": 2176.5882282434727,
+   "atendimento_pct": 98.96193771626298,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 190,
+    "upgrades": 7,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3335.0740599328956,
+    "energia_ponta_kwh": 407.5197650167722,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 233,
+    "upgrades": 4,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4079.393715361643,
+    "energia_ponta_kwh": 722.791624187923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 205,
+    "upgrades": 5,
+    "nao_atendidos": 8,
+    "pico_kw": 67.49999999999997,
+    "energia_kwh": 3769.515469083049,
+    "energia_ponta_kwh": 539.7523440293686,
+    "atendimento_pct": 96.3302752293578,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 209,
+    "upgrades": 5,
+    "nao_atendidos": 1,
+    "pico_kw": 67.5,
+    "energia_kwh": 3273.088341088399,
+    "energia_ponta_kwh": 506.524495009409,
+    "atendimento_pct": 99.53488372093024,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 1184.7058858782639,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   96.3302752293578,
+   99.53488372093024
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "1f8df69d50a7b0511fc5f1649371f20b198d7825adac04c5b4d353bc1c82bfa9",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 830,
+   "upgrades": 28,
+   "nao_atendidos": 9,
+   "pico_kw": 67.50000000000004,
+   "energia_kwh": 14602.407182630783,
+   "energia_ponta_kwh": 2220.753122488581,
+   "atendimento_pct": 98.96193771626298,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 187,
+    "upgrades": 10,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3338.702660015099,
+    "energia_ponta_kwh": 425.8725850995709,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 227,
+    "upgrades": 9,
+    "nao_atendidos": 1,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4115.1120865963285,
+    "energia_ponta_kwh": 737.8304499448221,
+    "atendimento_pct": 99.57805907172995,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 204,
+    "upgrades": 6,
+    "nao_atendidos": 8,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3776.355960900783,
+    "energia_ponta_kwh": 567.4676469120019,
+    "atendimento_pct": 96.3302752293578,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 212,
+    "upgrades": 3,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 3372.2364751185723,
+    "energia_ponta_kwh": 489.58244053218584,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 1113.6234387557088,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   99.57805907172995,
+   96.3302752293578,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "4f7dd1fb5a6fdca5a6622ffb58779344bdf934557823aa10ecd45cc810ece3b6",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 840,
+   "upgrades": 11,
+   "nao_atendidos": 16,
+   "pico_kw": 67.50000000000004,
+   "energia_kwh": 14366.157153210144,
+   "energia_ponta_kwh": 2143.3413091472926,
+   "atendimento_pct": 98.15455594002307,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 196,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3327.0699719734566,
+    "energia_ponta_kwh": 398.34769885157516,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 231,
+    "upgrades": 1,
+    "nao_atendidos": 5,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 4016.2626468678473,
+    "energia_ponta_kwh": 731.2835732208622,
+    "atendimento_pct": 97.8902953586498,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 203,
+    "upgrades": 6,
+    "nao_atendidos": 9,
+    "pico_kw": 67.49999999999997,
+    "energia_kwh": 3722.7587369122975,
+    "energia_ponta_kwh": 511.9634562247778,
+    "atendimento_pct": 95.87155963302752,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 210,
+    "upgrades": 3,
+    "nao_atendidos": 2,
+    "pico_kw": 67.49999999999999,
+    "energia_kwh": 3300.0657974565424,
+    "energia_ponta_kwh": 501.74658085007735,
+    "atendimento_pct": 99.06976744186046,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 616.329345426353,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   97.8902953586498,
+   95.87155963302752,
+   99.06976744186046
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "308b1872eb914cfebfb3d02b0dd766f2bcb539e07f018d12e02e652d7a21dfba",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 826,
+   "upgrades": 24,
+   "nao_atendidos": 17,
+   "pico_kw": 67.00000000000006,
+   "energia_kwh": 14313.307929945284,
+   "energia_ponta_kwh": 2154.6166175610942,
+   "atendimento_pct": 98.03921568627452,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 183,
+    "upgrades": 13,
+    "nao_atendidos": 1,
+    "pico_kw": 67.0,
+    "energia_kwh": 3326.617989476497,
+    "energia_ponta_kwh": 372.8604501309426,
+    "atendimento_pct": 99.49238578680203,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 232,
+    "upgrades": 3,
+    "nao_atendidos": 2,
+    "pico_kw": 67.00000000000006,
+    "energia_kwh": 3999.1088119439332,
+    "energia_ponta_kwh": 755.3292746279657,
+    "atendimento_pct": 99.15611814345992,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 203,
+    "upgrades": 6,
+    "nao_atendidos": 9,
+    "pico_kw": 67.0,
+    "energia_kwh": 3735.6515763532457,
+    "energia_ponta_kwh": 554.0639259651032,
+    "atendimento_pct": 95.87155963302752,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 208,
+    "upgrades": 2,
+    "nao_atendidos": 5,
+    "pico_kw": 67.00000000000003,
+    "energia_kwh": 3251.929552171608,
+    "energia_ponta_kwh": 472.36296683708275,
+    "atendimento_pct": 97.67441860465117,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 554.6916912194529,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   99.49238578680203,
+   99.15611814345992,
+   95.87155963302752,
+   97.67441860465117
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "ffeecb3646fae6d7a6e5be5fcfd60108079b4cd7d808e4a56bba6278a4f7a720",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 829,
+   "upgrades": 19,
+   "nao_atendidos": 19,
+   "pico_kw": 67.00000000000006,
+   "energia_kwh": 14194.33281651075,
+   "energia_ponta_kwh": 1981.115664923183,
+   "atendimento_pct": 97.80853517877739,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 193,
+    "upgrades": 3,
+    "nao_atendidos": 1,
+    "pico_kw": 67.00000000000001,
+    "energia_kwh": 3308.6478904928967,
+    "energia_ponta_kwh": 371.5622103378676,
+    "atendimento_pct": 99.49238578680203,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 225,
+    "upgrades": 6,
+    "nao_atendidos": 6,
+    "pico_kw": 67.00000000000006,
+    "energia_kwh": 4004.120777372247,
+    "energia_ponta_kwh": 680.2796531340127,
+    "atendimento_pct": 97.46835443037975,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 200,
+    "upgrades": 7,
+    "nao_atendidos": 11,
+    "pico_kw": 67.00000000000003,
+    "energia_kwh": 3619.9028027972968,
+    "energia_ponta_kwh": 470.96701209907474,
+    "atendimento_pct": 94.95412844036697,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 3,
+    "nao_atendidos": 1,
+    "pico_kw": 66.99999999999952,
+    "energia_kwh": 3261.6613458483093,
+    "energia_ponta_kwh": 458.3067893522279,
+    "atendimento_pct": 99.53488372093024,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 246.44216753840828,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   99.49238578680203,
+   97.46835443037975,
+   94.95412844036697,
+   99.53488372093024
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "543cbeab4a5ac82f3785ef3da3eef9ae68e61e0e6409e110f1cf35d38fec2ab8",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 832,
+   "upgrades": 20,
+   "nao_atendidos": 15,
+   "pico_kw": 67.5,
+   "energia_kwh": 14366.645539239948,
+   "energia_ponta_kwh": 2133.3879133844107,
+   "atendimento_pct": 98.26989619377163,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 192,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.49999999999997,
+    "energia_kwh": 3294.5544328801357,
+    "energia_ponta_kwh": 397.5546722194162,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 227,
+    "upgrades": 8,
+    "nao_atendidos": 2,
+    "pico_kw": 67.49999999999929,
+    "energia_kwh": 4081.716046125209,
+    "energia_ponta_kwh": 727.820580056281,
+    "atendimento_pct": 99.15611814345992,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 202,
+    "upgrades": 5,
+    "nao_atendidos": 11,
+    "pico_kw": 67.49999999999952,
+    "energia_kwh": 3712.3819433331237,
+    "energia_ponta_kwh": 510.9150969617966,
+    "atendimento_pct": 94.95412844036697,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 2,
+    "nao_atendidos": 2,
+    "pico_kw": 67.5,
+    "energia_kwh": 3277.99311690148,
+    "energia_ponta_kwh": 497.09756414691674,
+    "atendimento_pct": 99.06976744186046,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 173.30604330779533,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   99.15611814345992,
+   94.95412844036697,
+   99.06976744186046
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "7cb1ad797c33b0a41156755aa158747323fca9eaeada7b3e142bf624a57635dc",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 845,
+   "upgrades": 18,
+   "nao_atendidos": 4,
+   "pico_kw": 67.50000000000003,
+   "energia_kwh": 14546.254739208678,
+   "energia_ponta_kwh": 2217.0254294766673,
+   "atendimento_pct": 99.53863898500576,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 192,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3336.654684041273,
+    "energia_ponta_kwh": 451.425774079149,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 231,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4066.1473680791737,
+    "energia_ponta_kwh": 755.1580532166813,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 210,
+    "upgrades": 4,
+    "nao_atendidos": 4,
+    "pico_kw": 67.5,
+    "energia_kwh": 3825.1639877826765,
+    "energia_ponta_kwh": 517.9692797077302,
+    "atendimento_pct": 98.1651376146789,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 212,
+    "upgrades": 3,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 3318.288699305555,
+    "energia_ponta_kwh": 492.4723224731071,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 110.48728526166633,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   98.1651376146789,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "457706b937bbb20dea082bef59dc0a5724fae408398c96eb81b9f81841dbd092",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 840,
+   "upgrades": 12,
+   "nao_atendidos": 15,
+   "pico_kw": 67.50000000000001,
+   "energia_kwh": 14319.801995170103,
+   "energia_ponta_kwh": 2076.8719238321783,
+   "atendimento_pct": 98.26989619377163,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 196,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3330.0125769093156,
+    "energia_ponta_kwh": 407.91635741498027,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 230,
+    "upgrades": 3,
+    "nao_atendidos": 4,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4033.2735790611487,
+    "energia_ponta_kwh": 732.3106404362934,
+    "atendimento_pct": 98.31223628691983,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 203,
+    "upgrades": 4,
+    "nao_atendidos": 11,
+    "pico_kw": 67.49999999999997,
+    "energia_kwh": 3672.7711249431864,
+    "energia_ponta_kwh": 454.1754484765004,
+    "atendimento_pct": 94.95412844036697,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 4,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3283.744714256451,
+    "energia_ponta_kwh": 482.4694775044042,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": 7.564038083910418,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   98.31223628691983,
+   94.95412844036697,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "ad803030334e27c0d1bea49df51bf62dd59a0dfc0975b69d9a104fff16e09fb3",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 837,
+   "upgrades": 14,
+   "nao_atendidos": 16,
+   "pico_kw": 67.50000000000004,
+   "energia_kwh": 14367.977915251819,
+   "energia_ponta_kwh": 2102.5119122062943,
+   "atendimento_pct": 98.15455594002307,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 196,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.49999999999991,
+    "energia_kwh": 3331.62466930786,
+    "energia_ponta_kwh": 394.61335155176346,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 229,
+    "upgrades": 3,
+    "nao_atendidos": 5,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3985.6678722972006,
+    "energia_ponta_kwh": 693.2656476717167,
+    "atendimento_pct": 97.8902953586498,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 202,
+    "upgrades": 5,
+    "nao_atendidos": 11,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 3716.9195834850675,
+    "energia_ponta_kwh": 493.0031115841133,
+    "atendimento_pct": 94.95412844036697,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 210,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3333.7657901616913,
+    "energia_ponta_kwh": 521.6298013987008,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -384.2559561031467,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   97.8902953586498,
+   94.95412844036697,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "cc30988b7069d109587494bfddd4e82ba41624b9d690a9dbebb111bce7d5fe30",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 815,
+   "upgrades": 30,
+   "nao_atendidos": 22,
+   "pico_kw": 60.00000000000002,
+   "energia_kwh": 14292.452605401637,
+   "energia_ponta_kwh": 2323.153373254124,
+   "atendimento_pct": 97.46251441753172,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 192,
+    "upgrades": 5,
+    "nao_atendidos": 0,
+    "pico_kw": 60.00000000000001,
+    "energia_kwh": 3248.7115327894517,
+    "energia_ponta_kwh": 444.54570046980115,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 218,
+    "upgrades": 12,
+    "nao_atendidos": 7,
+    "pico_kw": 60.00000000000001,
+    "energia_kwh": 3892.6255848999053,
+    "energia_ponta_kwh": 773.562554015048,
+    "atendimento_pct": 97.0464135021097,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 196,
+    "upgrades": 7,
+    "nao_atendidos": 15,
+    "pico_kw": 59.99999999999816,
+    "energia_kwh": 3807.2222541650376,
+    "energia_ponta_kwh": 655.168457573072,
+    "atendimento_pct": 93.11926605504587,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 209,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 60.00000000000002,
+    "energia_kwh": 3343.8932335472423,
+    "energia_ponta_kwh": 449.87666119620246,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -396.5766866270624,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   97.0464135021097,
+   93.11926605504587,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "44f32b57dbf3c180e61072f12c5d42c4e784237a2c6a9acb956f88ab3edbf56a",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 845,
+   "upgrades": 15,
+   "nao_atendidos": 7,
+   "pico_kw": 67.50000000000001,
+   "energia_kwh": 14433.568198831686,
+   "energia_ponta_kwh": 2177.4088040340253,
+   "atendimento_pct": 99.19261822376009,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 194,
+    "upgrades": 3,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3320.3767144578246,
+    "energia_ponta_kwh": 418.04907361604273,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 236,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4064.2822983650876,
+    "energia_ponta_kwh": 752.8350081208291,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 204,
+    "upgrades": 8,
+    "nao_atendidos": 6,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3787.8008759904296,
+    "energia_ponta_kwh": 517.3028055353238,
+    "atendimento_pct": 97.24770642201835,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 3,
+    "nao_atendidos": 1,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3261.1083100183455,
+    "energia_ponta_kwh": 489.22191676182945,
+    "atendimento_pct": 99.53488372093024,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -743.7044020170124,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   97.24770642201835,
+   99.53488372093024
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "ede2d97f18fca6f10b467b4412b1f60c3174597aa3da54070268f78d4d9b5e56",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 853,
+   "upgrades": 10,
+   "nao_atendidos": 4,
+   "pico_kw": 67.50000000000003,
+   "energia_kwh": 14473.264265702057,
+   "energia_ponta_kwh": 2250.6411977712783,
+   "atendimento_pct": 99.53863898500576,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 193,
+    "upgrades": 4,
+    "nao_atendidos": 0,
+    "pico_kw": 67.5,
+    "energia_kwh": 3326.0058508585594,
+    "energia_ponta_kwh": 428.4191752751829,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 236,
+    "upgrades": 1,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 4054.629204383852,
+    "energia_ponta_kwh": 783.036326527987,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 213,
+    "upgrades": 1,
+    "nao_atendidos": 4,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3781.659395146397,
+    "energia_ponta_kwh": 511.50053382407793,
+    "atendimento_pct": 98.1651376146789,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 4,
+    "nao_atendidos": 0,
+    "pico_kw": 67.49999999999964,
+    "energia_kwh": 3310.969815313248,
+    "energia_ponta_kwh": 527.6851621440305,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -950.3205988856389,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   98.1651376146789,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "deda87903d7ba4332d97ac310219b7b01b33a988eb71cf052256a276720588ab",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 833,
+   "upgrades": 25,
+   "nao_atendidos": 9,
+   "pico_kw": 67.50000000000007,
+   "energia_kwh": 14469.847227894532,
+   "energia_ponta_kwh": 2132.3261850737586,
+   "atendimento_pct": 98.96193771626298,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 185,
+    "upgrades": 12,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3376.44777802945,
+    "energia_ponta_kwh": 393.1440481936532,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 235,
+    "upgrades": 2,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 4065.470583840563,
+    "energia_ponta_kwh": 746.1829448734078,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 202,
+    "upgrades": 8,
+    "nao_atendidos": 8,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3743.1787817760087,
+    "energia_ponta_kwh": 498.2341290010595,
+    "atendimento_pct": 96.3302752293578,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 211,
+    "upgrades": 3,
+    "nao_atendidos": 1,
+    "pico_kw": 67.50000000000007,
+    "energia_kwh": 3284.750084248511,
+    "energia_ponta_kwh": 494.765063005638,
+    "atendimento_pct": 99.53488372093024,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -971.163092536879,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   96.3302752293578,
+   99.53488372093024
+  ]
+ },
+ {
+  "agencia": "Zurich",
+  "hash": "109355c4d8d0f894946cbbde4fdd221bfd3b1de6e13e80b6d9c7e613e425a3dd",
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 867,
+   "certos": 838,
+   "upgrades": 21,
+   "nao_atendidos": 8,
+   "pico_kw": 67.50000000000004,
+   "energia_kwh": 14519.586848868936,
+   "energia_ponta_kwh": 2148.2317863479743,
+   "atendimento_pct": 99.07727797001154,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 197,
+    "certos": 190,
+    "upgrades": 7,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3330.785334459533,
+    "energia_ponta_kwh": 413.6921668491786,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 237,
+    "certos": 231,
+    "upgrades": 6,
+    "nao_atendidos": 0,
+    "pico_kw": 67.50000000000003,
+    "energia_kwh": 4057.8874320047075,
+    "energia_ponta_kwh": 700.2897672505007,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 218,
+    "certos": 208,
+    "upgrades": 5,
+    "nao_atendidos": 5,
+    "pico_kw": 67.50000000000004,
+    "energia_kwh": 3831.948941306616,
+    "energia_ponta_kwh": 527.0776218241054,
+    "atendimento_pct": 97.70642201834862,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 215,
+    "certos": 209,
+    "upgrades": 3,
+    "nao_atendidos": 3,
+    "pico_kw": 67.50000000000001,
+    "energia_kwh": 3298.96514109808,
+    "energia_ponta_kwh": 507.17223042418954,
+    "atendimento_pct": 98.6046511627907,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1444d35c44bbd949",
+  "valor": -986.1158931739865,
+  "envio": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   97.70642201834862,
+   98.6046511627907
+  ]
+ }
+]

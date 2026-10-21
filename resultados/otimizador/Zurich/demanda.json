@@ -1,0 +1,44 @@
+[
+ {
+  "demanda": null,
+  "entrada": "b3_75",
+  "valor": 2990.3688895419,
+  "hash": "77130044e470eff69f9f161aaf48506f760193d01d0653c8d5ca995a6808b8c1",
+  "atendimento_pct": 99.30795847750865
+ },
+ {
+  "demanda": 30,
+  "entrada": "a4_150",
+  "valor": -65273.843711727764,
+  "hash": "48325dc750610b8598f85a9e625a77b139b9e3a9e362f2a1074d36fa77b97bff",
+  "atendimento_pct": 66.66666666666667
+ },
+ {
+  "demanda": 40,
+  "entrada": "a4_150",
+  "valor": -38256.174700893025,
+  "hash": "07bd4f74e094c34214224fba9851c99fe7a19a4b4f0222f98211adecfaee2ecc",
+  "atendimento_pct": 81.199538638985
+ },
+ {
+  "demanda": 50,
+  "entrada": "a4_150",
+  "valor": -15735.017023924473,
+  "hash": "71322dc4bb6801efd46b2850018e8300567bfa899c56ff82ff6db71a1dce0a35",
+  "atendimento_pct": 93.0795847750865
+ },
+ {
+  "demanda": 60,
+  "entrada": "a4_150",
+  "valor": -5429.76770088139,
+  "hash": "4c6e5f9eb87d0ee6010c0bbadb8ccb7a27ed9401738eeb8c0c242413256c8ea4",
+  "atendimento_pct": 98.38523644752019
+ },
+ {
+  "demanda": 70,
+  "entrada": "a4_150",
+  "valor": -3649.6311104581,
+  "hash": "194ea22a9cdbf40ab0cf58887d791607be7f5cc16d73bea4b3da6126713ab616",
+  "atendimento_pct": 99.30795847750865
+ }
+]

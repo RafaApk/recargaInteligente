@@ -40,8 +40,17 @@ def _envio(sub: dict) -> dict:
     return {k: v for k, v in sub.items() if v is not None}
 
 
+CONFIRMADOS = RAIZ / "pesos_estimados" / "pesos_bangkok_confirmados.json"
+
+
 def estimativa():
-    """Pesos inferidos dos testes do juiz em Bangkok (amostras com métricas do nosso motor)."""
+    """Pesos confirmados (pesos_estimados/pesos_bangkok_confirmados.json) ou, sem eles, inferidos dos testes."""
+    if CONFIRMADOS.is_file():
+        P = json.loads(CONFIRMADOS.read_text(encoding="utf-8"))
+        c = P["custo_obra_em_pontos"]
+        p = objetivo.Pesos(w=P["pesos"], k_carregador={k: -v for k, v in c["carregadores"].items()},
+                           k_entrada={k: -v for k, v in c["entradas"].items() if k != "existente"})
+        return pesos.Estimativa(pesos=p, residuo_rms=0.0, n=0, confiavel=True, nao_identificados=[])
     p = RESULTADOS / "testes-juiz-bangkok.json"
     if not p.is_file():
         return None

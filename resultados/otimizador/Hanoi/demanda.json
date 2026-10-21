@@ -2,133 +2,57 @@
  {
   "demanda": null,
   "entrada": "b3_45",
-  "valor": [
-   67.86632390745501,
-   620,
-   -120.0
-  ],
-  "hash": "85dd7d50f701c6b9b8ca49f84e8573eda280b0b937c947e394cc46bc50470f87",
-  "atendimento_pct": 67.86632390745501
+  "valor": -61034.741933683006,
+  "hash": "756163c4adc4c5ae1fb560671d84f8b7c7909e8e99698a8ca54895b9a75f397e",
+  "atendimento_pct": 73.00771208226222
  },
  {
   "demanda": null,
   "entrada": "b3_75",
-  "valor": [
-   99.65724078834619,
-   1160,
-   -120.0
-  ],
-  "hash": "9b84d0ad1290ccd98fe0e1b538936862e5e3b95b18538116bcad153098ce5b39",
-  "atendimento_pct": 99.65724078834619
+  "valor": 3540.2719693173985,
+  "hash": "d367e68b4060a1801f8889485eb5991bac902b4753cb40ebb9c3cacb15dd38b1",
+  "atendimento_pct": 100.0
  },
  {
   "demanda": 30,
   "entrada": "a4_150",
-  "valor": [
-   53.04198800342759,
-   438,
-   -120.0
-  ],
-  "hash": "e642d0a0168d978672f896bd58e0bf6411c2bd3ad01012e257924a263cb75f1d",
-  "atendimento_pct": 53.04198800342759
+  "valor": -103139.61439893395,
+  "hash": "b6fd48ad447be52d6aa19f2147aaccc8d7844417b133487836c2666f3e4eafc8",
+  "atendimento_pct": 58.783204798628965
  },
  {
   "demanda": 40,
   "entrada": "a4_150",
-  "valor": [
-   67.69494430162811,
-   623,
-   -120.0
-  ],
-  "hash": "f67584da6c4d5c69a14d22116fe9456dfe6fde744ed96ffda38b81463d7fd695",
-  "atendimento_pct": 67.69494430162811
+  "valor": -72613.75569724507,
+  "hash": "ab7fee76421560d8c8133343c59618679be75eb1ce047a64ba709da7f82da92b",
+  "atendimento_pct": 71.03684661525278
  },
  {
   "demanda": 50,
   "entrada": "a4_150",
-  "valor": [
-   83.89031705227077,
-   875,
-   -120.0
-  ],
-  "hash": "d048e79424690319be274919f622c3f69bd4084575b8a1a1ea48fa3d9fc4f8f5",
-  "atendimento_pct": 83.89031705227077
+  "valor": -28404.950351779662,
+  "hash": "1c945fcbb0d0eed0d2e1ec53b3392a240415191468b0b0e60bc8417085b8b6ab",
+  "atendimento_pct": 88.51756640959726
  },
  {
   "demanda": 60,
   "entrada": "a4_150",
-  "valor": [
-   96.57240788346186,
-   1094,
-   -120.0
-  ],
-  "hash": "6552e52115160909faec60055882209d27d992794778f2a3d79de30b52a151ae",
-  "atendimento_pct": 96.57240788346186
+  "valor": 254.2225043187973,
+  "hash": "966e2c312fcadaf9738e9699341ebd5297e0b7cd2ec053cdf5cdacf013b8eeb2",
+  "atendimento_pct": 99.48586118251929
  },
  {
   "demanda": 70,
   "entrada": "a4_150",
-  "valor": [
-   99.65724078834619,
-   1161,
-   -120.0
-  ],
-  "hash": "7fdc627d1d3d6c00465c3e236309cb772955f45d7e041d7fd97d6aeef2eaeb6d",
-  "atendimento_pct": 99.65724078834619
+  "valor": 1977.5783750736719,
+  "hash": "3b9b9e763665e36d1c1061d0a5d46022318397304a47a6ca866d504a3992640c",
+  "atendimento_pct": 100.0
  },
  {
   "demanda": 80,
   "entrada": "a4_150",
-  "valor": [
-   99.74293059125964,
-   1164,
-   -120.0
-  ],
-  "hash": "fc56ea533dae9fb5cbee4fb694bc69f13c572df1e3b6dbce3adb9ee8e38c40ce",
-  "atendimento_pct": 99.74293059125964
- },
- {
-  "demanda": 90,
-  "entrada": "a4_150",
-  "valor": [
-   99.91431019708655,
-   1166,
-   -120.0
-  ],
-  "hash": "421f7966da0e41d2bc049852a8e4b98e9d0346d1da8ef756e85ae175b6dc9b3b",
-  "atendimento_pct": 99.91431019708655
- },
- {
-  "demanda": 100,
-  "entrada": "a4_150",
-  "valor": [
-   100.0,
-   1167,
-   -120.0
-  ],
-  "hash": "a26ae956217e269a8a630ce335ff1c0fed41e65edca9d09b9726252543c87647",
-  "atendimento_pct": 100.0
- },
- {
-  "demanda": 110,
-  "entrada": "a4_150",
-  "valor": [
-   100.0,
-   1167,
-   -120.0
-  ],
-  "hash": "a31cdcb78e2f77a95f3862cf602f9e74867411a6b638a92a4efc8d686c7bf8a2",
-  "atendimento_pct": 100.0
- },
- {
-  "demanda": 120,
-  "entrada": "a4_150",
-  "valor": [
-   100.0,
-   1167,
-   -120.0
-  ],
-  "hash": "08ad98e00877f3d710a4b5dfb78b86d204a18ab5d96a9239d52b80fea16e055f",
+  "valor": 1971.6565938893891,
+  "hash": "a68acc09f49d3011dfdd949a306f682d4b837f2eb0bc7ce238d2972af1dd51e1",
   "atendimento_pct": 100.0
  }
 ]

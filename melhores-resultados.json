@@ -2,28 +2,35 @@
  "atualizado_por": "python -m recarga.melhores",
  "fase": "neblina",
  "pesos_estimados": {
-  "confiavel": false,
-  "n_testes": 22,
-  "residuo_rms": 0.0010109509912431744,
+  "confiavel": true,
+  "n_testes": 0,
+  "residuo_rms": 0.0,
   "nao_identificados": [],
   "w": {
-   "certo": 19.712943792042296,
-   "demanda_contratada": -2.000000000002066,
-   "energia_ponta_kwh": -0.49990334720569873,
-   "nao_atendido": -199.13520060122394,
-   "upgrade": -27.211021200142838
+   "certo": 15,
+   "upgrade": 8,
+   "nao_atendido": -200,
+   "energia_ponta_kwh": -0.5,
+   "demanda_contratada": -2
   },
   "k_carregador": {
-   "ac_11": 815.8171760678355,
-   "ac_22x2": -4054.4204842378967,
-   "ac_7": -249.99828683895592,
-   "dc_30": -4777.209480804366,
-   "dc_60x2": -8577.207767643351
+   "ac_7": -250,
+   "ac_11": -1100,
+   "ac_22x2": -1500,
+   "dc_30": -3500,
+   "dc_60x2": -7300,
+   "dc_120x2": -15800
   },
   "k_entrada": {
-   "a4_150": -3945.585352937195,
-   "a4_225": -5645.585352937196,
-   "b3_75": -1168.3723164853538
+   "b3_75": -5000,
+   "a4_150": -6500,
+   "a4_225": -8200,
+   "a4_300": -10000,
+   "se_500": -18800,
+   "se_750": -24400,
+   "se_1000": -30000,
+   "se_1500": -41200,
+   "se_2000": -52500
   },
   "observacao": "ponta, demanda e ac_7 são exatos; certo × dc_30 confundidos até haver mais testes com perdas"
  },
@@ -31,16 +38,44 @@
   "Bangkok": {
    "semanas_teste": {
     "melhor_testada_no_juiz": {
-     "hash": "143329150a82f476a1d1dda549c0fdaf52c7b01b7023ee497b6eaff573c712a3",
-     "nota_juiz": 565.0,
+     "hash": "5268390b81713e7e568b60289d0dd45beb500b1b2203758f402f0cca0f147567",
+     "nota_juiz": 2871.0,
      "metricas_juiz": {
       "contratos": 271,
-      "atendimento_pct": 100.0,
-      "pico_kw": 30.00000000000005,
-      "energia_kwh": 4490.7033536187655
+      "atendimento_pct": 99.2619926199262,
+      "pico_kw": 21.000000000000014,
+      "energia_kwh": 4458.731790752912
      }
     },
     "candidatas": [
+     {
+      "origem": "configs/bangkok/otimizada-pesos.json",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_7": 3
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2871.0,
+      "nota_juiz": 2871.0,
+      "metricas_motor": {
+       "atendimento_pct": 99.2619926199262,
+       "certos": 267,
+       "upgrades": 2,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 21.00000000000001,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
+     },
      {
       "origem": "configs/bangkok/recomendada.json",
       "sub": {
@@ -103,92 +138,35 @@
       "sub": {
        "agencia": "Bangkok",
        "carregadores": {
-        "dc_30": 1
+        "ac_7": 3
        },
        "entrada": "b3_45",
        "politica": {
         "prioridade": "menor_soc",
         "evitar_ponta": true,
-        "divisao": "igual"
+        "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 565.0,
+      "nota_estimada": 2871.0,
       "nota_juiz": null,
       "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
+       "atendimento_pct": 99.2619926199262,
+       "certos": 267,
+       "upgrades": 2,
+       "nao_atendidos": 2,
        "energia_ponta_kwh": 0,
-       "pico_kw": 30.00000000000003,
+       "pico_kw": 21.00000000000001,
        "demanda_contratada_kw": 0.0
       },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#1",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "b3_45",
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 533.2,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 0.0
-      },
-      "perdidos_pior_semana": 0
+      "perdidos_pior_semana": 2
      },
      {
       "origem": "otimizador#3",
       "sub": {
        "agencia": "Bangkok",
        "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "b3_45",
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 533.2,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 0.0
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#11",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
+        "ac_7": 4
        },
        "entrada": "b3_45",
        "politica": {
@@ -198,7 +176,93 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 315.0,
+      "nota_estimada": 2850.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.6309963099631,
+       "certos": 270,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 27.999999999999915,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#4",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_7": 4
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2850.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.6309963099631,
+       "certos": 270,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 27.999999999999915,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#5",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 1
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2100.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.6309963099631,
+       "certos": 270,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 29.00000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#6",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 2
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2065.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -206,65 +270,268 @@
        "upgrades": 0,
        "nao_atendidos": 0,
        "energia_ponta_kwh": 0,
-       "pico_kw": 37.000000000000014,
+       "pico_kw": 36.00000000000002,
        "demanda_contratada_kw": 0.0
       },
       "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#7",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 2
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2065.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 271,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 35.599999999999945,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#8",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 2
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2065.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 271,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 35.599999999999945,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#9",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_11": 1,
+        "ac_7": 2
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2028.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.2619926199262,
+       "certos": 268,
+       "upgrades": 1,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 25.000000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
      },
      {
       "origem": "otimizador#10",
       "sub": {
        "agencia": "Bangkok",
        "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
+        "ac_11": 1,
+        "ac_7": 2
        },
        "entrada": "b3_45",
        "politica": {
         "prioridade": "menor_soc",
-        "evitar_ponta": false,
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2028.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.2619926199262,
+       "certos": 268,
+       "upgrades": 1,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 25.000000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
+     },
+     {
+      "origem": "otimizador#11",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_11": 1,
+        "ac_7": 3
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
         "divisao": "igual"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 266.5,
+      "nota_estimada": 2000.0,
       "nota_juiz": null,
       "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
+       "atendimento_pct": 99.6309963099631,
+       "certos": 270,
        "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 97.1130889320009,
-       "pico_kw": 37.000000000000014,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 31.99999999999972,
        "demanda_contratada_kw": 0.0
       },
-      "perdidos_pior_semana": 0
+      "perdidos_pior_semana": 1
      },
      {
       "origem": "otimizador#12",
       "sub": {
        "agencia": "Bangkok",
        "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
+        "ac_11": 1,
+        "ac_7": 3
        },
        "entrada": "b3_45",
        "politica": {
         "prioridade": "menor_soc",
-        "evitar_ponta": false,
+        "evitar_ponta": true,
         "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 266.5,
+      "nota_estimada": 2000.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.6309963099631,
+       "certos": 270,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 31.99999999999972,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#13",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 1
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1878.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.2619926199262,
+       "certos": 268,
+       "upgrades": 1,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 28.999999999999872,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
+     },
+     {
+      "origem": "otimizador#14",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 1
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1878.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.2619926199262,
+       "certos": 268,
+       "upgrades": 1,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 28.999999999999872,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
+     },
+     {
+      "origem": "otimizador#15",
+      "sub": {
+       "agencia": "Bangkok",
+       "carregadores": {
+        "ac_22x2": 1,
+        "ac_7": 3
+       },
+       "entrada": "b3_45",
+       "politica": {
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1815.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 271,
        "upgrades": 0,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 97.1130889320009,
-       "pico_kw": 37.000000000000014,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 40.49999999999981,
        "demanda_contratada_kw": 0.0
       },
       "perdidos_pior_semana": 0
@@ -299,267 +566,6 @@
       "perdidos_pior_semana": 0
      },
      {
-      "origem": "otimizador#5",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "b3_75",
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": true,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -603.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 0.0
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#4",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "b3_75",
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -635.2,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 0.0
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#6",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "b3_75",
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -635.2,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 0.0
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#8",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 30,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": true,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3440.6,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 30
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#7",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 30,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3472.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 30
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#9",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 30,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3472.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 63.583628212029986,
-       "pico_kw": 30.00000000000003,
-       "demanda_contratada_kw": 30
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#14",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 40,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": true,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3710.6,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 37.000000000000014,
-       "demanda_contratada_kw": 40
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#13",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 40,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3759.1,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 97.1130889320009,
-       "pico_kw": 37.000000000000014,
-       "demanda_contratada_kw": 40
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#15",
-      "sub": {
-       "agencia": "Bangkok",
-       "carregadores": {
-        "ac_7": 1,
-        "dc_30": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 40,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": -3759.1,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 271,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 97.1130889320009,
-       "pico_kw": 37.000000000000014,
-       "demanda_contratada_kw": 40
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
       "origem": "configs/bangkok/variantes.json",
       "sub": {
        "agencia": "Bangkok",
@@ -575,7 +581,7 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": -15866.6,
+      "nota_estimada": -12035.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -632,6 +638,453 @@
     "melhor_testada_no_juiz": null,
     "candidatas": [
      {
+      "origem": "otimizador#1",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 3540.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1165,
+       "upgrades": 2,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2301.456061365204,
+       "pico_kw": 67.50000000000009,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "configs/hanoi/otimizada-pesos.json",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 3362.2,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1164,
+       "upgrades": 2,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2227.590477702014,
+       "pico_kw": 67.50000000000003,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#3",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 3,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2478.2,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.65724078834619,
+       "certos": 1162,
+       "upgrades": 1,
+       "nao_atendidos": 4,
+       "energia_ponta_kwh": 2219.5630948057205,
+       "pico_kw": 67.50000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 2
+     },
+     {
+      "origem": "otimizador#4",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 80,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2019.9,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1167,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2050.141612238102,
+       "pico_kw": 73.99999999999994,
+       "demanda_contratada_kw": 80
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#5",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 70,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1977.6,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1165,
+       "upgrades": 2,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2146.843249852656,
+       "pico_kw": 70.00000000000009,
+       "demanda_contratada_kw": 70
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#6",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 80,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1971.7,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1167,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2146.686812221223,
+       "pico_kw": 74.00000000000009,
+       "demanda_contratada_kw": 80
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#7",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 70,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1944.8,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1166,
+       "upgrades": 1,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2226.4341913899534,
+       "pico_kw": 70.00000000000004,
+       "demanda_contratada_kw": 70
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#8",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 70,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1884.1,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1161,
+       "upgrades": 5,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2361.8896435512243,
+       "pico_kw": 67.00000000000006,
+       "demanda_contratada_kw": 70
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#9",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 70,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1878.6,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1163,
+       "upgrades": 3,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2400.802341172028,
+       "pico_kw": 67.00000000000001,
+       "demanda_contratada_kw": 70
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#10",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 3,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 80,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1555.4,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1165,
+       "upgrades": 1,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2035.124137581549,
+       "pico_kw": 80.00000000000009,
+       "demanda_contratada_kw": 80
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#11",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 3,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1548.7,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1165,
+       "upgrades": 1,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2008.614955756319,
+       "pico_kw": 81.0,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#12",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 3,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1546.9,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1166,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2026.1602650836114,
+       "pico_kw": 80.99999999999999,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#13",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 80,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1544.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.8286203941731,
+       "certos": 1164,
+       "upgrades": 1,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 2127.490113485597,
+       "pico_kw": 73.99999999999996,
+       "demanda_contratada_kw": 80
+      },
+      "perdidos_pior_semana": 2
+     },
+     {
+      "origem": "otimizador#14",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_7": 3,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1530.2,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91431019708655,
+       "certos": 1166,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2059.6350979191357,
+       "pico_kw": 80.99999999999993,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#15",
+      "sub": {
+       "agencia": "Hanoi",
+       "carregadores": {
+        "ac_11": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 80,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1230.1,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1163,
+       "upgrades": 4,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2373.7706834967594,
+       "pico_kw": 71.00000000000004,
+       "demanda_contratada_kw": 80
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
       "origem": "configs/hanoi/final-1.json",
       "sub": {
        "agencia": "Hanoi",
@@ -647,7 +1100,7 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 4547.8,
+      "nota_estimada": 325.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -656,209 +1109,6 @@
        "nao_atendidos": 0,
        "energia_ponta_kwh": 0,
        "pico_kw": 90.00000000000013,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#3",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": true,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 4547.8,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 90.00000000000011,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#7",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": true,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 4547.8,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 90.00000000000011,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#8",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": true,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 4547.8,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 90.00000000000013,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#2",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 3564.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 1967.2523952355245,
-       "pico_kw": 90.00000000000013,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#6",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 3564.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 1967.2523952355245,
-       "pico_kw": 90.00000000000013,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#1",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 3542.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2011.1818764215332,
-       "pico_kw": 90.00000000000011,
-       "demanda_contratada_kw": 90
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#5",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_30": 3
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 90,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 3542.4,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2011.1818764215332,
-       "pico_kw": 90.00000000000011,
        "demanda_contratada_kw": 90
       },
       "perdidos_pior_semana": 0
@@ -878,7 +1128,7 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 2305.6,
+      "nota_estimada": -3726.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 99.40017137960582,
@@ -890,224 +1140,6 @@
        "demanda_contratada_kw": 0.0
       },
       "perdidos_pior_semana": 6
-     },
-     {
-      "origem": "otimizador#13",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 120,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17787.3,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2064.675939459991,
-       "pico_kw": 119.99999999999244,
-       "demanda_contratada_kw": 120
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#9",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 100,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17760.8,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2197.669463595411,
-       "pico_kw": 100.00000000000006,
-       "demanda_contratada_kw": 100
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#12",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 110,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17760.7,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2157.804657001786,
-       "pico_kw": 109.99999999999831,
-       "demanda_contratada_kw": 110
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#10",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 100,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17758.0,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2203.275790179119,
-       "pico_kw": 99.99999999999997,
-       "demanda_contratada_kw": 100
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#14",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 120,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17755.5,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2128.2295696252254,
-       "pico_kw": 119.99999999999552,
-       "demanda_contratada_kw": 120
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#11",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 110,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17737.5,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2204.3599539131446,
-       "pico_kw": 109.99999999999997,
-       "demanda_contratada_kw": 110
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#15",
-      "sub": {
-       "agencia": "Hanoi",
-       "carregadores": {
-        "ac_7": 1,
-        "dc_120x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 130,
-       "politica": {
-        "prioridade": "chegada",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [
-       "dc_120x2"
-      ],
-      "nota_estimada": 17601.6,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1167,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 1896.0716035249307,
-       "pico_kw": 126.99999999999994,
-       "demanda_contratada_kw": 130
-      },
-      "perdidos_pior_semana": 0
      }
     ]
    },
@@ -1138,7 +1170,7 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 15743.3,
+      "nota_estimada": 7095.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -1152,11 +1184,11 @@
       "perdidos_pior_semana": 0
      },
      {
-      "origem": "otimizador#1",
+      "origem": "configs/istanbul/otimizada-pesos.json",
       "sub": {
        "agencia": "Istanbul",
        "carregadores": {
-        "dc_60x2": 1
+        "dc_30": 2
        },
        "entrada": "b3_75",
        "politica": {
@@ -1166,15 +1198,15 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 14371.9,
+      "nota_estimada": 6006.6,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 1293,
        "upgrades": 0,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2743.258446000017,
-       "pico_kw": 60.00000000000006,
+       "energia_ponta_kwh": 2776.8772653083574,
+       "pico_kw": 60.00000000000008,
        "demanda_contratada_kw": 0.0
       },
       "perdidos_pior_semana": 0
@@ -1184,7 +1216,7 @@
       "sub": {
        "agencia": "Istanbul",
        "carregadores": {
-        "dc_60x2": 1
+        "dc_30": 2
        },
        "entrada": "b3_75",
        "politica": {
@@ -1194,25 +1226,53 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 14370.4,
+      "nota_estimada": 6006.6,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 1293,
        "upgrades": 0,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2746.249730381904,
-       "pico_kw": 60.00000000000003,
+       "energia_ponta_kwh": 2776.8772653083574,
+       "pico_kw": 60.00000000000008,
        "demanda_contratada_kw": 0.0
       },
       "perdidos_pior_semana": 0
      },
      {
-      "origem": "otimizador#11",
+      "origem": "otimizador#3",
       "sub": {
        "agencia": "Istanbul",
        "carregadores": {
-        "dc_60x2": 1
+        "dc_30": 2
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5797.9,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.92266047950503,
+       "certos": 1292,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2764.260338281274,
+       "pico_kw": 60.00000000000008,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#4",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_30": 2
        },
        "entrada": "a4_150",
        "demanda_contratada_kw": 60,
@@ -1223,7 +1283,7 @@
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 12846.0,
+      "nota_estimada": 5775.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -1231,36 +1291,7 @@
        "upgrades": 0,
        "nao_atendidos": 0,
        "energia_ponta_kwh": 0,
-       "pico_kw": 60.00000000000006,
-       "demanda_contratada_kw": 60
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#14",
-      "sub": {
-       "agencia": "Istanbul",
-       "carregadores": {
-        "dc_60x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
-       "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": true,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 12846.0,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 0,
-       "pico_kw": 60.00000000000003,
+       "pico_kw": 60.000000000000064,
        "demanda_contratada_kw": 60
       },
       "perdidos_pior_semana": 0
@@ -1277,11 +1308,11 @@
        "politica": {
         "prioridade": "proxima_retirada",
         "evitar_ponta": true,
-        "divisao": "igual"
+        "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 11868.8,
+      "nota_estimada": 5775.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -1295,22 +1326,106 @@
       "perdidos_pior_semana": 0
      },
      {
+      "origem": "otimizador#6",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5723.4,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1293,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2743.258446000017,
+       "pico_kw": 60.00000000000006,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#7",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5721.9,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1293,
+       "upgrades": 0,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 2746.249730381904,
+       "pico_kw": 60.00000000000003,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
       "origem": "otimizador#8",
       "sub": {
        "agencia": "Istanbul",
        "carregadores": {
-        "dc_30": 2
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5509.2,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.92266047950503,
+       "certos": 1292,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 2741.6228381847804,
+       "pico_kw": 60.0000000000001,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#9",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_60x2": 1
        },
        "entrada": "a4_150",
        "demanda_contratada_kw": 60,
        "politica": {
         "prioridade": "proxima_retirada",
         "evitar_ponta": true,
-        "divisao": "prioridade"
+        "divisao": "igual"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 11868.8,
+      "nota_estimada": 5475.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
@@ -1318,7 +1433,7 @@
        "upgrades": 0,
        "nao_atendidos": 0,
        "energia_ponta_kwh": 0,
-       "pico_kw": 60.000000000000064,
+       "pico_kw": 60.00000000000006,
        "demanda_contratada_kw": 60
       },
       "perdidos_pior_semana": 0
@@ -1334,23 +1449,81 @@
        "demanda_contratada_kw": 60,
        "politica": {
         "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
-        "divisao": "igual"
+        "evitar_ponta": true,
+        "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 11474.7,
+      "nota_estimada": 5475.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 1293,
        "upgrades": 0,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2743.258446000017,
-       "pico_kw": 60.00000000000006,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 60.00000000000003,
        "demanda_contratada_kw": 60
       },
       "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#11",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_30": 2
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 60,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5345.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.84532095901005,
+       "certos": 1291,
+       "upgrades": 0,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 60.00000000000011,
+       "demanda_contratada_kw": 60
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#12",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_30": 2
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 60,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5345.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.84532095901005,
+       "certos": 1291,
+       "upgrades": 0,
+       "nao_atendidos": 2,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 60.00000000000011,
+       "demanda_contratada_kw": 60
+      },
+      "perdidos_pior_semana": 1
      },
      {
       "origem": "otimizador#13",
@@ -1362,228 +1535,1004 @@
        "entrada": "a4_150",
        "demanda_contratada_kw": 60,
        "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 11473.2,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2746.249730381904,
-       "pico_kw": 60.00000000000003,
-       "demanda_contratada_kw": 60
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#12",
-      "sub": {
-       "agencia": "Istanbul",
-       "carregadores": {
-        "dc_60x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "prioridade"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 11471.7,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2749.269175959332,
-       "pico_kw": 60.00000000000004,
-       "demanda_contratada_kw": 60
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#9",
-      "sub": {
-       "agencia": "Istanbul",
-       "carregadores": {
-        "dc_60x2": 1
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
+        "prioridade": "chegada",
+        "evitar_ponta": true,
         "divisao": "igual"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 11469.3,
+      "nota_estimada": 5260.0,
       "nota_juiz": null,
       "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1293,
+       "atendimento_pct": 99.92266047950503,
+       "certos": 1292,
        "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2754.094576064225,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 60.000000000000064,
+       "demanda_contratada_kw": 60
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#14",
+      "sub": {
+       "agencia": "Istanbul",
+       "carregadores": {
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 60,
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 5260.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.92266047950503,
+       "certos": 1292,
+       "upgrades": 0,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
        "pico_kw": 60.00000000000006,
        "demanda_contratada_kw": 60
       },
-      "perdidos_pior_semana": 0
+      "perdidos_pior_semana": 1
      },
      {
       "origem": "otimizador#15",
       "sub": {
        "agencia": "Istanbul",
        "carregadores": {
-        "ac_7": 1,
         "dc_60x2": 1
        },
        "entrada": "a4_150",
-       "demanda_contratada_kw": 70,
+       "demanda_contratada_kw": 60,
        "politica": {
-        "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
+        "prioridade": "menor_soc",
+        "evitar_ponta": true,
         "divisao": "igual"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 11200.2,
+      "nota_estimada": 4608.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.6906419180201,
+       "certos": 1288,
+       "upgrades": 1,
+       "nao_atendidos": 4,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 60.00000000000006,
+       "demanda_contratada_kw": 60
+      },
+      "perdidos_pior_semana": 2
+     }
+    ]
+   },
+   "final": {
+    "liberado": true,
+    "envios": 0,
+    "vigente": false,
+    "sub_vigente": null,
+    "nota_oculta": null
+   }
+  },
+  "Marrakech": {
+   "semanas_teste": {
+    "melhor_testada_no_juiz": null,
+    "candidatas": [
+     {
+      "origem": "configs/marrakech/otimizada-pesos.json",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_22x2": 5
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1057.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.9430894308943,
+       "certos": 1163,
+       "upgrades": 54,
+       "nao_atendidos": 13,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 97.59999999999977,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 8
+     },
+     {
+      "origem": "otimizador#2",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_22x2": 5
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1057.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.9430894308943,
+       "certos": 1163,
+       "upgrades": 54,
+       "nao_atendidos": 13,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 97.59999999999977,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 8
+     },
+     {
+      "origem": "otimizador#3",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 100,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 609.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
+       "certos": 1217,
+       "upgrades": 13,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2752.296098877803,
-       "pico_kw": 67.00000000000006,
-       "demanda_contratada_kw": 70
+       "energia_ponta_kwh": 0,
+       "pico_kw": 97.00000000000009,
+       "demanda_contratada_kw": 100
       },
       "perdidos_pior_semana": 0
      },
      {
       "origem": "otimizador#4",
       "sub": {
-       "agencia": "Istanbul",
+       "agencia": "Marrakech",
        "carregadores": {
-        "dc_30": 2
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
        },
        "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
+       "demanda_contratada_kw": 90,
        "politica": {
         "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
+        "evitar_ponta": true,
         "divisao": "igual"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 10480.7,
+      "nota_estimada": 601.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
+       "certos": 1213,
+       "upgrades": 17,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2776.8772653083574,
-       "pico_kw": 60.00000000000008,
-       "demanda_contratada_kw": 60
+       "energia_ponta_kwh": 0,
+       "pico_kw": 90.00000000000011,
+       "demanda_contratada_kw": 90
       },
       "perdidos_pior_semana": 0
      },
      {
-      "origem": "otimizador#7",
+      "origem": "otimizador#5",
       "sub": {
-       "agencia": "Istanbul",
+       "agencia": "Marrakech",
        "carregadores": {
-        "dc_30": 2
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
        },
        "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
+       "demanda_contratada_kw": 100,
        "politica": {
         "prioridade": "proxima_retirada",
-        "evitar_ponta": false,
+        "evitar_ponta": true,
         "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 10480.7,
+      "nota_estimada": 595.0,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
+       "certos": 1215,
+       "upgrades": 15,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2776.8772653083574,
-       "pico_kw": 60.00000000000008,
-       "demanda_contratada_kw": 60
-      },
-      "perdidos_pior_semana": 0
-     },
-     {
-      "origem": "otimizador#3",
-      "sub": {
-       "agencia": "Istanbul",
-       "carregadores": {
-        "dc_30": 2
-       },
-       "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
-       "politica": {
-        "prioridade": "menor_soc",
-        "evitar_ponta": false,
-        "divisao": "igual"
-       }
-      },
-      "itens_sem_custo_estimado": [],
-      "nota_estimada": 10467.3,
-      "nota_juiz": null,
-      "metricas_motor": {
-       "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
-       "nao_atendidos": 0,
-       "energia_ponta_kwh": 2803.6874471606825,
-       "pico_kw": 60.00000000000006,
-       "demanda_contratada_kw": 60
+       "energia_ponta_kwh": 0,
+       "pico_kw": 97.00000000000003,
+       "demanda_contratada_kw": 100
       },
       "perdidos_pior_semana": 0
      },
      {
       "origem": "otimizador#6",
       "sub": {
-       "agencia": "Istanbul",
+       "agencia": "Marrakech",
        "carregadores": {
-        "dc_30": 2
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
        },
        "entrada": "a4_150",
-       "demanda_contratada_kw": 60,
+       "demanda_contratada_kw": 90,
        "politica": {
-        "prioridade": "menor_soc",
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 531.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1203,
+       "upgrades": 27,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 90.00000000000004,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#7",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 524.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91869918699187,
+       "certos": 1196,
+       "upgrades": 33,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 90.00000000000004,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#8",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 423.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1229,
+       "upgrades": 1,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 104.00000000000003,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#9",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 395.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1225,
+       "upgrades": 5,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 103.99999999999994,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#10",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 100,
+       "politica": {
+        "prioridade": "proxima_retirada",
         "evitar_ponta": false,
         "divisao": "prioridade"
        }
       },
       "itens_sem_custo_estimado": [],
-      "nota_estimada": 10467.3,
+      "nota_estimada": 182.5,
       "nota_juiz": null,
       "metricas_motor": {
        "atendimento_pct": 100.0,
-       "certos": 1293,
-       "upgrades": 0,
+       "certos": 1215,
+       "upgrades": 15,
        "nao_atendidos": 0,
-       "energia_ponta_kwh": 2803.6874471606825,
-       "pico_kw": 60.00000000000006,
-       "demanda_contratada_kw": 60
+       "energia_ponta_kwh": 824.9044699922032,
+       "pico_kw": 97.00000000000003,
+       "demanda_contratada_kw": 100
       },
       "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#11",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 104.9,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1203,
+       "upgrades": 27,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 852.1789457514225,
+       "pico_kw": 90.00000000000004,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#12",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 99.2,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.91869918699187,
+       "certos": 1196,
+       "upgrades": 33,
+       "nao_atendidos": 1,
+       "energia_ponta_kwh": 849.534352428979,
+       "pico_kw": 90.00000000000004,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 1
+     },
+     {
+      "origem": "otimizador#13",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": -3.7,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 100.0,
+       "certos": 1225,
+       "upgrades": 5,
+       "nao_atendidos": 0,
+       "energia_ponta_kwh": 797.4364426945557,
+       "pico_kw": 103.99999999999994,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 0
+     },
+     {
+      "origem": "otimizador#14",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 90,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": true,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": -25.0,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.7560975609756,
+       "certos": 1177,
+       "upgrades": 50,
+       "nao_atendidos": 3,
+       "energia_ponta_kwh": 0,
+       "pico_kw": 90.00000000000007,
+       "demanda_contratada_kw": 90
+      },
+      "perdidos_pior_semana": 3
+     },
+     {
+      "origem": "otimizador#15",
+      "sub": {
+       "agencia": "Marrakech",
+       "carregadores": {
+        "ac_22x2": 5
+       },
+       "entrada": "a4_150",
+       "demanda_contratada_kw": 110,
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": -157.8,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.9430894308943,
+       "certos": 1163,
+       "upgrades": 54,
+       "nao_atendidos": 13,
+       "energia_ponta_kwh": 2429.621199989078,
+       "pico_kw": 97.59999999999977,
+       "demanda_contratada_kw": 110
+      },
+      "perdidos_pior_semana": 8
+     }
+    ]
+   },
+   "final": {
+    "liberado": true,
+    "envios": 0,
+    "vigente": false,
+    "sub_vigente": null,
+    "nota_oculta": null
+   }
+  },
+  "Zurich": {
+   "semanas_teste": {
+    "melhor_testada_no_juiz": null,
+    "candidatas": [
+     {
+      "origem": "configs/zurich/otimizada-pesos.json",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2990.4,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.30795847750865,
+       "certos": 840,
+       "upgrades": 21,
+       "nao_atendidos": 6,
+       "energia_ponta_kwh": 2055.2622209161987,
+       "pico_kw": 67.00000000000003,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 6
+     },
+     {
+      "origem": "otimizador#2",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2457.5,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.19261822376009,
+       "certos": 841,
+       "upgrades": 19,
+       "nao_atendidos": 7,
+       "energia_ponta_kwh": 2219.0656347634094,
+       "pico_kw": 67.50000000000006,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 5
+     },
+     {
+      "origem": "otimizador#3",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 2048.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.96193771626298,
+       "certos": 834,
+       "upgrades": 24,
+       "nao_atendidos": 9,
+       "energia_ponta_kwh": 2107.350783902581,
+       "pico_kw": 67.50000000000006,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 5
+     },
+     {
+      "origem": "otimizador#4",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_11": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1979.5,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.19261822376009,
+       "certos": 843,
+       "upgrades": 17,
+       "nao_atendidos": 7,
+       "energia_ponta_kwh": 2002.956912073016,
+       "pico_kw": 67.49999999999999,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 5
+     },
+     {
+      "origem": "otimizador#5",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_22x2": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1422.8,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.19261822376009,
+       "certos": 840,
+       "upgrades": 20,
+       "nao_atendidos": 7,
+       "energia_ponta_kwh": 2274.439434508453,
+       "pico_kw": 67.50000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 6
+     },
+     {
+      "origem": "otimizador#6",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_22x2": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1221.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.07727797001154,
+       "certos": 837,
+       "upgrades": 22,
+       "nao_atendidos": 8,
+       "energia_ponta_kwh": 2219.3121179234267,
+       "pico_kw": 67.5000000000001,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 4
+     },
+     {
+      "origem": "otimizador#7",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_11": 1,
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1184.7,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.96193771626298,
+       "certos": 837,
+       "upgrades": 21,
+       "nao_atendidos": 9,
+       "energia_ponta_kwh": 2176.5882282434727,
+       "pico_kw": 67.50000000000001,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 8
+     },
+     {
+      "origem": "otimizador#8",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_11": 1,
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 1113.6,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.96193771626298,
+       "certos": 830,
+       "upgrades": 28,
+       "nao_atendidos": 9,
+       "energia_ponta_kwh": 2220.753122488581,
+       "pico_kw": 67.50000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 8
+     },
+     {
+      "origem": "otimizador#9",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 2,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 616.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.15455594002307,
+       "certos": 840,
+       "upgrades": 11,
+       "nao_atendidos": 16,
+       "energia_ponta_kwh": 2143.3413091472926,
+       "pico_kw": 67.50000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 9
+     },
+     {
+      "origem": "otimizador#10",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 554.7,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.03921568627452,
+       "certos": 826,
+       "upgrades": 24,
+       "nao_atendidos": 17,
+       "energia_ponta_kwh": 2154.6166175610942,
+       "pico_kw": 67.00000000000006,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 9
+     },
+     {
+      "origem": "otimizador#11",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 246.4,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 97.80853517877739,
+       "certos": 829,
+       "upgrades": 19,
+       "nao_atendidos": 19,
+       "energia_ponta_kwh": 1981.115664923183,
+       "pico_kw": 67.00000000000006,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 11
+     },
+     {
+      "origem": "otimizador#12",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_11": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 173.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.26989619377163,
+       "certos": 832,
+       "upgrades": 20,
+       "nao_atendidos": 15,
+       "energia_ponta_kwh": 2133.3879133844107,
+       "pico_kw": 67.5,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 11
+     },
+     {
+      "origem": "otimizador#13",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "dc_30": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "proxima_retirada",
+        "evitar_ponta": false,
+        "divisao": "prioridade"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 110.5,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 99.53863898500576,
+       "certos": 845,
+       "upgrades": 18,
+       "nao_atendidos": 4,
+       "energia_ponta_kwh": 2217.0254294766673,
+       "pico_kw": 67.50000000000003,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 4
+     },
+     {
+      "origem": "otimizador#14",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_11": 1,
+        "ac_7": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": 7.6,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.26989619377163,
+       "certos": 840,
+       "upgrades": 12,
+       "nao_atendidos": 15,
+       "energia_ponta_kwh": 2076.8719238321783,
+       "pico_kw": 67.50000000000001,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 11
+     },
+     {
+      "origem": "otimizador#15",
+      "sub": {
+       "agencia": "Zurich",
+       "carregadores": {
+        "ac_22x2": 1,
+        "dc_60x2": 1
+       },
+       "entrada": "b3_75",
+       "politica": {
+        "prioridade": "chegada",
+        "evitar_ponta": false,
+        "divisao": "igual"
+       }
+      },
+      "itens_sem_custo_estimado": [],
+      "nota_estimada": -384.3,
+      "nota_juiz": null,
+      "metricas_motor": {
+       "atendimento_pct": 98.15455594002307,
+       "certos": 837,
+       "upgrades": 14,
+       "nao_atendidos": 16,
+       "energia_ponta_kwh": 2102.5119122062943,
+       "pico_kw": 67.50000000000004,
+       "demanda_contratada_kw": 0.0
+      },
+      "perdidos_pior_semana": 11
      }
     ]
    },

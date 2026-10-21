@@ -2,67 +2,43 @@
  {
   "demanda": null,
   "entrada": "b3_45",
-  "valor": [
-   95.90100541376644,
-   1157,
-   -60.0
-  ],
-  "hash": "35c16d34ed5f70cd32e52163ff63fdac74cd15b59fd0634bbd963f184fb4fcc8",
+  "valor": -754.9748396912146,
+  "hash": "a7d76c167ae32326993c704e786a29a14a20ea1488eb21e52e674a30362435a6",
   "atendimento_pct": 95.90100541376644
  },
  {
   "demanda": null,
   "entrada": "b3_75",
-  "valor": [
-   100.0,
-   1293,
-   -60.0
-  ],
-  "hash": "74db767d5ea9ae8077858468273bbb94dcb08f2bef9c32597e0348fd9ab0139a",
+  "valor": 6006.561367345821,
+  "hash": "449c55a94b4a4d21ba3ba38ce240edb8a1718ae2996544bdc35d49435454496d",
   "atendimento_pct": 100.0
  },
  {
   "demanda": 30,
   "entrada": "a4_150",
-  "valor": [
-   71.1523588553751,
-   660,
-   -60.0
-  ],
-  "hash": "c4c0369eb37b89ca6c8e00a85a168030d365d29feb671c8bb00875714683e3ee",
+  "valor": -77079.99999999994,
+  "hash": "95b4551923384b9c379c56ff967775abd63b43d1e42ec25589fdcde16722f736",
   "atendimento_pct": 71.1523588553751
  },
  {
   "demanda": 40,
   "entrada": "a4_150",
-  "valor": [
-   94.58623356535189,
-   1118,
-   -60.0
-  ],
-  "hash": "a05735442991ebb1ccb7bfad9c4af795079beb12f919118b83cb452d7c0414d9",
-  "atendimento_pct": 94.58623356535189
+  "valor": -11552.293711300928,
+  "hash": "5d673e8848c86dd800f213e398e1805d7850ddade1b6f9d5b5404ddc06176c17",
+  "atendimento_pct": 94.43155452436194
  },
  {
   "demanda": 50,
   "entrada": "a4_150",
-  "valor": [
-   100.0,
-   1291,
-   -60.0
-  ],
-  "hash": "b67d940d7a4588a99d8f3d1add150439f8a5ec3fb1bf89566339438783e66854",
+  "valor": 4471.5605385851595,
+  "hash": "51a15b4ffc342d0f36027b13ad3ef29df08b3c335a1617fc4095a898c0dade22",
   "atendimento_pct": 100.0
  },
  {
   "demanda": 60,
   "entrada": "a4_150",
-  "valor": [
-   100.0,
-   1293,
-   -60.0
-  ],
-  "hash": "324caa1c23087fee5a6a0fdc64e7f774a2f2573d1228d6dfe350954273696558",
+  "valor": 4386.561367345821,
+  "hash": "fa7f01e2db284b3422d8ce9233ab6e556e9550ac99261596496e982bbdd6ad5a",
   "atendimento_pct": 100.0
  }
 ]

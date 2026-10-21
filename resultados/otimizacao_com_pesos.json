@@ -1,0 +1,170 @@
+{
+ "Istanbul": {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_estimada_publica": 6006.6,
+  "notas_por_semana": [
+   -7774.7,
+   -7643.4,
+   -7411.3,
+   -7164.1
+  ],
+  "melhor_nota_publica_do_ranking": 6006.6,
+  "metricas": {
+   "atendimento_pct": 100.0,
+   "certos": 1293,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "energia_ponta_kwh": 2776.8772653083574,
+   "pico_kw": 60.00000000000008,
+   "demanda_contratada_kw": 0.0
+  },
+  "candidatos": 300,
+  "segundos": 15.1
+ },
+ "Hanoi": {
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_estimada_publica": 3362.2,
+  "notas_por_semana": [
+   -8694.7,
+   -8989.4,
+   -8604.3,
+   -8749.4
+  ],
+  "melhor_nota_publica_do_ranking": 3540.3,
+  "metricas": {
+   "atendimento_pct": 99.91431019708655,
+   "certos": 1164,
+   "upgrades": 2,
+   "nao_atendidos": 1,
+   "energia_ponta_kwh": 2227.590477702014,
+   "pico_kw": 67.50000000000003,
+   "demanda_contratada_kw": 0.0
+  },
+  "candidatos": 443,
+  "segundos": 22.0
+ },
+ "Marrakech": {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 5
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 110
+  },
+  "nota_estimada_publica": 1057.0,
+  "notas_por_semana": [
+   -9921.0,
+   -9927.0,
+   -10334.0,
+   -11421.0
+  ],
+  "melhor_nota_publica_do_ranking": 1057.0,
+  "metricas": {
+   "atendimento_pct": 98.9430894308943,
+   "certos": 1163,
+   "upgrades": 54,
+   "nao_atendidos": 13,
+   "energia_ponta_kwh": 0,
+   "pico_kw": 97.59999999999977,
+   "demanda_contratada_kw": 110
+  },
+  "candidatos": 507,
+  "segundos": 40.7
+ },
+ "Zurich": {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_estimada_publica": 2990.4,
+  "notas_por_semana": [
+   -4829.4,
+   -4372.1,
+   -5859.1,
+   -4599.1
+  ],
+  "melhor_nota_publica_do_ranking": 2990.4,
+  "metricas": {
+   "atendimento_pct": 99.30795847750865,
+   "certos": 840,
+   "upgrades": 21,
+   "nao_atendidos": 6,
+   "energia_ponta_kwh": 2055.2622209161987,
+   "pico_kw": 67.00000000000003,
+   "demanda_contratada_kw": 0.0
+  },
+  "candidatos": 310,
+  "segundos": 11.9
+ },
+ "Bangkok": {
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 3
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_estimada_publica": 2871.0,
+  "notas_por_semana": [
+   270.0,
+   263.0,
+   -227.0,
+   315.0
+  ],
+  "melhor_nota_publica_do_ranking": 2871.0,
+  "metricas": {
+   "atendimento_pct": 99.2619926199262,
+   "certos": 267,
+   "upgrades": 2,
+   "nao_atendidos": 2,
+   "energia_ponta_kwh": 0,
+   "pico_kw": 21.00000000000001,
+   "demanda_contratada_kw": 0.0
+  },
+  "candidatos": 358,
+  "segundos": 4.2
+ }
+}

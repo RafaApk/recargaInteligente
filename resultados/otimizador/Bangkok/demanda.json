@@ -2,34 +2,22 @@
  {
   "demanda": null,
   "entrada": "b3_45",
-  "valor": [
-   100.0,
-   271,
-   -30.0
-  ],
-  "hash": "a2d767a8225a03bcc773ce60fe2dc9e5d29c219b9864e799e92b29ec5c977260",
-  "atendimento_pct": 100.0
+  "valor": 2871.0,
+  "hash": "5268390b81713e7e568b60289d0dd45beb500b1b2203758f402f0cca0f147567",
+  "atendimento_pct": 99.2619926199262
  },
  {
   "demanda": null,
   "entrada": "b3_75",
-  "valor": [
-   100.0,
-   271,
-   -30.0
-  ],
-  "hash": "74dea6dc1d86d4067e84f155f577a231b5a203fa2a8559f389c8bdecf0bdd74a",
-  "atendimento_pct": 100.0
+  "valor": -2129.0,
+  "hash": "2030eebe4176bbbc0765d482376acbe2400de401789566b65fc8cc5f05c0896c",
+  "atendimento_pct": 99.2619926199262
  },
  {
   "demanda": 30,
   "entrada": "a4_150",
-  "valor": [
-   100.0,
-   271,
-   -30.0
-  ],
-  "hash": "825063c9ef8bf0bf73876ca97950ef0fab12eea323ab76ea307bee02326f7b1a",
-  "atendimento_pct": 100.0
+  "valor": -3689.0,
+  "hash": "5c0530bc33879f87d4b67ccc2aedc90b1815c30ad4613a0b480621216a25fcec",
+  "atendimento_pct": 99.2619926199262
  }
 ]
