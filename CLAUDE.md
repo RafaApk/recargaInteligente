@@ -130,6 +130,8 @@ Placar às 17:10 UTC: total 9909,93; saldo **920 m7Coins**; 2 agências ainda a 
 
 **Pronta para enviar depois (Zurich):** `configs/zurich/conservadora-pronta.json` (ac_7×2 + dc_60x2, b3_75, proxima_retirada, prioridade) — melhor sob estresse de potência; reenvio custa 80.
 
+**Pronta para enviar depois (Vienna):** `configs/vienna/maxima-pronta.json` (4× ac_7, a4_150, 30 kW, evitar_ponta) — máximo teórico 11.900 público, sem margem (3× ac_7 desaba); reenvio custa 80.
+
 ## Pendências
 
 1. **Evento de Marrakech** (`["corte","Marrakech",31680,34560,0.7]`, carta "Pedido da concessionária"): nenhum fator
