@@ -1,0 +1,13 @@
+{
+ "agencia": "Vienna",
+ "carregadores": {
+  "ac_7": 5
+ },
+ "entrada": "a4_150",
+ "demanda_contratada_kw": 40,
+ "politica": {
+  "prioridade": "proxima_retirada",
+  "evitar_ponta": true,
+  "divisao": "igual"
+ }
+}
