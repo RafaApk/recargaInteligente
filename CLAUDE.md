@@ -97,23 +97,44 @@ Kit de uma agência nova: baixe pelo site, coloque em `data/<Agencia>` e rode `p
 - `multiprocessing` precisa funcionar no Windows (spawn): workers em funções de módulo.
 - Commits em português, estilo `feat(area): ...`/`fix(area): ...`. Branch de trabalho: `design/recarga-inteligente`.
 
-## Estado atual (21/10/2026, Neblina)
+## Estado atual (21/10/2026, fase Clara — após H4)
 
-- Motor **bate com o juiz** em Bangkok: atendimento, pico, energia, potência e plugados idênticos em 2688 janelas.
-  Única diferença: série `fila_max` (o juiz só registra a fila em janelas onde ela aumenta) — não afeta a nota.
-- Pesos já conhecidos (Bangkok): **energia na ponta −0,5/kWh**, **demanda −2/kW**, **obra do `ac_7` = 250**,
-  `dc_60x2` ≈ 3800 a mais que `dc_30`; cliente perdido é muito caro; `divisao` não mudou a nota em Bangkok.
-  Ainda confundidos: peso do cliente atendido × custo do `dc_30` (falta testar configs com perdas, ex. `dc_30` ×2, `ac_7` ×2).
-- Bangkok: 1× `dc_30`, `b3_45`, `proxima_retirada`, `evitar_ponta` → 100%, **nota 565**.
-- Istanbul (4 vagas, 24h) e Hanoi (6 vagas) liberadas; envio final ainda não feito. Candidatas em `configs/` e `melhores-resultados.json`.
+**Pesos oficiais (GET /catalogo, iguais aos que inferimos na Neblina)** — `pesos_estimados/pesos_bangkok_confirmados.json`
+e `kit_kickoff/dados/catalogo.json`:
+- certo **+15**, upgrade **+8**, não atendido **−200**, energia na ponta **−0,5/kWh**, demanda **−2/kW**, infraestrutura **−1/ponto**.
+- Obra: ac_7 250, ac_11 1100, ac_22x2 1500, dc_30 3500, dc_60x2 7300, dc_120x2 15800;
+  b3_75 5000, a4_150 6500, a4_225 8200, a4_300 10000, se_500 18800, se_750 24400, se_1000 30000, se_1500 41200, se_2000 52500.
+- Mesmos pesos em todas as agências liberadas.
 
-## Pendências conhecidas (revisão final)
+**Fidelidade do motor:** reproduz exatamente as notas do juiz (38 testes em Bangkok, Istanbul 7095=7095; Hanoi e Zurich
+com erro < 1%). Corrigido: empate exato de km em `menor_soc` (arredondamento do ponto flutuante).
+`fila_max` difere só na medição. **Eventos (etapa 7): implementação provisória NÃO verificada** (ver pendências).
 
-1. `objetivo.chave_lexicografica` ignora energia na ponta, demanda e ampliação de entrada → sem pesos, o otimizador escolhe `evitar_ponta=false`. Corrigir a chave para `(atendimento, certos, -ponta, -kW, -entrada, -demanda)`.
-2. `operacao.Monitor` iniciado depois da liberação não baixa kits nem grava eventos já presentes no status.
-3. Rodar `python -m recarga.fidelidade` (grátis) para confirmar a ordem de plug em T0 (`motor.PLUG_T0_EM_LOTE`) e devoluções no mesmo minuto.
-4. Falta CLI guardado para envio final (`python -m recarga.juiz final AG SUB.json`) e checagem de vigentes em H7:00.
-5. Na fase Clara, recarregar `GET /catalogo` periodicamente (pesos podem ser ajustados).
-6. Etapa 7 do motor (eventos ao vivo) só quando o 1º evento for anunciado — formato de `params` vem no anúncio.
+**Lição principal:** a obra domina a nota. AC barato em quantidade costuma vencer DC caro
+(Bangkok: 3× ac_7 proxima_retirada ≈ 3100; 1× dc_30 = 565). A nota final usa **só as 4 semanas ocultas** —
+escolher pela **pior semana**, não pela melhor média (Zurich caiu de 3003 público para 132 oculto: perdas concentradas).
+
+**Envios finais (vigentes):**
+
+| Agência | Config | Nota pública (juiz) | Nota oculta (placar) |
+|---|---|---|---|
+| Istanbul | dc_60x2, b3_75, proxima_retirada, evitar_ponta, igual | 7095 | 6685 |
+| Hanoi | ac_7×2 + dc_60x2, b3_75, proxima_retirada, sem evitar_ponta, igual | 3519 | 3093 |
+| Zurich | ac_7 + dc_60x2, b3_75 (existente), proxima_retirada, sem evitar_ponta, prioridade | 3003 | 132 |
+| Marrakech | **sem envio** (evento de corte não modelado; teste com ac_22x2×5/a4_150/110 deu −3759) | — | — |
+
+Placar às 17:10 UTC: total 9909,93; saldo **920 m7Coins**; 2 agências ainda a liberar. Reenvio final custa 80/160/320.
+
+**Em andamento:** `resultados/exaustivo.py` (busca exaustiva com nota robusta pela pior semana) → `resultados/exaustivo.json`.
+
+## Pendências
+
+1. **Evento de Marrakech** (`["corte","Marrakech",31680,34560,0.7]`, carta "Pedido da concessionária"): nenhum fator
+   simples (limite × f na janela) reproduz o juiz. Precisa da série do juiz (`detalhe=completo`, 30 m7Coins) para
+   descobrir a regra. Nas semanas ocultas ocorre evento equivalente em horário desconhecido.
+2. Reavaliar Zurich e Hanoi com a busca exaustiva/robusta e decidir reenvio (80 m7Coins cada).
+3. Marrakech: fazer o 1º envio final (grátis) — agência sem envio vale 0.
+4. `objetivo.chave_lexicografica` ignora ponta/demanda/entrada (irrelevante agora que há pesos oficiais).
+5. `operacao.Monitor` não recupera estado inicial; falta CLI guardado de envio final; recarregar catálogo na Clara.
 
 Detalhes da execução e decisões: `docs/superpowers/` e o ledger local `.superpowers/sdd/.../progress.md` (git-ignored, só na máquina do Caio).
