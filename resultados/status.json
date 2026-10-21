@@ -9,9 +9,9 @@
   "n": 5,
   "rotulo": "H5"
  },
- "agora": "2026-10-21T18:43:58.673839+00:00",
+ "agora": "2026-10-21T18:54:19.287350+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
- "saldo": 660,
+ "saldo": 610,
  "agencias": {
   "Bangkok": {
    "aberta": true,
@@ -36,7 +36,7 @@
   },
   "Marrakech": {
    "aberta": true,
-   "cooldown_teste_ate": "2026-10-21T18:44:30.464280+00:00",
+   "cooldown_teste_ate": null,
    "cooldown_final_ate": "2026-10-21T18:58:55.443639+00:00",
    "envios": 1,
    "vigente": true
@@ -50,10 +50,10 @@
   },
   "Vienna": {
    "aberta": true,
-   "cooldown_teste_ate": null,
-   "cooldown_final_ate": null,
-   "envios": 0,
-   "vigente": false
+   "cooldown_teste_ate": "2026-10-21T18:59:12.416520+00:00",
+   "cooldown_final_ate": "2026-10-21T19:09:18.718941+00:00",
+   "envios": 1,
+   "vigente": true
   }
  },
  "cartas": [

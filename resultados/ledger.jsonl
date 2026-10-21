@@ -6,3 +6,4 @@
 {"t": "2026-10-21T18:19:21.001635Z", "rota": "teste", "agencia": "Marrakech", "hash": "a9382a08c7427ff29f2c66558ebc0c4835ed5a0dcdc6a0b08360857c1cd3ea12", "taxa": 20, "saldo": 870, "autor": "Caio"}
 {"t": "2026-10-21T18:43:57.207693Z", "rota": "final", "agencia": "Istanbul", "hash": "301674c3b6b4a6b72b0dc427f0ee831c7675a553fa2b997df508a42e53a8ca34", "taxa": 80, "saldo": 740, "autor": "Caio"}
 {"t": "2026-10-21T18:43:58.618651Z", "rota": "final", "agencia": "Hanoi", "hash": "eb2719d64ca2af809b180e80c7f0b813a6311faada4a7d5d09a17c82c2746d69", "taxa": 80, "saldo": 660, "autor": "Caio"}
+{"t": "2026-10-21T18:54:18.050195Z", "rota": "teste", "agencia": "Vienna", "hash": "66ea514644937a9dfa346dc621bb65fd33c44d80db01d4b555ba0c174d7a7316", "taxa": 50, "saldo": 610, "autor": "Caio"}
