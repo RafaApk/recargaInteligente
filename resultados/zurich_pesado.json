@@ -1,0 +1,969 @@
+[
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 2341.2,
+  "nota_pot90": 1188.0,
+  "nota_pot80": -2155.8,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 14,
+   "pot80": 29
+  },
+  "pior": -2155.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 2457.5,
+  "nota_pot90": 1995.7,
+  "nota_pot80": -2409.9,
+  "perdidos": {
+   "normal": 7,
+   "pot90": 9,
+   "pot80": 29
+  },
+  "pior": -2409.9
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 2209.1,
+  "nota_pot90": 540.5,
+  "nota_pot80": -2449.8,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 17,
+   "pot80": 30
+  },
+  "pior": -2449.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1709.7,
+  "nota_pot90": 709.6,
+  "nota_pot80": -2452.0,
+  "perdidos": {
+   "normal": 13,
+   "pot90": 17,
+   "pot80": 31
+  },
+  "pior": -2452.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1184.7,
+  "nota_pot90": 454.1,
+  "nota_pot80": -2464.1,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 12,
+   "pot80": 25
+  },
+  "pior": -2464.1
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1422.8,
+  "nota_pot90": 758.4,
+  "nota_pot80": -2628.1,
+  "perdidos": {
+   "normal": 7,
+   "pot90": 10,
+   "pot80": 25
+  },
+  "pior": -2628.1
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 2048.3,
+  "nota_pot90": 243.6,
+  "nota_pot80": -2750.3,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 17,
+   "pot80": 30
+  },
+  "pior": -2750.3
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1531.9,
+  "nota_pot90": 142.0,
+  "nota_pot80": -2817.6,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 15,
+   "pot80": 28
+  },
+  "pior": -2817.6
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 2990.4,
+  "nota_pot90": 2013.3,
+  "nota_pot80": -2890.4,
+  "perdidos": {
+   "normal": 6,
+   "pot90": 10,
+   "pot80": 32
+  },
+  "pior": -2890.4
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1979.5,
+  "nota_pot90": 538.9,
+  "nota_pot80": -2921.0,
+  "perdidos": {
+   "normal": 7,
+   "pot90": 13,
+   "pot80": 28
+  },
+  "pior": -2921.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 722.8,
+  "nota_pot90": 58.4,
+  "nota_pot80": -3328.1,
+  "perdidos": {
+   "normal": 7,
+   "pot90": 10,
+   "pot80": 25
+  },
+  "pior": -3328.1
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1214.9,
+  "nota_pot90": 465.9,
+  "nota_pot80": -3460.2,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 13,
+   "pot80": 30
+  },
+  "pior": -3460.2
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 1709.7,
+  "nota_pot90": 561.2,
+  "nota_pot80": -3714.4,
+  "perdidos": {
+   "normal": 13,
+   "pot90": 18,
+   "pot80": 37
+  },
+  "pior": -3714.4
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 347.4,
+  "nota_pot90": -72.9,
+  "nota_pot80": -3747.5,
+  "perdidos": {
+   "normal": 14,
+   "pot90": 16,
+   "pot80": 32
+  },
+  "pior": -3747.5
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 1113.6,
+  "nota_pot90": -167.4,
+  "nota_pot80": -4060.7,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 15,
+   "pot80": 32
+  },
+  "pior": -4060.7
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 514.9,
+  "nota_pot90": -234.1,
+  "nota_pot80": -4160.2,
+  "perdidos": {
+   "normal": 9,
+   "pot90": 13,
+   "pot80": 30
+  },
+  "pior": -4160.2
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 550.5,
+  "nota_pot90": -1093.1,
+  "nota_pot80": -4173.5,
+  "perdidos": {
+   "normal": 18,
+   "pot90": 25,
+   "pot80": 39
+  },
+  "pior": -4173.5
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1472.1,
+  "nota_pot90": -536.5,
+  "nota_pot80": -4297.4,
+  "perdidos": {
+   "normal": 10,
+   "pot90": 19,
+   "pot80": 36
+  },
+  "pior": -4297.4
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 614.1,
+  "nota_pot90": -769.8,
+  "nota_pot80": -4523.0,
+  "perdidos": {
+   "normal": 12,
+   "pot90": 18,
+   "pot80": 35
+  },
+  "pior": -4523.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 554.7,
+  "nota_pot90": 282.9,
+  "nota_pot80": -4539.1,
+  "perdidos": {
+   "normal": 17,
+   "pot90": 18,
+   "pot80": 39
+  },
+  "pior": -4539.1
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 461.5,
+  "nota_pot90": -1741.3,
+  "nota_pot80": -4604.8,
+  "perdidos": {
+   "normal": 18,
+   "pot90": 28,
+   "pot80": 41
+  },
+  "pior": -4604.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 1040.8,
+  "nota_pot90": -363.5,
+  "nota_pot80": -4615.8,
+  "perdidos": {
+   "normal": 12,
+   "pot90": 18,
+   "pot80": 37
+  },
+  "pior": -4615.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 644.5,
+  "nota_pot90": -1169.3,
+  "nota_pot80": -4723.9,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 24,
+   "pot80": 40
+  },
+  "pior": -4723.9
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 1221.3,
+  "nota_pot90": -608.2,
+  "nota_pot80": -4818.8,
+  "perdidos": {
+   "normal": 8,
+   "pot90": 16,
+   "pot80": 35
+  },
+  "pior": -4818.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 616.3,
+  "nota_pot90": -2407.5,
+  "nota_pot80": -4898.7,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 30,
+   "pot80": 41
+  },
+  "pior": -4898.7
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 447.4,
+  "nota_pot90": -938.0,
+  "nota_pot80": -5070.3,
+  "perdidos": {
+   "normal": 4,
+   "pot90": 10,
+   "pot80": 28
+  },
+  "pior": -5070.3
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 173.3,
+  "nota_pot90": 486.1,
+  "nota_pot80": -5375.5,
+  "perdidos": {
+   "normal": 15,
+   "pot90": 13,
+   "pot80": 39
+  },
+  "pior": -5375.5
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 521.3,
+  "nota_pot90": -1308.2,
+  "nota_pot80": -5518.8,
+  "perdidos": {
+   "normal": 8,
+   "pot90": 16,
+   "pot80": 35
+  },
+  "pior": -5518.8
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 874.3,
+  "nota_pot90": -1545.3,
+  "nota_pot80": -5565.7,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 27,
+   "pot80": 45
+  },
+  "pior": -5565.7
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": -8.0,
+  "nota_pot90": -1624.0,
+  "nota_pot80": -5827.3,
+  "perdidos": {
+   "normal": 15,
+   "pot90": 22,
+   "pot80": 41
+  },
+  "pior": -5827.3
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "dc_30": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 110.5,
+  "nota_pot90": -786.7,
+  "nota_pot80": -6079.0,
+  "perdidos": {
+   "normal": 4,
+   "pot90": 8,
+   "pot80": 31
+  },
+  "pior": -6079.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 246.4,
+  "nota_pot90": -707.6,
+  "nota_pot80": -6206.5,
+  "perdidos": {
+   "normal": 19,
+   "pot90": 23,
+   "pot80": 48
+  },
+  "pior": -6206.5
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 24.5,
+  "nota_pot90": -2587.7,
+  "nota_pot80": -6584.0,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 28,
+   "pot80": 46
+  },
+  "pior": -6584.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": -6.4,
+  "nota_pot90": -2337.0,
+  "nota_pot80": -6680.9,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 26,
+   "pot80": 46
+  },
+  "pior": -6680.9
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7.6,
+  "nota_pot90": -2237.4,
+  "nota_pot80": -6885.4,
+  "perdidos": {
+   "normal": 15,
+   "pot90": 25,
+   "pot80": 46
+  },
+  "pior": -6885.4
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 1002.0,
+  "nota_pot90": -3625.0,
+  "nota_pot80": -10222.0,
+  "perdidos": {
+   "normal": 20,
+   "pot90": 41,
+   "pot80": 71
+  },
+  "pior": -10222.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 480.0,
+  "nota_pot90": -4507.0,
+  "nota_pot80": -11861.0,
+  "perdidos": {
+   "normal": 21,
+   "pot90": 44,
+   "pot80": 77
+  },
+  "pior": -11861.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 604.0,
+  "nota_pot90": -4037.0,
+  "nota_pot80": -12195.0,
+  "perdidos": {
+   "normal": 16,
+   "pot90": 37,
+   "pot80": 74
+  },
+  "pior": -12195.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 130.0,
+  "nota_pot90": -3637.0,
+  "nota_pot80": -12524.0,
+  "perdidos": {
+   "normal": 19,
+   "pot90": 36,
+   "pot80": 76
+  },
+  "pior": -12524.0
+ },
+ {
+  "sub": {
+   "agencia": "Zurich",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 238.0,
+  "nota_pot90": -5284.0,
+  "nota_pot80": -13650.0,
+  "perdidos": {
+   "normal": 19,
+   "pot90": 44,
+   "pot80": 82
+  },
+  "pior": -13650.0
+ }
+]
