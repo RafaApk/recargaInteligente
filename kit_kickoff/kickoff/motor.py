@@ -7,6 +7,7 @@ Ordem no mesmo minuto (regulamento 5.1): devolução -> abertura/ponta/eventos -
 -> retirada -> fechamento (constantes PRIO_*).
 """
 import heapq
+import math
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -90,6 +91,11 @@ class Motor:
                 self.pontos.append(Ponto(f"{modelo_id}-{i}", cenario.carregadores[modelo_id]))
         self.eventos = eventos
         self._abertura_t0 = False  # abertura extra em T0 para plugar a fila inicial (entrar_patio)
+        # proxima_retirada (6.3.3): contratos em ordem de horário, os já processados (retirados ou
+        # perdidos) e um ponteiro por rank para o primeiro contrato compatível ainda não processado
+        self._contratos_ordem = sorted(cenario.contratos, key=lambda c: (c.retirada_t, c.id))
+        self._processados: set = set()
+        self._ptr_reserva: dict = {}
 
     # ---------- pronto: laço de eventos ----------
 
@@ -222,6 +228,7 @@ class Motor:
 
     def on_retirada(self, contrato_id: str, t: float) -> None:
         self.avancar(t)
+        self._processados.add(contrato_id)  # sai da "próxima reserva" (proxima_retirada), atendido ou não
         c = self.contratos[contrato_id]
         v = self.escolher_carro(c, t)
         if v is None:
@@ -303,8 +310,17 @@ class Motor:
             return (v.entrou_fila_t, v.id)
         if pr == "menor_soc":
             return (v.modelo.autonomia_km * v.soc / 100.0, v.id)
-        # TODO(etapa 6): proxima_retirada
-        return (v.id,)
+        r = self._proxima_reserva(v.rank)
+        return (math.inf if r is None else r, -v.soc, v.id)
+
+    def _proxima_reserva(self, rank: int) -> Optional[float]:
+        """Horário do primeiro contrato ainda não retirado com categoria <= `rank` (None se não houver)."""
+        lista = self._contratos_ordem
+        i = self._ptr_reserva.get(rank, 0)
+        while i < len(lista) and (lista[i].rank > rank or lista[i].id in self._processados):
+            i += 1
+        self._ptr_reserva[rank] = i
+        return lista[i].retirada_t if i < len(lista) else None
 
     def _plugados_ordenados(self, t: float) -> list:
         """Plugados que ainda carregam (SOC abaixo do alvo), na ordem da `prioridade`."""
