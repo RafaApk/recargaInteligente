@@ -1,0 +1,10 @@
+[
+ {"agencia": "Bangkok", "carregadores": {"ac_7": 2, "dc_30": 1}, "entrada": "b3_45",
+  "politica": {"prioridade": "menor_soc", "evitar_ponta": false, "divisao": "igual"}},
+ {"agencia": "Bangkok", "carregadores": {"dc_60x2": 2, "ac_22x2": 1}, "entrada": "b3_45",
+  "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "prioridade"}},
+ {"agencia": "Bangkok", "carregadores": {"dc_60x2": 2, "ac_22x2": 1}, "entrada": "b3_75",
+  "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "prioridade"}},
+ {"agencia": "Bangkok", "carregadores": {"dc_60x2": 3}, "entrada": "a4_150", "demanda_contratada_kw": 90,
+  "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "prioridade"}}
+]
