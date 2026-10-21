@@ -9,9 +9,9 @@
   "n": 4,
   "rotulo": "H4"
  },
- "agora": "2026-10-21T16:54:16.410373+00:00",
+ "agora": "2026-10-21T17:07:21.678446+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
- "saldo": 940,
+ "saldo": 920,
  "agencias": {
   "Bangkok": {
    "aberta": true,
@@ -23,20 +23,20 @@
   "Istanbul": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T17:01:14.815177+00:00",
+   "cooldown_final_ate": null,
    "envios": 1,
    "vigente": true
   },
   "Hanoi": {
    "aberta": true,
-   "cooldown_teste_ate": "2026-10-21T16:58:45.672419+00:00",
-   "cooldown_final_ate": null,
-   "envios": 0,
-   "vigente": false
+   "cooldown_teste_ate": null,
+   "cooldown_final_ate": "2026-10-21T17:22:21.118924+00:00",
+   "envios": 1,
+   "vigente": true
   },
   "Marrakech": {
    "aberta": true,
-   "cooldown_teste_ate": "2026-10-21T16:59:07.005150+00:00",
+   "cooldown_teste_ate": null,
    "cooldown_final_ate": null,
    "envios": 0,
    "vigente": false
