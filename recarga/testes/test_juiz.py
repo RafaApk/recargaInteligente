@@ -41,9 +41,15 @@ class ClienteFalso:
         self.chamadas_outras.append("catalogo")
         return {"carregadores": []}
 
-    def baixar_kit(self, ag, destino=None):
-        self.chamadas_outras.append(("kit", ag, destino))
-        return Path(destino) / ag
+    def _req(self, metodo, caminho, corpo=None):
+        """Kit: zip mínimo em base64, como o API Gateway devolve."""
+        import base64, io, zipfile
+        ag = caminho.split("/")[2]
+        self.chamadas_outras.append(("kit", ag))
+        b = io.BytesIO()
+        with zipfile.ZipFile(b, "w") as z:
+            z.writestr(f"{ag}/agencias.md", "x")
+        return base64.b64encode(b.getvalue())
 
     def teste(self, ag, sub, detalhe="placar", salvar=None):
         self.chamadas_teste.append((ag, sub, detalhe))
@@ -447,7 +453,8 @@ class Rotas(Base):
         self.assertEqual(self.juiz.catalogo(), {"carregadores": []})
         self.assertEqual(self.juiz.placar()["fase"], "neblina")
         self.assertEqual(self.juiz.kit("Tokyo"), self.tmp_dados / "Tokyo")
-        self.assertIn(("kit", "Tokyo", self.tmp_dados), self.falso.chamadas_outras)
+        self.assertIn(("kit", "Tokyo"), self.falso.chamadas_outras)
+        self.assertEqual((self.tmp_dados / "Tokyo" / "agencias.md").read_text(), "x")
 
 
 class LimitadorTeste(unittest.TestCase):
@@ -501,3 +508,21 @@ class Env(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExtrairKit(unittest.TestCase):
+    def _zip(self):
+        import io, zipfile
+        b = io.BytesIO()
+        with zipfile.ZipFile(b, "w") as z:
+            z.writestr("Ag/agencias.md", "x")
+        return b.getvalue()
+
+    def test_zip_cru_e_base64(self):
+        import base64
+        from recarga.juiz import extrair_kit
+        for corpo in (self._zip(), base64.b64encode(self._zip())):
+            d = Path(tempfile.mkdtemp())
+            self.addCleanup(shutil.rmtree, d, ignore_errors=True)
+            extrair_kit(corpo, d)
+            self.assertEqual((d / "Ag" / "agencias.md").read_text(), "x")

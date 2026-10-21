@@ -4,11 +4,14 @@ Tudo que gasta m7Coins passa por aqui: valida localmente, exige `confirmar=True`
 reserva de saldo, evita cobrar duas vezes o mesmo teste (cache por hash) e espera cooldown/rate limit.
 Arquivos gerados em `raiz` (padrão `resultados/`): status.json, ledger.jsonl, finais.jsonl, juiz/<ag>/<hash>_<detalhe>.json.
 """
+import base64
 import importlib
+import io
 import json
 import os
 import sys
 import time
+import zipfile
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,6 +46,21 @@ ESPERA_RATE_LIMIT = 15.0
 IDADE_STATUS_S = 30.0
 BANGKOK = "Bangkok"
 
+
+
+def extrair_kit(corpo: bytes, destino: Path) -> Path:
+    """Extrai o zip do kit em `destino`, aceitando o corpo cru ou em base64; recusa caminhos fora de `destino`."""
+    if not corpo.startswith(b"PK"):
+        corpo = base64.b64decode(corpo.strip())
+    destino = Path(destino)
+    destino.mkdir(parents=True, exist_ok=True)
+    raiz = destino.resolve()
+    with zipfile.ZipFile(io.BytesIO(corpo)) as z:
+        for n in z.namelist():
+            if not (raiz / n).resolve().is_relative_to(raiz):
+                raise ErroApi(0, "zip_invalido", f"caminho suspeito no zip: {n}")
+        z.extractall(destino)
+    return destino
 
 class Recusado(Exception):
     """Trava local: a chamada nem chegou à rede."""
@@ -182,7 +200,9 @@ class Juiz:
         return self._chamar(self.cliente._json, "GET", "/placar")
 
     def kit(self, ag: str) -> Path:
-        return self._chamar(self.cliente.baixar_kit, ag, self.dados)
+        """Baixa e extrai o kit. O API Gateway pode devolver o zip em base64 ('UEsDB...')."""
+        corpo = self._chamar(self.cliente._req, "GET", f"/agencias/{ag}/kit")
+        return extrair_kit(corpo, self.dados) / ag
 
     def eventos(self, ag: str) -> list:
         """Params dos eventos ativos da agência, do último status salvo em disco."""
