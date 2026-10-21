@@ -44,6 +44,26 @@ class Ponta636(unittest.TestCase):
         self.assertEqual(m["energia_ponta_kwh"], 0.0)
         self.assertAlmostEqual(apoio.fim_plug(res, SEG_17H), SEG_17H + 240 + 51 * 0.43 / 11 * 60, delta=0.5)
 
+    def test_6_3_6_fecha_20h_retirada_19h30(self):
+        # 6.3.6: agência que fecha às 20:00, retirada Ouro às 19:30. Sem evitar_ponta o MG4 (17:00, 29%)
+        # está pronto às ~19:00 e sai; com evitar_ponta está perto de 55% e o cliente é perdido
+        ate_20h = [(8 * 60, 20 * 60)] * 7
+        ret = SEG_17H + 150
+        for evitar, atendido in ((False, True), (True, False)):
+            with self.subTest(evitar_ponta=evitar):
+                frota = [apoio.veiculo("mg4", MG4, "em_contrato", devolucao_t=SEG_17H, soc_devolucao=29.0)]
+                cen = apoio.cenario(frota, [apoio.contrato("c1", "Ouro", ret)], horario=ate_20h)
+                mot = apoio.motor(cen, {"ac_22x2": 1}, politica={"evitar_ponta": evitar})
+                res = mot.rodar()
+                if atendido:
+                    self.assertEqual([(r.veiculo_id, r.t) for r in res.retiradas], [("mg4", ret)])
+                    self.assertAlmostEqual(res.retiradas[0].soc, 80.0, places=9)
+                else:
+                    self.assertEqual(res.nao_atendidos, [ret])
+                    self.assertAlmostEqual(mot.veiculos["mg4"].soc, 80.0, places=9)
+                    # termina às ~22:00 com a agência fechada e segura a saída até 08:00 de terça
+                    self.assertEqual(apoio.fim_plug(res, SEG_17H), TER_08H)
+
     def test_sabado_sem_ponta(self):
         sab_17h = 6 * DIA + 17 * 60
         _, res, _ = mg4_29(evitar_ponta=True, devolucao_t=sab_17h)

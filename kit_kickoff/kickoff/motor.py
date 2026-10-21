@@ -23,6 +23,11 @@ PRIO_FECHAMENTO = 4
 
 EPS = 1e-9  # tolerância de SOC (%) nas comparações com o alvo
 
+# Fila de T0 com a agência aberta: True = plugada de uma vez, na ordem da política (leitura de 6.3.3,
+# "entram todos no mesmo instante"); False = carro a carro em ordem de id, como `_agendar_inicio` chama
+# `entrar_patio`. A CONFIRMAR no juiz com comparar.py numa agência aberta no domingo às 18:00.
+PLUG_T0_EM_LOTE = True
+
 
 @dataclass(eq=False)
 class Veiculo:
@@ -265,7 +270,7 @@ class Motor:
             v.na_fila = True
             v.entrou_fila_t = t
             self.fila.append(v)
-        if not self.trace:
+        if PLUG_T0_EM_LOTE and not self.trace:
             # Ainda em _agendar_inicio (o trace só começa no fim dele): a fila de T0 entra toda no
             # mesmo instante (6.3.3) e é plugada de uma vez, na ordem da política, numa abertura em T0.
             if v.na_fila and self.aberta and not self._abertura_t0:
@@ -421,7 +426,13 @@ class Motor:
         limite = min(v.alvo, (i + 1) * 5.0)
         v.soc_limite = limite
         v.token += 1
-        if v.potencia_kw <= 0 or v.soc >= v.alvo - EPS:
+        if v.soc >= v.alvo - EPS:
+            # Chegou ao alvo, mas outro evento no mesmo instante recalculou antes e invalidou o
+            # 'fim_recarga' dele: reagenda em t para desplugar agora (5.2), na ordem de 5.1.
+            if v.plugado and self.aberta:
+                self.agendar(t, PRIO_FIM_RECARGA, "fim_recarga", v.id, v.token)
+            return
+        if v.potencia_kw <= 0:
             return
         dt = (limite - v.soc) / 100.0 * v.modelo.bateria_kwh / v.potencia_kw * 60.0
         self.agendar(t + dt, PRIO_FIM_RECARGA, "fim_recarga", v.id, v.token)
