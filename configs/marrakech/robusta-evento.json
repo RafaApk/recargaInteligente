@@ -1,0 +1,15 @@
+{
+ "agencia": "Marrakech",
+ "carregadores": {
+  "ac_22x2": 2,
+  "ac_7": 5,
+  "dc_30": 1
+ },
+ "entrada": "a4_150",
+ "demanda_contratada_kw": 110,
+ "politica": {
+  "prioridade": "proxima_retirada",
+  "evitar_ponta": true,
+  "divisao": "igual"
+ }
+}

@@ -1,0 +1,603 @@
+[
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2476.0,
+  "pior_cenario": -5614.0,
+  "media_cenarios": 437.8
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 2,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3861.0,
+  "pior_cenario": -5781.0,
+  "media_cenarios": 1840.4
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 1,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3282.0,
+  "pior_cenario": -5827.0,
+  "media_cenarios": 724.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3298.0,
+  "pior_cenario": -5902.0,
+  "media_cenarios": 710.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2352.0,
+  "pior_cenario": -6243.0,
+  "media_cenarios": 551.5
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3089.0,
+  "pior_cenario": -6319.0,
+  "media_cenarios": 911.8
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 2,
+    "ac_7": 4,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3060.0,
+  "pior_cenario": -6416.0,
+  "media_cenarios": 1203.9
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 2,
+    "ac_7": 4,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3576.0,
+  "pior_cenario": -6463.0,
+  "media_cenarios": 700.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_22x2": 1,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3161.0,
+  "pior_cenario": -6481.0,
+  "media_cenarios": 1140.4
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 3,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2582.0,
+  "pior_cenario": -6527.0,
+  "media_cenarios": 24.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2629.8,
+  "pior_cenario": -6602.6,
+  "media_cenarios": -11.9
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 2,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3052.1,
+  "pior_cenario": -6642.6,
+  "media_cenarios": 950.2
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 1,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2348.4,
+  "pior_cenario": -6742.3,
+  "media_cenarios": -246.0
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 3,
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2952.0,
+  "pior_cenario": -6760.0,
+  "media_cenarios": 1032.8
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2462.0,
+  "pior_cenario": -7004.6,
+  "media_cenarios": 220.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 3,
+    "ac_22x2": 1,
+    "ac_7": 4,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2360.0,
+  "pior_cenario": -7116.0,
+  "media_cenarios": 503.9
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_22x2": 1,
+    "ac_7": 4,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2876.0,
+  "pior_cenario": -7163.0,
+  "media_cenarios": 0.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 4,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2461.0,
+  "pior_cenario": -7181.0,
+  "media_cenarios": 440.4
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_22x2": 1,
+    "ac_7": 5,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2352.1,
+  "pior_cenario": -7342.6,
+  "media_cenarios": 250.2
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 3,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3125.0,
+  "pior_cenario": -7379.0,
+  "media_cenarios": 460.1
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 2,
+    "ac_7": 4,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2649.1,
+  "pior_cenario": -7450.6,
+  "media_cenarios": -295.7
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 2,
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3032.0,
+  "pior_cenario": -7554.0,
+  "media_cenarios": 74.6
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3019.0,
+  "pior_cenario": -7957.0,
+  "media_cenarios": -1839.1
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_22x2": 2,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2425.0,
+  "pior_cenario": -8079.0,
+  "media_cenarios": -239.9
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2423.0,
+  "pior_cenario": -8542.8,
+  "media_cenarios": -2467.7
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 3,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2363.0,
+  "pior_cenario": -8828.0,
+  "media_cenarios": -1759.9
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_22x2": 2,
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2361.0,
+  "pior_cenario": -8947.0,
+  "media_cenarios": -3113.8
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 3,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2392.0,
+  "pior_cenario": -8951.0,
+  "media_cenarios": -3247.3
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 3277.0,
+  "pior_cenario": -9024.0,
+  "media_cenarios": -2661.2
+ },
+ {
+  "sub": {
+   "agencia": "Marrakech",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "sem_evento": 2528.6,
+  "pior_cenario": -9709.2,
+  "media_cenarios": -3395.4
+ }
+]
