@@ -1153,7 +1153,16 @@
   },
   "Istanbul": {
    "semanas_teste": {
-    "melhor_testada_no_juiz": null,
+    "melhor_testada_no_juiz": {
+     "hash": "f475e635d02e3977f212083879b0b14240705798ec14d123924e253ecc8a1fc4",
+     "nota_juiz": 7095.0,
+     "metricas_juiz": {
+      "contratos": 1293,
+      "atendimento_pct": 100.0,
+      "pico_kw": 60.00000000000006,
+      "energia_kwh": 27669.558107611167
+     }
+    },
     "candidatas": [
      {
       "origem": "configs/istanbul/final-1.json",
@@ -1171,7 +1180,7 @@
       },
       "itens_sem_custo_estimado": [],
       "nota_estimada": 7095.0,
-      "nota_juiz": null,
+      "nota_juiz": 7095.0,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 1293,
