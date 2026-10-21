@@ -121,7 +121,7 @@ escolher pela **pior semana**, não pela melhor média (Zurich caiu de 3003 púb
 | Istanbul | dc_60x2, b3_75, proxima_retirada, evitar_ponta, igual | 7095 | 6685 |
 | Hanoi | ac_7×2 + dc_60x2, b3_75, proxima_retirada, sem evitar_ponta, igual | 3519 | 3093 |
 | Zurich | ac_7 + dc_60x2, b3_75 (existente), proxima_retirada, sem evitar_ponta, prioridade | 3003 | 132 |
-| Marrakech | **sem envio** (evento de corte não modelado; teste com ac_22x2×5/a4_150/110 deu −3759) | — | — |
+| Marrakech | **sem envio — pronta para enviar: `configs/marrakech/final-pronto.json`** (7×ac_7 + ac_22x2 + dc_30, a4_150, 130 kW, proxima_retirada, evitar_ponta, igual) | 4842 (juiz) | — |
 
 Placar às 17:10 UTC: total 9909,93; saldo **920 m7Coins**; 2 agências ainda a liberar. Reenvio final custa 80/160/320.
 
