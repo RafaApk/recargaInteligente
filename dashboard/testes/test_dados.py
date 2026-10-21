@@ -51,7 +51,7 @@ class DadosComExemplo(unittest.TestCase):
         sims = dados.simulacoes(self.raiz, "Bangkok")
         self.assertEqual(set(sims), set(dados.respostas_juiz(self.raiz, "Bangkok")))
         for s in sims.values():
-            self.assertIn("publico", s["series"])  # formato de simular.avaliar
+            self.assertEqual(len(dados.normalizar_series(s["series"])["potencia_kw"]), 28 * 96)
 
     def test_demais_arquivos(self):
         self.assertEqual(len(dados.placar(self.raiz)), 3)
@@ -128,13 +128,16 @@ class PastaVaziaOuRuim(unittest.TestCase):
 
 
 class PontuacaoEstimada(unittest.TestCase):
+    """Formato de `recarga.pesos.salvar`: tudo com sinal."""
     METRICAS = {"certos": 100, "upgrades": 10, "nao_atendidos": 5, "demanda_contratada_kw": 90.0,
                 "energia_ponta_kwh": 200.0}
-    EST = {"pesos": {"certo": 10, "upgrade": 6, "nao_atendido": 12, "demanda_contratada": 2, "energia_ponta_kwh": 0.5},
-           "custos": {"carregadores": {"dc_60x2": 20, "ac_22x2": 8}, "entradas": {"a4_150": 50}}}
+    EST = {"pesos": {"w": {"certo": 10, "upgrade": 6, "nao_atendido": -12, "demanda_contratada": -2,
+                           "energia_ponta_kwh": -0.5},
+                     "k_carregador": {"dc_60x2": -20, "ac_22x2": -8}, "k_entrada": {"a4_150": -50}},
+           "residuo_rms": 1.0, "n": 9, "confiavel": True, "nao_identificados": []}
     SUB = {"carregadores": {"dc_60x2": 2, "ac_22x2": 1}, "entrada": "a4_150"}
 
-    def test_itens_estimados(self):
+    def test_itens_estimados_com_sinal(self):
         itens = dados.pontuar_estimado(self.METRICAS, self.EST, self.SUB, entrada_existente="b3_45")
         por = {i[0]: i[3] for i in itens["itens"]}
         self.assertEqual(por["certo"], 1000)
@@ -151,13 +154,55 @@ class PontuacaoEstimada(unittest.TestCase):
         por = {i[0]: i[3] for i in itens["itens"]}
         self.assertEqual(por["infraestrutura"], -(2 * 20 + 8))
 
-    def test_aceita_letras_a_e(self):
-        est = {"pesos": {"a": 10, "b": 6, "c": 12, "d": 2, "e": 0.5}, "custos": self.EST["custos"]}
-        self.assertIsNotNone(dados.pontuar_estimado(self.METRICAS, est, self.SUB))
+    def test_custo_nao_identificado_invalida(self):
+        est = {**self.EST, "nao_identificados": ["car:ac_22x2"]}
+        self.assertIsNone(dados.pontuar_estimado(self.METRICAS, est, self.SUB, "b3_45"))
+        self.assertIsNone(dados.obra_estimada(self.EST, {**self.SUB, "entrada": "a4_225"}, "b3_45"))
+
+    def test_item_sem_peso_so_passa_com_quantidade_zero(self):
+        w = {k: v for k, v in self.EST["pesos"]["w"].items() if k != "upgrade"}
+        est = {**self.EST, "pesos": {**self.EST["pesos"], "w": w}}
+        self.assertIsNone(dados.pontuar_estimado(self.METRICAS, est, self.SUB, "b3_45"))
+        zero = {**self.METRICAS, "upgrades": 0}
+        self.assertIsNotNone(dados.pontuar_estimado(zero, est, self.SUB, "b3_45"))
 
     def test_sem_pesos_devolve_none(self):
         self.assertIsNone(dados.pontuar_estimado(self.METRICAS, {}, self.SUB))
         self.assertIsNone(dados.pontuar_estimado({}, self.EST, self.SUB))
+
+
+class PontuacaoExata(unittest.TestCase):
+    """Pós-H4: `kickoff.nota.custo_infra` + `kickoff.nota.pontuar` com o catálogo."""
+
+    def test_usa_custos_e_pesos_do_catalogo(self):
+        from kickoff.dados import carregar
+        from recarga import RAIZ
+        cat = {"pesos": {"Bangkok": {"certo": 10, "upgrade": 6, "nao_atendido": -12, "demanda_contratada": -2,
+                                     "energia_ponta_kwh": -0.5, "infraestrutura": -3}},
+               "carregadores": [{"id": k, "custo": c} for k, c in
+                                (("ac_7", 2), ("ac_11", 3), ("ac_22x2", 7), ("dc_30", 8), ("dc_60x2", 18),
+                                 ("dc_120x2", 30))],
+               "entradas": [{"id": k, "custo": c} for k, c in (("b3_45", 0), ("b3_75", 6), ("a4_150", 14),
+                                                               ("a4_225", 20))]}
+        cen = carregar(RAIZ, "Bangkok", cat)
+        sub = {"agencia": "Bangkok", "carregadores": {"ac_7": 2, "dc_30": 1}, "entrada": "b3_75",
+               "demanda_contratada_kw": None}  # forma normalizada: o dashboard tira o null
+        m = {"certos": 100, "upgrades": 10, "nao_atendidos": 5, "demanda_contratada_kw": 0.0,
+             "energia_ponta_kwh": 200.0}
+        r = dados.pontuar_exato(m, sub, cen, cat, "Bangkok")
+        por = {i[0]: i[3] for i in r["itens"]}
+        self.assertEqual(r["custo_infra"]["total"], 2 * 2 + 8 + 6)
+        self.assertEqual(por["infraestrutura"], -3 * 18)
+        self.assertEqual(por["certo"], 1000)
+        self.assertAlmostEqual(r["nota"], 1000 + 60 - 60 - 100 - 54)
+
+    def test_sem_custos_devolve_none(self):
+        from kickoff.dados import carregar
+        from recarga import RAIZ
+        cen = carregar(RAIZ, "Bangkok")  # sem catálogo: custos None
+        cat = {"pesos": {"Bangkok": {}}}
+        sub = {"agencia": "Bangkok", "carregadores": {"ac_7": 1}, "entrada": "b3_45"}
+        self.assertIsNone(dados.pontuar_exato({"certos": 1}, sub, cen, cat, "Bangkok"))
 
 
 class Formatacao(unittest.TestCase):
@@ -226,6 +271,14 @@ class Justificativa(unittest.TestCase):
         self.assertIn("90", texto)
         self.assertIn("máximo", texto)
         self.assertIn("sem demanda", texto)
+
+    def test_lexicografico_fala_em_atendimento(self):
+        curva = [{"demanda_kw": d, "nota": a, "medida": "atendimento", "entrada": "a4_150"}
+                 for d, a in ((60, 80.0), (90, 95.0), (120, 95.0))]
+        curva.append({"demanda_kw": None, "nota": 90.0, "medida": "atendimento", "entrada": "b3_75"})
+        texto = dados.justificativa({"entrada": "a4_150", "demanda_contratada_kw": 90}, curva)
+        self.assertIn("atendimento 95,0 %", texto)
+        self.assertIn("p.p.", texto)
 
     def test_sem_dados_nao_quebra(self):
         self.assertEqual(dados.justificativa(None, []), "")

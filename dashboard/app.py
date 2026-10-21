@@ -18,8 +18,15 @@ import streamlit as st  # noqa: E402
 
 from recarga import DADOS, RAIZ  # noqa: E402
 from kickoff import dados as kit_dados  # noqa: E402
+from kickoff import nota as nota_kit  # noqa: E402
 from kickoff import validar  # noqa: E402
 from dashboard import dados, graficos  # noqa: E402
+
+try:
+    from simular import tem_custos  # kit: o catálogo traz pesos e custos de todos os itens?
+except ImportError:
+    def tem_custos(cat, ag) -> bool:
+        return bool(cat and cat.get("pesos", {}).get(ag))
 
 try:  # construído em paralelo por outra frente; sem ele o dashboard só mostra o que já está em resultados/
     from recarga import lote
@@ -61,8 +68,14 @@ def ler_global(raiz: str) -> dict:
 @st.cache_data(ttl=ATUALIZAR_A_CADA, show_spinner=False)
 def ler_agencia(raiz: str, ag: str) -> dict:
     r = Path(raiz)
-    return {"juiz": dados.respostas_juiz(r, ag), "sim": dados.simulacoes(r, ag), "ranking": dados.ranking(r, ag),
-            "demanda": dados.demanda(r, ag)}
+    return {"juiz": dados.respostas_juiz(r, ag), "ranking": dados.ranking(r, ag), "demanda": dados.demanda(r, ag),
+            "eventos": dados.eventos_da_agencia(r, ag)}
+
+
+@st.cache_data(ttl=ATUALIZAR_A_CADA, show_spinner=False)
+def ler_sim(raiz: str, ag: str, h: str):
+    """Saída do nosso motor para um hash (um arquivo só: `sim/` pode ter milhares depois da otimização)."""
+    return dados.simulacao(Path(raiz), ag, h)
 
 
 @st.cache_data(ttl=ATUALIZAR_A_CADA, show_spinner=False)
@@ -74,51 +87,64 @@ def ler_catalogo() -> dict:
         return {}
 
 
+def catalogo_exato(ag: str):
+    """O catálogo (pós-H4), se traz pesos e custos suficientes para pontuar `ag` exatamente; senão None."""
+    cat = ler_catalogo()
+    return cat if cat and tem_custos(cat, ag) else None
+
+
 @st.cache_resource(ttl=300, show_spinner=False)
-def cenario(ag: str):
-    """Cenário do kit da agência (vagas, horário, carregadores), ou None se o kit não estiver baixado."""
+def cenario(ag: str, catalogo=None):
+    """Cenário do kit da agência (vagas, horário, carregadores), ou None se o kit não estiver baixado.
+    Com `catalogo`, os custos de obra vêm preenchidos (`kickoff.nota.custo_infra`)."""
     for pasta in (DADOS, RAIZ):  # Bangkok fica na raiz do repositório
         try:
-            return kit_dados.carregar(pasta, ag)
+            return kit_dados.carregar(pasta, ag, catalogo)
         except (SystemExit, Exception):
             continue
     return None
 
 
 @st.cache_data(show_spinner="Rodando o motor da equipe...")
-def motor_ao_vivo(ag: str, sub_json: str) -> dict:
-    return lote.avaliar(ag, json.loads(sub_json), series=True)
+def motor_ao_vivo(ag: str, sub_json: str, eventos_json: str, versao_motor: str) -> dict:
+    """`versao_motor` só entra na chave do cache: motor novo, resultado novo."""
+    return lote.avaliar(ag, json.loads(sub_json), eventos=json.loads(eventos_json), series=True)
 
 
 # --- derivados --------------------------------------------------------------------------------
 
-def hash_da(sub: dict, ag: str, cen) -> str | None:
+def hash_da(sub: dict, ag: str, cen, eventos: list = ()) -> str | None:
     from recarga import chave
     try:
-        return chave.chave(validar.normalizar(sub, cen), []) if cen else None
+        return chave.chave(validar.normalizar(dados.para_envio(sub), cen), list(eventos)) if cen else None
     except Exception:
         return None
 
 
-def opcoes_submissao(ag: str, glob: dict, loc: dict, cen) -> list:
-    """Vigente (de `finais`), candidatas (do `ranking`) e testes avulsos do juiz, sem repetir hash."""
+def opcoes_submissao(raiz: str, ag: str, glob: dict, loc: dict, cen) -> list:
+    """Vigente (de `finais`), candidatas (do `ranking`) e testes avulsos do juiz (`juiz/`), sem repetir hash."""
     ops, vistos = [], set()
 
     def add(rotulo, h, sub, origem):
-        h = h or hash_da(sub, ag, cen) or f"{origem}:{len(ops)}"
+        h = h or (hash_da(sub, ag, cen, loc["eventos"]) if sub else None) or f"{origem}:{len(ops)}"
         if h not in vistos:
             vistos.add(h)
             ops.append({"id": h, "hash": h, "sub": sub, "rotulo": rotulo, "origem": origem})
 
     vig = dados.vigentes(glob["finais"]).get(ag)
-    if vig and isinstance(vig.get("sub"), dict):
-        add(f"Vigente · final nº {vig.get('n', '?')}", vig.get("hash"), vig["sub"], "vigente")
+    if vig:
+        sub_vig = vig.get("sub") if isinstance(vig.get("sub"), dict) else None
+        if sub_vig is None and vig.get("hash"):  # finais antigos sem `sub`: o lote guarda a submissão no sim
+            sub_vig = ((ler_sim(raiz, ag, vig["hash"]) or {}).get("sub"))
+        add(f"Vigente · final nº {vig.get('n', '?')}", vig.get("hash"), sub_vig, "vigente")
     for i, c in enumerate(loc["ranking"], 1):
         if isinstance(c.get("sub"), dict):
-            extra = f" · pior semana {dados.fmt(c['pior_semana'], 0)}" if "pior_semana" in c else ""
+            pior = c.get("pior_semana")
+            extra = f" · pior semana {dados.fmt(pior, 1 if c.get('medida') == 'atendimento' else 0)}" + (
+                " %" if c.get("medida") == "atendimento" and pior is not None else "") if pior is not None else ""
             add(f"Candidata {i}{extra}", c.get("hash"), c["sub"], "candidata")
-    for h in {**loc["juiz"], **loc["sim"]}:
-        add(f"Teste avulso · {h[:8]}", h, None, "avulso")
+    for h in loc["juiz"]:  # testes avulsos: só os que o juiz respondeu (os `sim/` são milhares de candidatos)
+        add(f"Teste avulso · {h[:8]}", h, ((ler_sim(raiz, ag, h) or {}).get("sub")), "avulso")
     return ops
 
 
@@ -139,22 +165,36 @@ def limites_da_agencia(sub: dict | None, cen) -> dict:
 
 
 def obra_da_agencia(ag: str, glob: dict, est: dict) -> tuple | None:
-    """(pontos de obra, origem) da submissão vigente: juiz > modelo > estimado."""
+    """(pontos de obra, origem) da submissão vigente: juiz > modelo (catálogo exato) > estimado.
+
+    Do juiz e do modelo exato são pontos de custo de obra; do estimado são pontos de nota (peso × custo).
+    """
     vig = dados.vigentes(glob["finais"]).get(ag)
     if not vig:
         return None
-    loc = ler_agencia(_raiz(), ag)
+    raiz = _raiz()
     h, sub = vig.get("hash"), vig.get("sub") or {}
-    juiz, sim = loc["juiz"].get(h) or {}, loc["sim"].get(h) or {}
+    juiz, sim = ler_agencia(raiz, ag)["juiz"].get(h) or {}, (ler_sim(raiz, ag, h) if h else None) or {}
     for origem, valores in (("juiz", (vig.get("custo_infra"), juiz.get("custo_infra"),
                                        (juiz.get("metricas") or {}).get("custo_infra"))),
                             ("modelo", (sim.get("custo_infra"), (sim.get("metricas") or {}).get("custo_infra")))):
         for v in valores:
             if dados.total_obra(v) is not None:
                 return dados.total_obra(v), origem
-    if est.get("custos") and sub:
+    cat = catalogo_exato(ag)
+    cen_cat = cenario(ag, cat) if cat and sub else None
+    if cen_cat is not None:
+        try:
+            custo = nota_kit.custo_infra(validar.normalizar(dados.para_envio(sub), cen_cat), cen_cat)
+        except Exception:
+            custo = None
+        if custo:
+            return custo["total"], "modelo"
+    if est.get("pesos") and sub:
         cen = cenario(ag)
-        return dados.obra_estimada(est, sub, cen.agencia.entrada_existente if cen else None), "estimado"
+        obra = dados.obra_estimada(est, sub, cen.agencia.entrada_existente if cen else None)
+        if obra is not None:
+            return abs(obra), "estimado"
     return None
 
 
@@ -201,11 +241,19 @@ def cabecalho(glob: dict) -> None:
 @st.fragment(run_every=ATUALIZAR_A_CADA)
 def corpo_agencia(raiz: str, ag: str, op: dict) -> None:
     glob, loc, cen = ler_global(raiz), ler_agencia(raiz, ag), cenario(ag)
+    cat = catalogo_exato(ag)
+    cen_cat = cenario(ag, cat) if cat else None
     sub, h = op["sub"], op["hash"]
-    juiz, sim = loc["juiz"].get(h), loc["sim"].get(h)
-    if sim is None and lote is not None and sub:
-        try:
-            sim = motor_ao_vivo(ag, json.dumps(sub, sort_keys=True))
+    juiz, sim = loc["juiz"].get(h), ler_sim(raiz, ag, h)
+    sub = sub or (sim or {}).get("sub")
+    if (sim is None or "series" not in sim) and lote is not None and sub:
+        try:  # o `sim/` do otimizador não guarda séries: roda o motor (com cache) para o painel
+            vivo = motor_ao_vivo(ag, json.dumps(dados.para_envio(sub), sort_keys=True), json.dumps(loc["eventos"]),
+                                 lote.versao_motor())
+            if vivo.get("valido", True):
+                sim = vivo
+            else:
+                st.warning("Submissão inválida para o motor da equipe: " + "; ".join(vivo.get("erros") or []))
         except Exception as e:  # o motor é de outra frente; o dashboard não pode cair por causa dele
             st.warning(f"Não foi possível rodar o motor da equipe para esta submissão: {e}")
     lim = limites_da_agencia(sub, cen)
@@ -224,7 +272,9 @@ def corpo_agencia(raiz: str, ag: str, op: dict) -> None:
     m_juiz = (juiz or {}).get("metricas") or {}
     pontos_meu = (sim or {}).get("pontos")
     estimado = False
-    if not pontos_meu and m_meu:
+    if not pontos_meu and m_meu and sub and cen_cat is not None:  # pós-H4: custos e pesos exatos do catálogo
+        pontos_meu = dados.pontuar_exato(m_meu, sub, cen_cat, cat, ag)
+    if not pontos_meu and m_meu:  # antes: pesos estimados na Neblina
         pontos_meu = dados.pontuar_estimado(m_meu, glob["pesos"], sub or {}, lim["existente"])
         estimado = pontos_meu is not None
     pontos_juiz = (juiz or {}).get("pontos")
@@ -238,11 +288,12 @@ def corpo_agencia(raiz: str, ag: str, op: dict) -> None:
     if nao is None:
         nao = len((series_juiz or series_meu).get("nao_atendidos_min") or []) or None
     obra = next((dados.total_obra(v) for v in ((juiz or {}).get("custo_infra"), m_juiz.get("custo_infra"),
-                                              (sim or {}).get("custo_infra"), m_meu.get("custo_infra"))
+                                              (sim or {}).get("custo_infra"), m_meu.get("custo_infra"),
+                                              None if estimado else (pontos_meu or {}).get("custo_infra"))
                  if dados.total_obra(v) is not None), None)
     obra_estimada_ = False
     if obra is None and pontos_meu and estimado:
-        obra, obra_estimada_ = -next(i[3] for i in pontos_meu["itens"] if i[0] == "infraestrutura"), True
+        obra, obra_estimada_ = abs(next(i[3] for i in pontos_meu["itens"] if i[0] == "infraestrutura")), True
 
     k = st.columns(5)
     k[0].metric("Nota do juiz", dados.fmt(nota_juiz, 1), help="Janela pública (semanas 1 a 4).", border=True)
@@ -260,12 +311,15 @@ def corpo_agencia(raiz: str, ag: str, op: dict) -> None:
                 delta_color="off", delta_arrow="off", border=True)
     k[4].metric("Custo de obra" + (" (estimado)" if obra_estimada_ else ""),
                 "—" if obra is None else f"{dados.fmt(obra, 0)} pts", border=True,
-                help="Carregadores instalados mais ampliação de entrada. Sai do juiz a partir de H4.")
+                help="Carregadores instalados mais ampliação de entrada. Sai do juiz a partir de H4."
+                + (" Estimado: em pontos de nota (peso × custo)." if obra_estimada_ else ""))
 
     esquerda, direita = st.columns([3, 2])
     with esquerda:
         with cartao("Cascata de pontos", "Pontos ganhos e perdidos por item, no modelo da equipe e no juiz."
                     + (" Modelo com pesos estimados (marcado como estimado até H4)." if estimado else "")):
+            if estimado and glob["pesos"].get("confiavel") is False:
+                st.caption("A estimativa de pesos ainda não é confiável (resíduo alto ou itens não identificados).")
             if pontos_meu or pontos_juiz:
                 mostrar(graficos.cascata((pontos_meu or {}).get("itens") or [], (pontos_juiz or {}).get("itens"),
                                          estimado), "g_cascata")
@@ -333,7 +387,7 @@ def pagina_agencia(glob: dict) -> None:
             return
         ag = st.selectbox("Agência", ags, key="agencia")
         loc = ler_agencia(raiz, ag)
-        ops = opcoes_submissao(ag, glob, loc, cenario(ag))
+        ops = opcoes_submissao(raiz, ag, glob, loc, cenario(ag))
         if not ops:
             st.info("Sem submissões para esta agência.")
             return
@@ -418,9 +472,11 @@ def corpo_consolidado(raiz: str) -> None:
         if ags:
             ag_p = st.session_state.get("agencia_consolidado", ags[0])
             reais = (ler_catalogo().get("pesos") or {}).get(ag_p)
-        mostrar(graficos.pesos_vs_reais(est.get("pesos") or {}, reais), "g_pesos")
+        mostrar(graficos.pesos_vs_reais((est.get("pesos") or {}).get("w") or {}, reais), "g_pesos")
         if est:
-            st.caption(f"{est.get('n_testes', '?')} testes usados · resíduo RMS {dados.fmt(est.get('residuo_rms'), 2)}.")
+            conf = {True: "confiável", False: "ainda não confiável"}.get(est.get("confiavel"), "")
+            st.caption(f"{est.get('n', '?')} testes usados · resíduo RMS {dados.fmt(est.get('residuo_rms'), 2)}"
+                       + (f" · estimativa {conf}" if conf else "") + ".")
 
     if placar and placar[-1].get("equipes"):
         with cartao("Placar", f"Última atualização: {placar[-1].get('atualizado_em', '—')}"):

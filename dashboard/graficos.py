@@ -376,23 +376,25 @@ def curva_demanda(demanda: list, escolhida: int | None) -> go.Figure:
     sem = [d for d in itens if _num(d.get("demanda_kw")) is None]
     if not com and not sem:
         return _vazio(fig)
+    atend = (com or sem)[0].get("medida") == "atendimento"
+    eixo = "Atendimento (%)" if atend else "Nota"
     if com:
         fig.add_trace(go.Scatter(
-            x=[d["demanda_kw"] for d in com], y=[d["nota"] for d in com], mode="lines+markers", name="Nota pública",
+            x=[d["demanda_kw"] for d in com], y=[d["nota"] for d in com], mode="lines+markers", name="Atendimento público" if atend else "Nota pública",
             line=dict(color=COR["azul"], width=2.5), marker=dict(size=7),
-            hovertemplate="%{x} kW<br>Nota %{y:,.1f}<extra></extra>"))
+            hovertemplate="%{x} kW<br>" + eixo + " %{y:,.1f}<extra></extra>"))
         marca = [d for d in com if d["demanda_kw"] == escolhida]
         if marca:
             fig.add_trace(go.Scatter(
                 x=[marca[0]["demanda_kw"]], y=[marca[0]["nota"]], mode="markers", name="Escolhida",
                 marker=dict(symbol="star", size=18, color=COR["principal"], line=dict(color="white", width=1.5)),
-                hovertemplate="Escolhida: %{x} kW<br>Nota %{y:,.1f}<extra></extra>"))
+                hovertemplate="Escolhida: %{x} kW<br>" + eixo + " %{y:,.1f}<extra></extra>"))
     if sem:
         melhor = max(d["nota"] for d in sem)
         rot = (sem[0].get("entrada") or "B3").upper().replace("_", " ")
-        _linha_h(fig, melhor, COR["neutra"], "dash", f"Sem demanda contratada ({rot}): {_n(melhor, 0)}")
+        _linha_h(fig, melhor, COR["neutra"], "dash", f"Sem demanda contratada ({rot}): {_n(melhor, 1 if atend else 0)}")
     fig.update_xaxes(title_text="Demanda contratada (kW)")
-    fig.update_yaxes(title_text="Nota")
+    fig.update_yaxes(title_text=eixo)
     return fig
 
 

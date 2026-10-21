@@ -2,8 +2,12 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
+import streamlit as st
 from streamlit.testing.v1 import AppTest
+
+from recarga import lote
 
 from dashboard import exemplo
 
@@ -13,6 +17,14 @@ APP = str(Path(__file__).resolve().parent.parent / "app.py")
 class AppStreamlit(unittest.TestCase):
     def setUp(self):
         self._antes = os.environ.get("RESULTADOS_DIR")
+        # candidatas sem `series` fazem o app rodar o motor ao vivo: o cache do lote vai para uma pasta temporária
+        self._cache = tempfile.TemporaryDirectory()
+        patch = mock.patch.object(lote, "CACHE", Path(self._cache.name))
+        patch.start()
+        self.addCleanup(patch.stop)
+        self.addCleanup(self._cache.cleanup)
+        st.cache_data.clear()
+        st.cache_resource.clear()
 
     def tearDown(self):
         if self._antes is None:

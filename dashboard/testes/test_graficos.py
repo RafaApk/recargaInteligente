@@ -117,7 +117,7 @@ class GraficosComExemplo(unittest.TestCase):
         self.assertEqual(len(nossa.y), 3)
         dem = graficos.curva_demanda(dados.demanda(self.raiz, "Bangkok"), 90)
         self.assertTrue(any(t.name == "Escolhida" for t in dem.data))
-        est = dados.pesos(self.raiz)["pesos"]
+        est = dados.pesos(self.raiz)["pesos"]["w"]
         pv = graficos.pesos_vs_reais(est, {"certo": 10, "upgrade": 6, "nao_atendido": -12})
         self.assertEqual(len(pv.data), 2)
         self.assertEqual(len(graficos.pesos_vs_reais(est, None).data), 1)
