@@ -1,0 +1,314 @@
+[
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 10455.0,
+  "perdidos_por_semana": [
+   3,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 15,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10455.0,
+  "perdidos_por_semana": [
+   3,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 15,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10405.0,
+  "perdidos_por_semana": [
+   1,
+   1,
+   0,
+   0
+  ],
+  "upgrades": 10,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 10395.0,
+  "perdidos_por_semana": [
+   3,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 15,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10395.0,
+  "perdidos_por_semana": [
+   3,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 15,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 4,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10345.0,
+  "perdidos_por_semana": [
+   1,
+   1,
+   0,
+   0
+  ],
+  "upgrades": 10,
+  "ponta_kwh": 0,
+  "pico_kw": 88.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 10289.0,
+  "perdidos_por_semana": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "upgrades": 3,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10289.0,
+  "perdidos_por_semana": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "upgrades": 3,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 10229.0,
+  "perdidos_por_semana": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "upgrades": 3,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_30": 2
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10229.0,
+  "perdidos_por_semana": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "upgrades": 3,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 10218.0,
+  "perdidos_por_semana": [
+   1,
+   1,
+   0,
+   0
+  ],
+  "upgrades": 1,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ },
+ {
+  "sub": {
+   "agencia": "Lisbon",
+   "carregadores": {
+    "ac_7": 5,
+    "dc_60x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 10204.0,
+  "perdidos_por_semana": [
+   1,
+   1,
+   0,
+   0
+  ],
+  "upgrades": 3,
+  "ponta_kwh": 0,
+  "pico_kw": 95.0
+ }
+]

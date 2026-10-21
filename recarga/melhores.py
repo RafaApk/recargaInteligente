@@ -43,6 +43,16 @@ def _envio(sub: dict) -> dict:
 CONFIRMADOS = RAIZ / "pesos_estimados" / "pesos_bangkok_confirmados.json"
 
 
+def pesos_agencia(ag: str):
+    """Pesos da agência: os oficiais do catálogo (H4, podem variar por agência) ou, sem ele, a estimativa."""
+    cat_path = DADOS / "catalogo.json"
+    if cat_path.is_file():
+        cat = json.loads(cat_path.read_text(encoding="utf-8"))
+        if ag in cat.get("pesos", {}):
+            return objetivo.pesos_do_catalogo(cat, ag)
+    return estimativa().pesos
+
+
 def estimativa():
     """Pesos confirmados (pesos_estimados/pesos_bangkok_confirmados.json) ou, sem eles, inferidos dos testes."""
     if CONFIRMADOS.is_file():

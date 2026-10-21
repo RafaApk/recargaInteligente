@@ -1,0 +1,2 @@
+{"agencia": "Lisbon", "carregadores": {"ac_7": 4, "dc_30": 2}, "entrada": "a4_150", "demanda_contratada_kw": 100,
+ "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "igual"}}

@@ -16,7 +16,7 @@ FIM = 40 * 1440
 ESTRESSE = {"normal": [], "pot90": [["corte", AG, 1080, FIM, 0.9]], "pot80": [["corte", AG, 1080, FIM, 0.8]]}
 
 if __name__ == "__main__":
-    pes = melhores.estimativa().pesos; cen = lote.cenario(AG); ex = cen.agencia.entrada_existente
+    pes = melhores.pesos_agencia(AG); cen = lote.cenario(AG); ex = cen.agencia.entrada_existente
     nota = lambda r: objetivo.nota(r["metricas"], r["sub"], ex, pes)
     t0 = time.time()
     combos = [{t: q for q, t in zip(qs, SAIDAS) if q} for qs in itertools.product(range(5), repeat=len(SAIDAS))
