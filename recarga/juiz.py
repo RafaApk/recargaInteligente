@@ -323,7 +323,7 @@ class Juiz:
             self._checar_saldo(ag, taxa, "final")
         resp = self._chamar(self.cliente._json, "POST", f"/final/{ag}", sub)
         if resp.get("aceito", True):
-            self._anexar("finais.jsonl", {"t": _iso(_agora_utc()), "agencia": ag, "hash": h, "hash_sub": h_sub,
+            self._anexar("finais.jsonl", {"t": _iso(_agora_utc()), "agencia": ag, "hash": h, "hash_sub": h_sub, "sub": norm,
                                           "n": resp.get("n"), "taxa": resp.get("taxa", 0), "autor": self.autor})
         self._registrar_cobranca("final", ag, h, resp)
         return resp

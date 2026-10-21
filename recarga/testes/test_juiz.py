@@ -305,6 +305,7 @@ class Final(Base):
         fin = self.linhas("finais.jsonl")
         self.assertEqual(len(fin), 1)
         self.assertEqual(fin[0]["hash"], chave(self.norm(SUB), []))
+        self.assertEqual(fin[0]["sub"], self.norm(SUB))
         self.assertEqual(self.linhas("ledger.jsonl"), [])  # 1º final é grátis
 
     def test_final_exige_confirmar(self):
