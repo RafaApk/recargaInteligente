@@ -1,0 +1,2 @@
+{"agencia": "Hanoi", "carregadores": {"dc_30": 3}, "entrada": "a4_150", "demanda_contratada_kw": 90,
+ "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "igual"}}

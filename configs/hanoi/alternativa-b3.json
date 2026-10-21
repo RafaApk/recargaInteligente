@@ -1,0 +1,2 @@
+{"agencia": "Hanoi", "carregadores": {"dc_60x2": 2}, "entrada": "b3_75",
+ "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "igual"}}
