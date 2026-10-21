@@ -1,0 +1,41 @@
+{
+  "agencia": "Bangkok",
+  "fase": "neblina",
+  "atualizado_em": "2026-10-21",
+  "fonte": "notas de 4 testes grátis em Bangkok (juiz/resp_1..4.json) cruzadas com o motor próprio, que bate com o juiz em todas as janelas de potência",
+  "formula": "nota = certo*certos + upgrade*upgrades + nao_atendido*nao_atendidos + energia_ponta_kwh*kWh_na_ponta + demanda_contratada*kW_contratados - custo_obra",
+  "pesos": {
+    "certo": {"valor": 15, "status": "provavel"},
+    "upgrade": {"valor": 8, "status": "provavel"},
+    "nao_atendido": {"valor": -200, "status": "provavel"},
+    "energia_ponta_kwh": {"valor": -0.5, "status": "confirmado", "nota": "único valor que explica as casas decimais das notas dos testes 3 e 4"},
+    "demanda_contratada": {"valor": null, "status": "desconhecido", "nota": "sai dos testes 6 e 7 (juiz/bangkok_6.json e bangkok_7.json)"}
+  },
+  "custo_obra_em_pontos": {
+    "carregadores": {
+      "ac_7": {"valor": 250, "status": "provavel"},
+      "dc_30": {"valor": 3500, "status": "provavel"},
+      "ac_11": {"valor": null, "status": "desconhecido"},
+      "ac_22x2": {"valor": null, "status": "desconhecido"},
+      "dc_60x2": {"valor": null, "status": "desconhecido"},
+      "dc_120x2": {"valor": null, "status": "desconhecido"}
+    },
+    "entradas": {
+      "entrada_existente": {"valor": 0, "status": "confirmado", "nota": "regulamento 7.2: manter a existente custa 0"},
+      "a4_150": {"valor": null, "status": "desconhecido", "nota": "sai dos testes 6 e 7"},
+      "demais": {"valor": null, "status": "desconhecido"}
+    },
+    "pista": "custo de ac_22x2 + dc_60x2 + a4_150 + 40 x peso da demanda = 15380 (teste 4)"
+  },
+  "verificacao": {
+    "teste_1": {"submissao": "1x dc_30, b3_45, menor_soc, evita ponta", "nota_juiz": 565, "nota_prevista": 565},
+    "teste_2": {"submissao": "1x ac_7, b3_45, menor_soc, evita ponta", "nota_juiz": -31169, "nota_prevista": -31169},
+    "teste_3": {"submissao": "1x ac_7, b3_45, proxima_retirada", "nota_juiz": -25430.667, "nota_prevista": -25430.667},
+    "teste_5_pendente": {"submissao": "2x ac_7, b3_45, menor_soc, evita ponta", "nota_prevista": -10571, "nota": "se o juiz der -10571, os pesos provaveis ficam confirmados"}
+  },
+  "ressalvas": [
+    "Status 'provavel': fecha exatamente as 3 notas com números redondos, mas outras combinações também fecham (com valores quebrados ou custos negativos).",
+    "Os pesos são de Bangkok; a organização pode usar pesos diferentes por agência.",
+    "Os valores reais saem em H4 no GET /catalogo."
+  ]
+}
