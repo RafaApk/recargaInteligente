@@ -1,0 +1,13 @@
+{
+ "agencia": "Hanoi",
+ "carregadores": {
+  "ac_7": 5,
+  "dc_30": 1
+ },
+ "entrada": "b3_75",
+ "politica": {
+  "prioridade": "proxima_retirada",
+  "evitar_ponta": false,
+  "divisao": "igual"
+ }
+}
