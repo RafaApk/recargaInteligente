@@ -9,9 +9,9 @@
   "n": 6,
   "rotulo": "H6"
  },
- "agora": "2026-10-21T20:24:20.918967+00:00",
+ "agora": "2026-10-21T20:53:56.728878+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
- "saldo": 155,
+ "saldo": 135,
  "agencias": {
   "Bangkok": {
    "aberta": true,
@@ -23,7 +23,7 @@
   "Istanbul": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T20:39:15.601161+00:00",
+   "cooldown_final_ate": null,
    "envios": 3,
    "vigente": true
   },
@@ -44,23 +44,23 @@
   "Zurich": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T20:34:41.620093+00:00",
+   "cooldown_final_ate": null,
    "envios": 2,
    "vigente": true
   },
   "Vienna": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": "2026-10-21T20:34:39.963217+00:00",
+   "cooldown_final_ate": null,
    "envios": 2,
    "vigente": true
   },
   "Lisbon": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": null,
-   "envios": 0,
-   "vigente": false
+   "cooldown_final_ate": "2026-10-21T21:08:56.170998+00:00",
+   "envios": 1,
+   "vigente": true
   }
  },
  "cartas": [

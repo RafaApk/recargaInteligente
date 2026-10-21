@@ -97,51 +97,49 @@ Kit de uma agência nova: baixe pelo site, coloque em `data/<Agencia>` e rode `p
 - `multiprocessing` precisa funcionar no Windows (spawn): workers em funções de módulo.
 - Commits em português, estilo `feat(area): ...`/`fix(area): ...`. Branch de trabalho: `design/recarga-inteligente`.
 
-## Estado atual (21/10/2026, fase Clara — após H4)
+## Estado atual (21/10/2026 ~21h UTC, fase Clara, etapa H6 — todas as 6 agências com envio)
 
-**Pesos oficiais (GET /catalogo, iguais aos que inferimos na Neblina)** — `pesos_estimados/pesos_bangkok_confirmados.json`
-e `kit_kickoff/dados/catalogo.json`:
-- certo **+15**, upgrade **+8**, não atendido **−200**, energia na ponta **−0,5/kWh**, demanda **−2/kW**, infraestrutura **−1/ponto**.
+**Pesos oficiais por agência** (`GET /catalogo` → `kit_kickoff/dados/catalogo.json`; use `recarga.melhores.pesos_agencia(ag)`):
+- Todas: certo **+15**, upgrade **+8**, não atendido **−200**, demanda **−2/kW**, infraestrutura **−1/ponto**.
+- Energia na ponta: **−0,5/kWh**, exceto **Lisbon: −5/kWh** (10×). Os pesos podem mudar por agência durante o dia.
 - Obra: ac_7 250, ac_11 1100, ac_22x2 1500, dc_30 3500, dc_60x2 7300, dc_120x2 15800;
   b3_75 5000, a4_150 6500, a4_225 8200, a4_300 10000, se_500 18800, se_750 24400, se_1000 30000, se_1500 41200, se_2000 52500.
-- Mesmos pesos em todas as agências liberadas.
 
-**Fidelidade do motor:** reproduz exatamente as notas do juiz (38 testes em Bangkok, Istanbul 7095=7095; Hanoi e Zurich
-com erro < 1%). Corrigido: empate exato de km em `menor_soc` (arredondamento do ponto flutuante).
-`fila_max` difere só na medição. **Eventos (etapa 7): implementação provisória NÃO verificada** (ver pendências).
+**Fidelidade do motor** (`resultados/calibracao.py`, 9 notas do juiz fora Bangkok + 38 em Bangkok):
+- Exato: Bangkok, Istanbul (7095 e 8826,28), Marrakech 4842, Vienna 11630. Hanoi/Zurich/Marrakech: erro de 13 a 243.
+- Correções: empate exato de km em `menor_soc`; **fila de T0 plugada carro a carro em ordem de id**
+  (`PLUG_T0_EM_LOTE = False`, confirmado em Istanbul).
+- Divergência aberta: filas longas com várias saídas liberando no mesmo minuto (`proxima_retirada`) — o motor é
+  otimista (Marrakech ac_22x2×5: motor 807, juiz −3759; Lisbon: motor 10455, juiz 9310).
+- `fila_max` difere só na medição (juiz registra só aumentos).
 
-**Lição principal:** a obra domina a nota. AC barato em quantidade costuma vencer DC caro
-(Bangkok: 3× ac_7 proxima_retirada ≈ 3100; 1× dc_30 = 565). A nota final usa **só as 4 semanas ocultas** —
-escolher pela **pior semana**, não pela melhor média (Zurich caiu de 3003 público para 132 oculto: perdas concentradas).
+**Eventos ao vivo** (motor, `agendar_eventos`/`on_evento`):
+- Carta 1, Marrakech `["corte", ag, ini, fim, f]`: limite da agência × f na janela — **confirmado** (77 kW = 0,7 × 110).
+- Carta 2, Istanbul `["quebra_maiores", ag, n, ini, fim]`: os n carregadores de maior potência ficam a 0 kW
+  (carro segue plugado) na janela; na volta a fila é replugada — **não validado no juiz**, placar coerente.
+- Nas semanas ocultas o evento equivalente cai em horário desconhecido → avaliar com o evento deslocado.
 
-**Envios finais (vigentes):**
+**Lições:** a obra domina a nota (AC barato em quantidade > DC caro); a nota final usa **só as semanas ocultas**
+(escolher pela pior semana/cenário); confira os pesos de cada agência no catálogo (Lisbon!).
 
-| Agência | Config | Nota pública (juiz) | Nota oculta (placar) |
-|---|---|---|---|
-| Istanbul | dc_60x2, b3_75, proxima_retirada, evitar_ponta, igual | 7095 | 6685 |
-| Hanoi | ac_7×2 + dc_60x2, b3_75, proxima_retirada, sem evitar_ponta, igual | 3519 | 3093 |
-| Zurich | ac_7 + dc_60x2, b3_75 (existente), proxima_retirada, sem evitar_ponta, prioridade | 3003 | 132 |
-| Marrakech | **sem envio — pronta para enviar: `configs/marrakech/final-pronto.json`** (7×ac_7 + ac_22x2 + dc_30, a4_150, 130 kW, proxima_retirada, evitar_ponta, igual) | 4842 (juiz) | — |
+**Envios finais vigentes:**
 
-Placar às 17:10 UTC: total 9909,93; saldo **920 m7Coins**; 2 agências ainda a liberar. Reenvio final custa 80/160/320.
+| Agência | Envio | Config | Pública (juiz) | Oculta (placar) |
+|---|---|---|---|---|
+| Istanbul | 3º | ac_7 + dc_30×3, b3_75, proxima_retirada, igual (resistente à quebra) | — | 1703 |
+| Hanoi | 2º | ac_7×5 + dc_30, b3_75, proxima_retirada, igual (Matheus) | 6211 | 5763 |
+| Marrakech | 1º | ac_7×9 + dc_30, a4_150 100 kW, proxima_retirada, evitar_ponta, prioridade (Antonio) | 5152 | 6898 |
+| Zurich | 2º | ac_7×2 + dc_60x2, b3_75, proxima_retirada, prioridade | — | 40 |
+| Vienna | 2º | ac_7×4, a4_150 30 kW, evitar_ponta, igual | — | 12077 |
+| Lisbon | 1º | ac_7×4 + dc_30×2, a4_150 100 kW, proxima_retirada, **evitar_ponta**, igual | 9310 | (aguardando) |
 
-**Em andamento:** `resultados/exaustivo.py` (busca exaustiva com nota robusta pela pior semana) → `resultados/exaustivo.json`.
-
-
-**Pronta para enviar depois (Zurich):** `configs/zurich/conservadora-pronta.json` (ac_7×2 + dc_60x2, b3_75, proxima_retirada, prioridade) — melhor sob estresse de potência; reenvio custa 80.
-
-**Pronta para enviar depois (Vienna):** `configs/vienna/maxima-pronta.json` (4× ac_7, a4_150, 30 kW, evitar_ponta) — máximo teórico 11.900 público, sem margem (3× ac_7 desaba); reenvio custa 80.
-
-**Pronta para enviar depois (Istanbul, evento 'Carregadores queimados'):** `configs/istanbul/quebra-pronta.json` (ac_7 + dc_30×3, b3_75, proxima_retirada, igual) — média ~1.836 com a quebra em horário desconhecido vs ~453 da atual (oculta real −103); 3º envio custa 160.
+Saldo **135 m7Coins**. Próximo reenvio: Hanoi/Vienna/Zurich 160, Marrakech/Lisbon 80, Istanbul 320.
+Alternativa guardada: `configs/zurich/anterior-pronta.json` (1º envio, oculta 131,86 > 40 atual; reenvio custa 160 > saldo).
 
 ## Pendências
 
-1. **Evento de Marrakech** (`["corte","Marrakech",31680,34560,0.7]`, carta "Pedido da concessionária"): nenhum fator
-   simples (limite × f na janela) reproduz o juiz. Precisa da série do juiz (`detalhe=completo`, 30 m7Coins) para
-   descobrir a regra. Nas semanas ocultas ocorre evento equivalente em horário desconhecido.
-2. Reavaliar Zurich e Hanoi com a busca exaustiva/robusta e decidir reenvio (80 m7Coins cada).
-3. Marrakech: fazer o 1º envio final (grátis) — agência sem envio vale 0.
-4. `objetivo.chave_lexicografica` ignora ponta/demanda/entrada (irrelevante agora que há pesos oficiais).
-5. `operacao.Monitor` não recupera estado inicial; falta CLI guardado de envio final; recarregar catálogo na Clara.
+1. Divergência de fila longa em `proxima_retirada` (afeta Marrakech, Hanoi, Lisbon) — regra exata desconhecida.
+2. Validar `quebra_maiores` com um teste do juiz (Istanbul).
+3. `operacao.Monitor` não recupera estado inicial; falta CLI guardado de envio final; recarregar catálogo na Clara.
 
 Detalhes da execução e decisões: `docs/superpowers/` e o ledger local `.superpowers/sdd/.../progress.md` (git-ignored, só na máquina do Caio).
