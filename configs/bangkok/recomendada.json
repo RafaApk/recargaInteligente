@@ -1,0 +1,6 @@
+{
+ "agencia": "Bangkok",
+ "carregadores": {"dc_30": 1},
+ "entrada": "b3_45",
+ "politica": {"prioridade": "proxima_retirada", "evitar_ponta": true, "divisao": "igual"}
+}
