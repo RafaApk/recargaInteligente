@@ -1625,9 +1625,21 @@
    },
    "final": {
     "liberado": true,
-    "envios": 0,
-    "vigente": false,
-    "sub_vigente": null,
+    "envios": 1,
+    "vigente": true,
+    "sub_vigente": {
+     "agencia": "Istanbul",
+     "carregadores": {
+      "dc_60x2": 1
+     },
+     "entrada": "b3_75",
+     "demanda_contratada_kw": null,
+     "politica": {
+      "prioridade": "proxima_retirada",
+      "evitar_ponta": true,
+      "divisao": "igual"
+     }
+    },
     "nota_oculta": null
    }
   },
