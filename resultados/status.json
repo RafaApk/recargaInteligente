@@ -4,14 +4,14 @@
   "nome": "Os Caórdicos",
   "pode_renomear": false
  },
- "fase": "neblina",
+ "fase": "clara",
  "etapa": {
-  "n": 2,
-  "rotulo": "H2"
+  "n": 4,
+  "rotulo": "H4"
  },
- "agora": "2026-10-21T16:46:15.531035+00:00",
+ "agora": "2026-10-21T16:54:16.410373+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
- "saldo": 980,
+ "saldo": 940,
  "agencias": {
   "Bangkok": {
    "aberta": true,
@@ -29,14 +29,14 @@
   },
   "Hanoi": {
    "aberta": true,
-   "cooldown_teste_ate": null,
+   "cooldown_teste_ate": "2026-10-21T16:58:45.672419+00:00",
    "cooldown_final_ate": null,
    "envios": 0,
    "vigente": false
   },
   "Marrakech": {
    "aberta": true,
-   "cooldown_teste_ate": null,
+   "cooldown_teste_ate": "2026-10-21T16:59:07.005150+00:00",
    "cooldown_final_ate": null,
    "envios": 0,
    "vigente": false
@@ -49,7 +49,24 @@
    "vigente": false
   }
  },
- "cartas": [],
- "eventos_ativos": [],
+ "cartas": [
+  {
+   "n": 1,
+   "titulo": "Pedido da concessionaria",
+   "agencia": "Marrakech"
+  }
+ ],
+ "eventos_ativos": [
+  {
+   "agencia": "Marrakech",
+   "params": [
+    "corte",
+    "Marrakech",
+    31680,
+    34560,
+    0.7
+   ]
+  }
+ ],
  "kit_simulador": false
 }

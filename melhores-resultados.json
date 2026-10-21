@@ -1,6 +1,6 @@
 {
  "atualizado_por": "python -m recarga.melhores",
- "fase": "neblina",
+ "fase": "clara",
  "pesos_estimados": {
   "confiavel": true,
   "n_testes": 0,
@@ -635,7 +635,22 @@
   },
   "Hanoi": {
    "semanas_teste": {
-    "melhor_testada_no_juiz": null,
+    "melhor_testada_no_juiz": {
+     "hash": "d367e68b4060a1801f8889485eb5991bac902b4753cb40ebb9c3cacb15dd38b1",
+     "nota_juiz": 3519.2627049435014,
+     "metricas_juiz": {
+      "contratos": 1167,
+      "certos": 1163,
+      "upgrades": 4,
+      "nao_atendidos": 0,
+      "pico_kw": 67.50000000000009,
+      "energia_kwh": 20495.22761428553,
+      "energia_ponta_kwh": 2315.4745901129977,
+      "atendimento_pct": 100.0,
+      "demanda_contratada_kw": 0.0,
+      "custo_infra": 12800
+     }
+    },
     "candidatas": [
      {
       "origem": "otimizador#1",
@@ -654,7 +669,7 @@
       },
       "itens_sem_custo_estimado": [],
       "nota_estimada": 3540.3,
-      "nota_juiz": null,
+      "nota_juiz": 3519.2627049435014,
       "metricas_motor": {
        "atendimento_pct": 100.0,
        "certos": 1165,
@@ -1645,7 +1660,22 @@
   },
   "Marrakech": {
    "semanas_teste": {
-    "melhor_testada_no_juiz": null,
+    "melhor_testada_no_juiz": {
+     "hash": "884837cc9be302930163409976bbc9a21f7374e86752aeea8a66fa0530613bff",
+     "nota_juiz": -3759.0,
+     "metricas_juiz": {
+      "contratos": 1230,
+      "certos": 1099,
+      "upgrades": 97,
+      "nao_atendidos": 34,
+      "pico_kw": 97.59999999999961,
+      "energia_kwh": 20676.26173188254,
+      "energia_ponta_kwh": 0,
+      "atendimento_pct": 97.23577235772358,
+      "demanda_contratada_kw": 110,
+      "custo_infra": 14000
+     }
+    },
     "candidatas": [
      {
       "origem": "configs/marrakech/otimizada-pesos.json",
@@ -2115,7 +2145,22 @@
   },
   "Zurich": {
    "semanas_teste": {
-    "melhor_testada_no_juiz": null,
+    "melhor_testada_no_juiz": {
+     "hash": "77130044e470eff69f9f161aaf48506f760193d01d0653c8d5ca995a6808b8c1",
+     "nota_juiz": 3003.478989357325,
+     "metricas_juiz": {
+      "contratos": 867,
+      "certos": 842,
+      "upgrades": 19,
+      "nao_atendidos": 6,
+      "pico_kw": 67.00000000000003,
+      "energia_kwh": 14498.278596899348,
+      "energia_ponta_kwh": 2057.04202128535,
+      "atendimento_pct": 99.30795847750865,
+      "demanda_contratada_kw": 0.0,
+      "custo_infra": 7550
+     }
+    },
     "candidatas": [
      {
       "origem": "configs/zurich/otimizada-pesos.json",
@@ -2134,7 +2179,7 @@
       },
       "itens_sem_custo_estimado": [],
       "nota_estimada": 2990.4,
-      "nota_juiz": null,
+      "nota_juiz": 3003.478989357325,
       "metricas_motor": {
        "atendimento_pct": 99.30795847750865,
        "certos": 840,
