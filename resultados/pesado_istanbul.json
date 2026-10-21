@@ -1,0 +1,976 @@
+[
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 8419.8,
+  "nota_pot90": 8419.8,
+  "nota_pot80": 8419.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 8419.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 8419.8,
+  "nota_pot90": 8419.8,
+  "nota_pot80": 8419.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 8419.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 8381.2,
+  "nota_pot90": 8381.2,
+  "nota_pot80": 8381.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 8381.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 8381.2,
+  "nota_pot90": 8381.2,
+  "nota_pot80": 8381.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 8381.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_22x2": 1,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7834.2,
+  "nota_pot90": 7834.2,
+  "nota_pot80": 7837.9,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 0
+  },
+  "pior": 7834.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7761.0,
+  "nota_pot90": 7761.0,
+  "nota_pot80": 7766.6,
+  "perdidos": {
+   "normal": 1,
+   "pot90": 1,
+   "pot80": 1
+  },
+  "pior": 7761.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_22x2": 1,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7834.2,
+  "nota_pot90": 7834.2,
+  "nota_pot80": 7582.1,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 1
+  },
+  "pior": 7582.1
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7761.0,
+  "nota_pot90": 7761.0,
+  "nota_pot80": 7549.4,
+  "perdidos": {
+   "normal": 1,
+   "pot90": 1,
+   "pot80": 2
+  },
+  "pior": 7549.4
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_22x2": 1,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7411.9,
+  "nota_pot90": 7411.9,
+  "nota_pot80": 7421.5,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 7411.9
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_22x2": 1,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7411.9,
+  "nota_pot90": 7411.9,
+  "nota_pot80": 7607.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 1
+  },
+  "pior": 7411.9
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7340.7,
+  "nota_pot90": 7340.7,
+  "nota_pot80": 7366.7,
+  "perdidos": {
+   "normal": 3,
+   "pot90": 3,
+   "pot80": 3
+  },
+  "pior": 7340.7
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7340.7,
+  "nota_pot90": 7340.7,
+  "nota_pot80": 7569.7,
+  "perdidos": {
+   "normal": 3,
+   "pot90": 3,
+   "pot80": 2
+  },
+  "pior": 7340.7
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7134.2,
+  "nota_pot90": 7134.2,
+  "nota_pot80": 7137.9,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 0
+  },
+  "pior": 7134.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7105.0,
+  "nota_pot90": 7105.0,
+  "nota_pot80": 7105.0,
+  "perdidos": {
+   "normal": 13,
+   "pot90": 13,
+   "pot80": 13
+  },
+  "pior": 7105.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7105.0,
+  "nota_pot90": 7105.0,
+  "nota_pot80": 7105.0,
+  "perdidos": {
+   "normal": 13,
+   "pot90": 13,
+   "pot80": 13
+  },
+  "pior": 7105.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6937.5,
+  "nota_pot90": 6937.5,
+  "nota_pot80": 6918.3,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 0
+  },
+  "pior": 6918.3
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7395.0,
+  "nota_pot90": 7395.0,
+  "nota_pot80": 6916.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 2
+  },
+  "pior": 6916.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7395.0,
+  "nota_pot90": 7395.0,
+  "nota_pot80": 6909.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 2
+  },
+  "pior": 6909.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7134.2,
+  "nota_pot90": 7134.2,
+  "nota_pot80": 6882.1,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 1
+  },
+  "pior": 6882.1
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 7095.0,
+  "nota_pot90": 7095.0,
+  "nota_pot80": 6852.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 1
+  },
+  "pior": 6852.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 70,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6779.8,
+  "nota_pot90": 6779.8,
+  "nota_pot80": 6779.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6779.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 70,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6779.8,
+  "nota_pot90": 6779.8,
+  "nota_pot80": 6779.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6779.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_22x2": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6937.5,
+  "nota_pot90": 6937.5,
+  "nota_pot80": 6753.7,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 1
+  },
+  "pior": 6753.7
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 70,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6741.2,
+  "nota_pot90": 6741.2,
+  "nota_pot80": 6741.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6741.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 70,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6741.2,
+  "nota_pot90": 6741.2,
+  "nota_pot80": 6741.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6741.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6739.8,
+  "nota_pot90": 6739.8,
+  "nota_pot80": 6739.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6739.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6739.8,
+  "nota_pot90": 6739.8,
+  "nota_pot80": 6739.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6739.8
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6965.0,
+  "nota_pot90": 6965.0,
+  "nota_pot80": 6722.0,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 3
+  },
+  "pior": 6722.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6965.0,
+  "nota_pot90": 6965.0,
+  "nota_pot80": 6722.0,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 3
+  },
+  "pior": 6722.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6715.0,
+  "nota_pot90": 6715.0,
+  "nota_pot80": 6715.0,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6715.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6711.9,
+  "nota_pot90": 6711.9,
+  "nota_pot80": 6721.5,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6711.9
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6711.9,
+  "nota_pot90": 6711.9,
+  "nota_pot80": 6907.8,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 1
+  },
+  "pior": 6711.9
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6701.2,
+  "nota_pot90": 6701.2,
+  "nota_pot80": 6701.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6701.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6701.2,
+  "nota_pot90": 6701.2,
+  "nota_pot80": 6701.2,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6701.2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 2,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6895.0,
+  "nota_pot90": 6673.0,
+  "nota_pot80": 6652.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 1,
+   "pot80": 1
+  },
+  "pior": 6652.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6880.0,
+  "nota_pot90": 6880.0,
+  "nota_pot80": 6651.0,
+  "perdidos": {
+   "normal": 1,
+   "pot90": 1,
+   "pot80": 2
+  },
+  "pior": 6651.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 7095.0,
+  "nota_pot90": 7095.0,
+  "nota_pot80": 6602.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 0,
+   "pot80": 2
+  },
+  "pior": 6602.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 2
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota_normal": 6715.0,
+  "nota_pot90": 6500.0,
+  "nota_pot80": 6493.0,
+  "perdidos": {
+   "normal": 2,
+   "pot90": 3,
+   "pot80": 3
+  },
+  "pior": 6493.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6880.0,
+  "nota_pot90": 6880.0,
+  "nota_pot80": 6436.0,
+  "perdidos": {
+   "normal": 1,
+   "pot90": 1,
+   "pot80": 3
+  },
+  "pior": 6436.0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_60x2": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota_normal": 6845.0,
+  "nota_pot90": 6415.0,
+  "nota_pot80": 6408.0,
+  "perdidos": {
+   "normal": 0,
+   "pot90": 2,
+   "pot80": 2
+  },
+  "pior": 6408.0
+ }
+]
