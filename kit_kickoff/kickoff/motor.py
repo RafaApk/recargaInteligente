@@ -20,6 +20,8 @@ PRIO_FIM_RECARGA = 2
 PRIO_RETIRADA = 3
 PRIO_FECHAMENTO = 4
 
+EPS = 1e-9  # tolerância de SOC (%) nas comparações com o alvo
+
 
 @dataclass(eq=False)
 class Veiculo:
@@ -87,6 +89,7 @@ class Motor:
             for i in range(sub["carregadores"][modelo_id]):
                 self.pontos.append(Ponto(f"{modelo_id}-{i}", cenario.carregadores[modelo_id]))
         self.eventos = eventos
+        self._abertura_t0 = False  # abertura extra em T0 para plugar a fila inicial (entrar_patio)
 
     # ---------- pronto: laço de eventos ----------
 
@@ -240,8 +243,9 @@ class Motor:
         SOC = km_devolucao / autonomia_km do modelo que atendeu * 100, nunca acima do SOC com que saiu
         (`v.soc` neste momento). `c.km_devolucao` é a autonomia restante em km.
         """
-        # TODO(etapa 2)
-        return v.soc
+        if c.km_devolucao is None:
+            return v.soc
+        return min(v.soc, c.km_devolucao / v.modelo.autonomia_km * 100.0)
 
     def entrar_patio(self, v: Veiculo, t: float) -> None:
         """Carro entra no pátio (T0 ou devolução).
@@ -249,8 +253,20 @@ class Motor:
         Abaixo do SOC alvo (80%) vai para a fila de recarga (5.2), registrando `entrou_fila_t`;
         acima, fica apto no pátio. Depois tente plugar (`plugar_fila`) e recalcule as potências.
         """
-        # TODO(etapa 2)
         self.patio[v.id] = v
+        if v.soc < v.alvo - EPS:
+            v.na_fila = True
+            v.entrou_fila_t = t
+            self.fila.append(v)
+        if not self.trace:
+            # Ainda em _agendar_inicio (o trace só começa no fim dele): a fila de T0 entra toda no
+            # mesmo instante (6.3.3) e é plugada de uma vez, na ordem da política, numa abertura em T0.
+            if v.na_fila and self.aberta and not self._abertura_t0:
+                self._abertura_t0 = True
+                self.agendar(t, PRIO_ABERTURA, "abertura")
+            return
+        self.plugar_fila(t)
+        self.recalcular_potencias(t)
 
     def escolher_carro(self, c, t: float) -> Optional[Veiculo]:
         """Carro do pátio para o contrato c, ou None (cliente perdido). Regulamento 5.1 e 6.3.1.
@@ -261,8 +277,10 @@ class Motor:
         Dolphin Mini 95% plugado; com o Geely a 78%, sai o Dolphin Mini; sem Prata apto, sai o MG4 (upgrade).
         Com a agência fechada, ninguém retira (os contratos já vêm em horário de funcionamento).
         """
-        # TODO(etapa 2)
-        return None
+        aptos = [v for v in self.patio.values() if v.rank >= c.rank and v.soc >= v.alvo - EPS and not v.na_fila]
+        if not aptos:
+            return None
+        return min(aptos, key=lambda v: (v.rank - c.rank, v.soc, v.plugado, v.id))
 
     def ordenar_fila(self, t: float) -> None:
         """Ordena `self.fila` pela política (`self.pol['prioridade']`). Regulamento 6.3.3.
@@ -345,7 +363,6 @@ class Motor:
 
     def on_devolucao(self, vid: str, soc: float, t: float) -> None:
         """Carro volta do contrato com `soc` e entra no pátio. Um carro devolvido apto pode sair no mesmo minuto (5.1)."""
-        # TODO(etapa 2)
         v = self.veiculos[vid]
         v.soc = soc
         self.entrar_patio(v, t)
