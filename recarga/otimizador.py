@@ -10,7 +10,7 @@ import math
 import sys
 from pathlib import Path
 
-from recarga import RESULTADOS, lote, objetivo, pesos
+from recarga import RESULTADOS, lote, objetivo, pesos, robustez
 
 from kickoff import validar  # noqa: E402
 
@@ -259,6 +259,14 @@ def _sementes(vagas: int, n: int) -> list:
     return ok[:n] or [{"ac_7": 1}]
 
 
+def _obra_aproximada(sub: dict, cen) -> tuple:
+    """Desempate entre valores iguais (ex.: lexicográfico ignora obra): sem ampliar a entrada, menos demanda,
+    menos kW instalado; por fim o hash, para ser determinístico."""
+    ampliou = sub["entrada"] != cen.agencia.entrada_existente
+    return (cen.entradas[sub["entrada"]].kva if ampliou else 0.0, sub["demanda_contratada_kw"] or 0,
+            objetivo.kw_instalado(sub, cen), json.dumps(sub, sort_keys=True))
+
+
 PARTIDAS = ({"ac_7": 1}, {"dc_30": 1}, {"ac_22x2": 1}, {"dc_60x2": 1})
 
 
@@ -283,7 +291,8 @@ def buscar(ag: str, modo: str = "rapido", obj=None, eventos=(), processos=None) 
         if k not in vistos:
             vistos.add(k)
             varreduras.append(b.varrer(car, pol))
-    ranking = sorted(sorted(b.vistos.values(), key=lambda r: r["hash"]), key=lambda r: r["valor"], reverse=True)
+    ranking = sorted(sorted(b.vistos.values(), key=lambda r: _obra_aproximada(r["sub"], b.cen)),
+                     key=lambda r: r["valor"], reverse=True)
     for r in ranking:
         r["envio"] = para_envio(r["sub"])
     # demanda.json: a varredura que contém o melhor candidato (senão, a da melhor configuração)
@@ -309,14 +318,18 @@ def main(argv=None) -> None:
     ap = argparse.ArgumentParser(prog="python -m recarga.otimizador")
     ap.add_argument("agencia")
     ap.add_argument("--modo", choices=tuple(MODOS), default="rapido")
+    ap.add_argument("--top", type=int, default=10, help="candidatos considerados na escolha robusta")
     a = ap.parse_args(argv)
-    sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     t = time.time()
     ranking = buscar(a.agencia, a.modo)
     if not ranking:
         raise SystemExit("nenhuma submissão válida encontrada")
-    escolhida = ranking[0]
-    print(f"# {len(ranking)} candidatos em {time.time() - t:.1f} s; valor = {escolhida['valor']}", file=sys.stderr)
+    escolhida = robustez.escolher(ranking, objetivo_semana_padrao(a.agencia), a.top)
+    pos = next(i for i, r in enumerate(ranking) if r is escolhida) + 1
+    print(f"# {len(ranking)} candidatos em {time.time() - t:.1f} s; escolhida a {pos}ª do ranking "
+          f"(valor = {escolhida['valor']})", file=sys.stderr)
     print(json.dumps(escolhida["envio"], ensure_ascii=False, indent=1))
 
 

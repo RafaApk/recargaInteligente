@@ -151,6 +151,8 @@ class Busca(ComTemporarios):
         self.assertEqual(len(salvo[0]["valor_semanas"]), 4)
         dem = json.loads((otimizador.SAIDA / "Bangkok" / "demanda.json").read_text(encoding="utf-8"))
         self.assertTrue(dem)
+        if len({json.dumps(x["valor"]) for x in ranking[:2]}) == 1:  # empate: não amplia a entrada à toa
+            self.assertEqual(r["sub"]["entrada"], cen.agencia.entrada_existente)
         print(f"\n[buscar rapido Bangkok: {self.tempo:.1f} s]")
 
     def test_busca_local_sobe_com_objetivo_falso(self):

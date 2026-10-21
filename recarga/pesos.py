@@ -224,7 +224,8 @@ def main(argv=None) -> None:
     ap.add_argument("--amostras", type=Path, default=AMOSTRAS)
     ap.add_argument("--saida", type=Path, default=ESTIMATIVA)
     a = ap.parse_args(argv)
-    sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     if a.acao == "coletar":
         from recarga.juiz import Juiz, carregar_env
 
