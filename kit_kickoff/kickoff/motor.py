@@ -25,8 +25,9 @@ EPS = 1e-9  # tolerância de SOC (%) nas comparações com o alvo
 
 # Fila de T0 com a agência aberta: True = plugada de uma vez, na ordem da política (leitura de 6.3.3,
 # "entram todos no mesmo instante"); False = carro a carro em ordem de id, como `_agendar_inicio` chama
-# `entrar_patio`. A CONFIRMAR no juiz com comparar.py numa agência aberta no domingo às 18:00.
-PLUG_T0_EM_LOTE = True
+# `entrar_patio`. CONFIRMADO False: Istanbul (aberta em T0) 3x ac_7 + dc_30 dá 8826,28 no juiz e no
+# motor com False (True dava 8381,19).
+PLUG_T0_EM_LOTE = False
 
 
 @dataclass(eq=False)
