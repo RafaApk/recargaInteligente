@@ -371,7 +371,8 @@ class Motor:
         Depois chame `agendar_fim_degrau` para cada carro.
         """
         dividir = potencia.sequencial if self.pol["divisao"] == "prioridade" else potencia.enchimento_agua
-        ordenados = self._plugados_ordenados(t)  # ainda carregando, na ordem da `prioridade`
+        # ainda carregando, na ordem da `prioridade`; na ponta com `evitar_ponta`, ninguém carrega
+        ordenados = [] if self.em_ponta else self._plugados_ordenados(t)
         pos = {v.id: i for i, v in enumerate(ordenados)}
         for p in self.pontos:
             for v in p.conectados:
@@ -438,25 +439,28 @@ class Motor:
 
         Desplugue quem está parado no alvo (80%) segurando saída, depois `plugar_fila`.
         """
-        # TODO(etapa 5): desplugar quem está parado no alvo segurando saída
         self.aberta = True
+        parados = [v for p in self.pontos for v in p.conectados if v.soc >= v.alvo - EPS]
+        for v in parados:
+            self.desplugar(v)
         self.plugar_fila(t)
+        if parados:
+            self.recalcular_potencias(t)
 
     def on_fechamento(self, t: float) -> None:
         """Agência fecha: ninguém retira nem pluga/despluga; a recarga continua (5.2).
 
         Quem atinge 80% com a agência fechada segura a saída até a abertura.
         """
-        # TODO(etapa 5)
-        self.aberta = False
+        self.aberta = False  # a recarga continua; plugar/desplugar esperam a abertura
 
     def on_ponta(self, inicio: bool, t: float) -> None:
         """Início/fim da ponta (seg-sex 18:00-21:00) com `evitar_ponta` (5.3, 6.3.6).
 
         Na ponta todos a 0 kW, continuam plugados e plugar continua permitido. Recalcule as potências.
         """
-        # TODO(etapa 5)
         self.em_ponta = inicio
+        self.recalcular_potencias(t)
 
     def agendar_eventos(self, eventos) -> None:
         """Agenda os eventos ao vivo (seção 11). `eventos`: lista de `params` (minutos desde 17/10/2049 00:00).
