@@ -127,6 +127,9 @@ Placar às 17:10 UTC: total 9909,93; saldo **920 m7Coins**; 2 agências ainda a 
 
 **Em andamento:** `resultados/exaustivo.py` (busca exaustiva com nota robusta pela pior semana) → `resultados/exaustivo.json`.
 
+
+**Pronta para enviar depois (Zurich):** `configs/zurich/conservadora-pronta.json` (ac_7×2 + dc_60x2, b3_75, proxima_retirada, prioridade) — melhor sob estresse de potência; reenvio custa 80.
+
 ## Pendências
 
 1. **Evento de Marrakech** (`["corte","Marrakech",31680,34560,0.7]`, carta "Pedido da concessionária"): nenhum fator

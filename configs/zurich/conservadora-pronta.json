@@ -1,0 +1,2 @@
+{"agencia": "Zurich", "carregadores": {"ac_7": 2, "dc_60x2": 1}, "entrada": "b3_75",
+ "politica": {"prioridade": "proxima_retirada", "evitar_ponta": false, "divisao": "prioridade"}}
