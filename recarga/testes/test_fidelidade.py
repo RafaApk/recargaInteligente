@@ -94,6 +94,26 @@ class Rodar(unittest.TestCase):
         self.assertFalse(res[0]["ok"])
         self.assertTrue(any(d.startswith("series.potencia_kw") for d in res[0]["diverge"]))
 
+    def test_resposta_sem_metricas_diverge(self):
+        res = rodar(JuizFalso(lambda r: {k: v for k, v in r.items() if k != "metricas"}), matriz()[:1])
+        self.assertFalse(res[0]["ok"])
+        self.assertIn("juiz.sem_metricas", res[0]["diverge"])
+
+    def test_resposta_com_metricas_vazias_diverge(self):
+        res = rodar(JuizFalso(lambda r: {**r, "metricas": {}}), matriz()[:1])
+        self.assertIn("juiz.sem_metricas", res[0]["diverge"])
+        self.assertFalse(res[0]["ok"])
+
+    def test_resposta_sem_series_diverge(self):
+        res = rodar(JuizFalso(lambda r: {k: v for k, v in r.items() if k != "series"}), matriz()[:1])
+        self.assertFalse(res[0]["ok"])
+        self.assertIn("juiz.sem_series", res[0]["diverge"])
+
+    def test_resposta_invalida_diverge(self):
+        res = rodar(JuizFalso(lambda r: {"valido": False, "erros": ["x"]}), matriz()[:1])
+        self.assertFalse(res[0]["ok"])
+        self.assertEqual(res[0]["diverge"], ["juiz.invalido"])
+
     def test_rodar_registra_erro_e_segue(self):
         class Quebrado(JuizFalso):
             def teste(self, ag, sub, detalhe="placar", confirmar=False):

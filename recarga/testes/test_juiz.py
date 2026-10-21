@@ -23,6 +23,7 @@ class ClienteFalso:
     def __init__(self, saldo=1000, taxa=20):
         self.saldo, self.taxa = saldo, taxa
         self.eventos_ativos = []
+        self.envios_na_status = True   # False simula o campo `envios` ausente/renomeado
         self.fila_teste = []        # respostas/exceções devolvidas antes do padrão
         self.fila_final = []
         self.chamadas_status = 0
@@ -32,8 +33,9 @@ class ClienteFalso:
 
     def status(self):
         self.chamadas_status += 1
+        info = {"aberta": True, **({"envios": 0} if self.envios_na_status else {})}
         return {"fase": "neblina", "saldo": self.saldo, "eventos_ativos": list(self.eventos_ativos),
-                "agencias": {"Teste": {"aberta": True, "envios": 0}, "Bangkok": {"aberta": True, "envios": 0}}}
+                "agencias": {"Teste": dict(info), "Bangkok": dict(info)}}
 
     def catalogo(self):
         self.chamadas_outras.append("catalogo")
@@ -354,6 +356,28 @@ class Final(Base):
         self.assertIn("reserva", str(cm.exception))
         self.assertEqual(len(self.falso.chamadas_final), 1)
 
+    def test_final_envios_desconhecido_trata_como_pago_e_respeita_reserva(self):
+        self.falso.envios_na_status = False
+        self.falso.saldo = 350  # taxa assumida >= 80: 350-80 < 300
+        with self.assertRaises(Recusado) as cm:
+            self.juiz.final("Teste", SUB, confirmar=True)
+        self.assertIn("reserva", str(cm.exception))
+        self.assertEqual(self.falso.chamadas_final, [])
+
+    def test_final_envios_desconhecido_com_saldo_folgado_envia(self):
+        self.falso.envios_na_status = False
+        self.juiz.final("Teste", SUB, confirmar=True)
+        self.assertEqual(len(self.falso.chamadas_final), 1)
+
+    def test_final_envios_desconhecido_usa_historico_local(self):
+        self.falso.envios_na_status = False
+        self.juiz.final("Teste", SUB, confirmar=True)
+        self.falso.saldo = 450  # 2º envio local custaria 80 (450-80 ok); 3º custaria 160 (450-160 < 300)
+        self.juiz.final("Teste", {**SUB, "carregadores": {"ac_7": 3}}, confirmar=True)
+        with self.assertRaises(Recusado) as cm:
+            self.juiz.final("Teste", {**SUB, "carregadores": {"ac_7": 4}}, confirmar=True)
+        self.assertIn("reserva", str(cm.exception))
+
     def test_primeiro_final_gratis_ignora_reserva(self):
         self.falso.saldo = 100
         self.juiz.final("Teste", SUB, confirmar=True)
@@ -380,6 +404,27 @@ class Final(Base):
             self.juiz.final("Teste", SUB, confirmar=True)
         self.assertEqual(len(self.falso.chamadas_final), 1)
         falso_lote.avaliar.assert_called_once()
+
+
+class ImportLote(unittest.TestCase):
+    def test_ausencia_de_recarga_lote_vira_none(self):
+        ausente = ModuleNotFoundError("No module named 'recarga.lote'", name="recarga.lote")
+        with mock.patch.object(mod.importlib, "import_module", side_effect=ausente):
+            self.assertIsNone(mod._importar_lote())
+
+    def test_outro_erro_de_import_sobe(self):
+        outro = ModuleNotFoundError("No module named 'numpy'", name="numpy")
+        with mock.patch.object(mod.importlib, "import_module", side_effect=outro):
+            with self.assertRaises(ModuleNotFoundError):
+                mod._importar_lote()
+        with mock.patch.object(mod.importlib, "import_module", side_effect=ImportError("quebrado")):
+            with self.assertRaises(ImportError):
+                mod._importar_lote()
+
+    def test_modulo_presente_e_devolvido(self):
+        falso = object()
+        with mock.patch.object(mod.importlib, "import_module", return_value=falso):
+            self.assertIs(mod._importar_lote(), falso)
 
 
 class Rotas(Base):

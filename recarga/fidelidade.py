@@ -52,7 +52,13 @@ def _comparar(sub: dict, resp: dict, cenarios: dict, cat, eventos: list):
     out = simular.avaliar(sub, cenarios, DADOS, cat, eventos, True)
     if not out["valido"]:
         return ["invalido: " + "; ".join(out["erros"])], ""
+    if resp.get("valido") is False:
+        return ["juiz.invalido"], "juiz recusou a submissão: " + "; ".join(map(str, resp.get("erros") or []))
     diverge: list = []
+    if not resp.get("metricas"):
+        diverge.append("juiz.sem_metricas")
+    if not resp.get("series"):
+        diverge.append("juiz.sem_series")
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
         comparar.comparar_metricas(out["metricas"], resp.get("metricas") or {}, diverge)

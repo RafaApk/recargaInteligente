@@ -4,6 +4,7 @@ Tudo que gasta m7Coins passa por aqui: valida localmente, exige `confirmar=True`
 reserva de saldo, evita cobrar duas vezes o mesmo teste (cache por hash) e espera cooldown/rate limit.
 Arquivos gerados em `raiz` (padrão `resultados/`): status.json, ledger.jsonl, finais.jsonl, juiz/<ag>/<hash>_<detalhe>.json.
 """
+import importlib
 import json
 import os
 import sys
@@ -19,10 +20,18 @@ from kickoff import validar
 from kickoff.api import Cliente, ErroApi
 from kickoff.dados import carregar
 
-try:  # construído por outra frente; opcional aqui
-    from recarga import lote
-except ImportError:
-    lote = None
+
+def _importar_lote():
+    """`recarga.lote` é construído por outra frente: opcional aqui. Só a ausência desse módulo é engolida."""
+    try:
+        return importlib.import_module("recarga.lote")
+    except ModuleNotFoundError as e:
+        if e.name != "recarga.lote":
+            raise
+        return None
+
+
+lote = _importar_lote()
 
 DETALHES = ("placar", "completo")
 TAXA_PLACAR = 20
@@ -275,12 +284,16 @@ class Juiz:
         return resp
 
     def _envios_anteriores(self, ag: str) -> int:
+        """Nº de finais já enviados. Se `/status` não informa `envios` (ausente/renomeado) a contagem é
+        desconhecida: assume-se ao menos 1 (o próximo envio é pago), para que a reserva valha."""
         local = sum(1 for l in _linhas_jsonl(self.raiz / "finais.jsonl") if l.get("agencia") == ag)
         info = ((self._status or {}).get("agencias") or {}).get(ag) or {}
-        envios = info.get("envios")
+        envios = info.get("envios") if isinstance(info, dict) else None
         if isinstance(envios, list):
             envios = len(envios)
-        return max(local, envios if isinstance(envios, int) and not isinstance(envios, bool) else 0)
+        if isinstance(envios, bool) or not isinstance(envios, int):
+            return max(local, 1)  # desconhecido: trata como reenvio pago
+        return max(local, envios)
 
     def final(self, ag: str, sub: dict, confirmar: bool = False) -> dict:
         if ag == BANGKOK:
