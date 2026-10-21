@@ -1,0 +1,35 @@
+[
+ {
+  "demanda": null,
+  "entrada": "b3_45",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "hash": "a2d767a8225a03bcc773ce60fe2dc9e5d29c219b9864e799e92b29ec5c977260",
+  "atendimento_pct": 100.0
+ },
+ {
+  "demanda": null,
+  "entrada": "b3_75",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "hash": "74dea6dc1d86d4067e84f155f577a231b5a203fa2a8559f389c8bdecf0bdd74a",
+  "atendimento_pct": 100.0
+ },
+ {
+  "demanda": 30,
+  "entrada": "a4_150",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "hash": "825063c9ef8bf0bf73876ca97950ef0fab12eea323ab76ea307bee02326f7b1a",
+  "atendimento_pct": 100.0
+ }
+]

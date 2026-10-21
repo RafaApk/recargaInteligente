@@ -1,0 +1,2074 @@
+[
+ {
+  "agencia": "Hanoi",
+  "hash": "2ab8b817e126f51f72d890e309bc683a30324ef57fd44fe4e8a9dbeb867fa047",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000011,
+   "energia_kwh": 20403.93645505634,
+   "energia_ponta_kwh": 2011.1818764215332,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000011,
+    "energia_kwh": 4984.981406599096,
+    "energia_ponta_kwh": 428.2792829348825,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000007,
+    "energia_kwh": 5083.378931131705,
+    "energia_ponta_kwh": 578.0937207117804,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999994,
+    "energia_kwh": 5478.824865112683,
+    "energia_ponta_kwh": 514.9301236604641,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999998836,
+    "energia_kwh": 4856.7512522128545,
+    "energia_ponta_kwh": 489.8787491144061,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "192ae8f62b4e205e6f3cacdb13466b66f472d35fa9d81501d919b6cfa8948e16",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000013,
+   "energia_kwh": 20466.231872307177,
+   "energia_ponta_kwh": 1967.2523952355245,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000009,
+    "energia_kwh": 4997.847005303119,
+    "energia_ponta_kwh": 428.1435562912866,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000013,
+    "energia_kwh": 5123.278285136413,
+    "energia_ponta_kwh": 544.7090457002728,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000004,
+    "energia_kwh": 5489.364616350888,
+    "energia_ponta_kwh": 509.01514297794483,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999997,
+    "energia_kwh": 4855.741965516756,
+    "energia_ponta_kwh": 485.38465026602023,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "16f3931e38cc3933440d5e7dfcf9d40153a2be4c07af7d14e0fdf128b3ecae7a",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000011,
+   "energia_kwh": 20407.84462643605,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000006,
+    "energia_kwh": 4983.668447924076,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000004,
+    "energia_kwh": 5084.098287120766,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000011,
+    "energia_kwh": 5468.087335531816,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999998882,
+    "energia_kwh": 4871.990555859393,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "d10dada92061b18893ffd0691f8fda948ca623730e8486a2fd847c021b837798",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000013,
+   "energia_kwh": 20474.3197067321,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000003,
+    "energia_kwh": 5004.433468948714,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000013,
+    "energia_kwh": 5100.692305382182,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000001,
+    "energia_kwh": 5479.66679264064,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999706,
+    "energia_kwh": 4889.527139760564,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "f59f68ff7417c012e67786a005bb0a56c615afc66c87ac17ea00647f1202fd1e",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000011,
+   "energia_kwh": 20403.93645505634,
+   "energia_ponta_kwh": 2011.1818764215332,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000011,
+    "energia_kwh": 4984.981406599096,
+    "energia_ponta_kwh": 428.2792829348825,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000007,
+    "energia_kwh": 5083.378931131705,
+    "energia_ponta_kwh": 578.0937207117804,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999994,
+    "energia_kwh": 5478.824865112683,
+    "energia_ponta_kwh": 514.9301236604641,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999998836,
+    "energia_kwh": 4856.7512522128545,
+    "energia_ponta_kwh": 489.8787491144061,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "68630e75a6255ba254eaff0276edf6c4d70e373d9414c39f6404ff1fb108cef5",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000013,
+   "energia_kwh": 20466.231872307177,
+   "energia_ponta_kwh": 1967.2523952355245,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000009,
+    "energia_kwh": 4997.847005303119,
+    "energia_ponta_kwh": 428.1435562912866,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000013,
+    "energia_kwh": 5123.278285136413,
+    "energia_ponta_kwh": 544.7090457002728,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000004,
+    "energia_kwh": 5489.364616350888,
+    "energia_ponta_kwh": 509.01514297794483,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999997,
+    "energia_kwh": 4855.741965516756,
+    "energia_ponta_kwh": 485.38465026602023,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "90e5d7290fc56ce98086491576ea99f83ea710baa19d05b61dfd538fda7c4dce",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000011,
+   "energia_kwh": 20407.84462643605,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000006,
+    "energia_kwh": 4983.668447924076,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000004,
+    "energia_kwh": 5084.098287120766,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000011,
+    "energia_kwh": 5468.087335531816,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999998882,
+    "energia_kwh": 4871.990555859393,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "8b1b52bc77e83afa801fc4883e979e839bb8303c237ea34f4f3106c6a8285157",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 90,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 90.00000000000013,
+   "energia_kwh": 20474.3197067321,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 90
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000003,
+    "energia_kwh": 5004.433468948714,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000013,
+    "energia_kwh": 5100.692305382182,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 90.00000000000001,
+    "energia_kwh": 5479.66679264064,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 89.99999999999706,
+    "energia_kwh": 4889.527139760564,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 90
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -90.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 90
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "a26ae956217e269a8a630ce335ff1c0fed41e65edca9d09b9726252543c87647",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 100.00000000000006,
+   "energia_kwh": 20470.882163722974,
+   "energia_ponta_kwh": 2197.669463595411,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 100
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.99999999999996,
+    "energia_kwh": 5000.01825377785,
+    "energia_ponta_kwh": 444.5910952744626,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.99999999999994,
+    "energia_kwh": 5103.449462378383,
+    "energia_ponta_kwh": 648.0217964940348,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 100.00000000000001,
+    "energia_kwh": 5480.938892205049,
+    "energia_ponta_kwh": 613.0189274234617,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 100.00000000000006,
+    "energia_kwh": 4886.47555536169,
+    "energia_ponta_kwh": 492.0376444034518,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 100
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "80576a6604e0dc95852d6f79166d60606337b03569fa113768671a25bebe2418",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 100,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 99.99999999999997,
+   "energia_kwh": 20455.763887153607,
+   "energia_ponta_kwh": 2203.275790179119,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 100
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.9999999999986,
+    "energia_kwh": 4999.088794128866,
+    "energia_ponta_kwh": 455.3132540465907,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.99999999999997,
+    "energia_kwh": 5104.621390132763,
+    "energia_ponta_kwh": 596.1979211341026,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.99999999998705,
+    "energia_kwh": 5485.94104679315,
+    "energia_ponta_kwh": 619.2728575463112,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 99.99999999999054,
+    "energia_kwh": 4866.11265609883,
+    "energia_ponta_kwh": 532.4917574521148,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 100
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 100
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "a31cdcb78e2f77a95f3862cf602f9e74867411a6b638a92a4efc8d686c7bf8a2",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 109.99999999999997,
+   "energia_kwh": 20417.99445432843,
+   "energia_ponta_kwh": 2204.3599539131446,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 110
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999999997,
+    "energia_kwh": 4985.334111422872,
+    "energia_ponta_kwh": 417.065990366377,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999999058,
+    "energia_kwh": 5080.576486908875,
+    "energia_ponta_kwh": 599.2156668371751,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999998735,
+    "energia_kwh": 5470.043246496247,
+    "energia_ponta_kwh": 623.4057845351065,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999996781,
+    "energia_kwh": 4882.040609500435,
+    "energia_ponta_kwh": 564.6725121744861,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 110
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "be896f8d4cbd16a9116547809c67924073522f5259cef7d13d1aa65ecfc3be08",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 109.99999999999831,
+   "energia_kwh": 20410.69885291481,
+   "energia_ponta_kwh": 2157.804657001786,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 110
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999999831,
+    "energia_kwh": 4983.313827713748,
+    "energia_ponta_kwh": 423.096725437035,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999999015,
+    "energia_kwh": 5083.982942219981,
+    "energia_ponta_kwh": 591.2551171236636,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.9999999999855,
+    "energia_kwh": 5481.73326474203,
+    "energia_ponta_kwh": 624.765040534141,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 109.99999999999078,
+    "energia_kwh": 4861.668818239054,
+    "energia_ponta_kwh": 518.6877739069464,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 110
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 110
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "08ad98e00877f3d710a4b5dfb78b86d204a18ab5d96a9239d52b80fea16e055f",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 120,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 119.99999999999244,
+   "energia_kwh": 20404.92299993172,
+   "energia_ponta_kwh": 2064.675939459991,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 120
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.71300365931874,
+    "energia_kwh": 4986.206225856872,
+    "energia_ponta_kwh": 403.41513188504234,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.99999999999244,
+    "energia_kwh": 5083.457484000008,
+    "energia_ponta_kwh": 569.1665063801519,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.9999999999681,
+    "energia_kwh": 5470.510907590469,
+    "energia_ponta_kwh": 568.8415446699312,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.9999999999715,
+    "energia_kwh": 4864.748382484373,
+    "energia_ponta_kwh": 523.2527565248655,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 120
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "eaf330e26fc3dfe96d534c0d862901f65f9f6e353c0caeffad43b0d56933ce60",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 120,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 119.99999999999552,
+   "energia_kwh": 20430.59559744678,
+   "energia_ponta_kwh": 2128.2295696252254,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 120
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.99999999999552,
+    "energia_kwh": 4985.334111422862,
+    "energia_ponta_kwh": 403.16683116773845,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.99999999998128,
+    "energia_kwh": 5082.8202175640145,
+    "energia_ponta_kwh": 560.7878944450453,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.99999999998128,
+    "energia_kwh": 5478.856582309538,
+    "energia_ponta_kwh": 594.1568711640957,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 119.99999999998386,
+    "energia_kwh": 4883.584686150366,
+    "energia_ponta_kwh": 570.1179728483461,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 120
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -120.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 120
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "336f37e7cfe5b2851c35bc11883ec2db5773ba7b0470c804ff1c25a185edd7e0",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 126.99999999999994,
+   "energia_kwh": 20381.313324070834,
+   "energia_ponta_kwh": 1896.0716035249307,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 130
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999999994,
+    "energia_kwh": 4988.45845518697,
+    "energia_ponta_kwh": 397.20440295953125,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999994033,
+    "energia_kwh": 5084.811460046815,
+    "energia_ponta_kwh": 564.6017883391453,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.9999999999748,
+    "energia_kwh": 5462.223124723691,
+    "energia_ponta_kwh": 471.4934916542135,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.59999999995013,
+    "energia_kwh": 4845.820284113359,
+    "energia_ponta_kwh": 462.77192057204064,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -127.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 130
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "1253500332fdf2d52604b84d35284b436fa8b4308f2a2f879bcbd20fb39ec180",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 130,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 126.99999999999599,
+   "energia_kwh": 20398.530407796643,
+   "energia_ponta_kwh": 1901.1030935898743,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 130
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999999599,
+    "energia_kwh": 4988.458455186973,
+    "energia_ponta_kwh": 397.2044029595315,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999997576,
+    "energia_kwh": 5086.234780085337,
+    "energia_ponta_kwh": 586.0826245369058,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.59999999998207,
+    "energia_kwh": 5468.6541329102665,
+    "energia_ponta_kwh": 469.36529209258015,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999998424,
+    "energia_kwh": 4855.183039614067,
+    "energia_ponta_kwh": 448.4507740008569,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 130
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -127.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 130
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "60d64ec3b1c9651c2cf269bf82d032cbe0b9efdc1ef2c80b3d0049a55f2bcf5f",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "demanda_contratada_kw": 140,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 130.99999999999923,
+   "energia_kwh": 20391.185382943644,
+   "energia_ponta_kwh": 1891.0168576799297,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 140
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.99999999999923,
+    "energia_kwh": 4988.458455186969,
+    "energia_ponta_kwh": 400.3134229595314,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.8561055709289,
+    "energia_kwh": 5078.605409415225,
+    "energia_ponta_kwh": 526.9320625004336,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.99999999994765,
+    "energia_kwh": 5471.265287860641,
+    "energia_ponta_kwh": 482.3040202935133,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.99999999997229,
+    "energia_kwh": 4852.85623048081,
+    "energia_ponta_kwh": 481.46735192645133,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -131.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 140
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "a651cdf3a63c5394cf8f06ea197a88e35129440d47b920cbcb72ff43db133f8d",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "demanda_contratada_kw": 140,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 130.99999999999642,
+   "energia_kwh": 20394.528581374867,
+   "energia_ponta_kwh": 1885.2154134322523,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 140
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.99999999999642,
+    "energia_kwh": 4988.458455186971,
+    "energia_ponta_kwh": 400.3134229595316,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.95830882564925,
+    "energia_kwh": 5078.605409415216,
+    "energia_ponta_kwh": 527.9824122270776,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 130.99999999999,
+    "energia_kwh": 5469.437217102888,
+    "energia_ponta_kwh": 459.718732189431,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 126.59999999997855,
+    "energia_kwh": 4858.027499669793,
+    "energia_ponta_kwh": 497.2008460562121,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 140
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -131.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 140
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "98aaa654c168d97875c858675989f1a296e555e8e502018ec2c23d636444417e",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "demanda_contratada_kw": 150,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 138.39999999999486,
+   "energia_kwh": 20436.036768542108,
+   "energia_ponta_kwh": 1808.4735192148082,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 150
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 138.39999999999486,
+    "energia_kwh": 4999.340478438074,
+    "energia_ponta_kwh": 404.4336659711147,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 135.78916134110162,
+    "energia_kwh": 5094.194943534559,
+    "energia_ponta_kwh": 495.15770987305905,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 137.59999999994935,
+    "energia_kwh": 5479.320546799021,
+    "energia_ponta_kwh": 460.3906742458891,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 136.5285461373137,
+    "energia_kwh": 4863.180799770454,
+    "energia_ponta_kwh": 448.4914691247455,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -142.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 150
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Hanoi",
+  "hash": "938149226ffbde7ed96bfa0fefc482e7b83dc8d973868961f7623613cb1c96da",
+  "sub": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "demanda_contratada_kw": 150,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 1167,
+   "certos": 1167,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 139.84256612144142,
+   "energia_kwh": 20446.470454849426,
+   "energia_ponta_kwh": 1785.791726455098,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 150
+  },
+  "semanas": [
+   {
+    "contratos": 291,
+    "certos": 291,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 139.84256612144142,
+    "energia_kwh": 5007.218670167633,
+    "energia_ponta_kwh": 398.9624229595322,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 274,
+    "certos": 274,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 137.59999999998874,
+    "energia_kwh": 5106.915459752675,
+    "energia_ponta_kwh": 467.1437222344981,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 314,
+    "certos": 314,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 138.02148198543387,
+    "energia_kwh": 5484.225772768866,
+    "energia_ponta_kwh": 453.00119356127055,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   },
+   {
+    "contratos": 288,
+    "certos": 288,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 137.27552480915688,
+    "energia_kwh": 4848.110552160251,
+    "energia_ponta_kwh": 466.68438769979696,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 150
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   1167,
+   -142.0
+  ],
+  "envio": {
+   "agencia": "Hanoi",
+   "carregadores": {
+    "ac_22x2": 1,
+    "dc_120x2": 1
+   },
+   "entrada": "a4_225",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 150
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ }
+]

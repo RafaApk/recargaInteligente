@@ -1,0 +1,2072 @@
+[
+ {
+  "agencia": "Bangkok",
+  "hash": "a2d767a8225a03bcc773ce60fe2dc9e5d29c219b9864e799e92b29ec5c977260",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "4b922510501bd6eee1f3a9cf123c3f76fb5293f380bffb3738abc54258e93a68",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "90e768a4d10560b9846b4ee4efa7c9230c9acf73f126d8fb89262cdcc092afe5",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "74dea6dc1d86d4067e84f155f577a231b5a203fa2a8559f389c8bdecf0bdd74a",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "d89504cb8db5b9401920ac6be6a63c19ee02bc29915a2519ba1136905133b373",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "d3e5c0fef6b4e93242d1297c31bcf38592c2c53d8bff6e0e1e7ac341baacfcef",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "825063c9ef8bf0bf73876ca97950ef0fab12eea323ab76ea307bee02326f7b1a",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 30
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 30
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "3e6bd42a6a9ebc2c32c7e7b829522941bcba8fae075a3726b7602191ac3507f9",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 30
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 30
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "4a1508775eb6f2d059b6853cad1bd4425c9dd5fc54a92da47ec6e907be8ab8ec",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 30.00000000000003,
+   "energia_kwh": 4499.186306408739,
+   "energia_ponta_kwh": 63.583628212029986,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 30
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000007,
+    "energia_kwh": 1091.9333200405588,
+    "energia_ponta_kwh": 15.089445514604517,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000025,
+    "energia_kwh": 1169.781149068402,
+    "energia_ponta_kwh": 39.826580266457405,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.00000000000003,
+    "energia_kwh": 1179.8848195605049,
+    "energia_ponta_kwh": 5.559719191079571,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 30.000000000000014,
+    "energia_kwh": 1057.587017739273,
+    "energia_ponta_kwh": 3.1078832398884897,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 30
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -30.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 30
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "31bcf4175af9270222fb611f792f8eff11a9b004f314940af96492dc07015aed",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 97.1130889320009,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848415,
+    "energia_ponta_kwh": 20.431486490762126,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 54.64849670482659,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 1.8297673051672625,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "1534025a9b0bb0bb582085ec9d7506f2fc45ff411877726392e7860467daa1af",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848413,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "33a4a92d7e5c0f1c648f7071a4a2b8524aa13f5c07354d02ada82df81cf52c62",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 97.1130889320009,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848415,
+    "energia_ponta_kwh": 20.431486490762126,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 54.64849670482659,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 1.8297673051672625,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "20b8cb87863f3caf6e615877406687ad7d85a68376cea457d352f9d36f82aa3b",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 97.1130889320009,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 40
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848415,
+    "energia_ponta_kwh": 20.431486490762126,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 54.64849670482659,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 1.8297673051672625,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 40
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "ddbaf3d12c6c27f219838183f3c3ddee49f2a6a4146430ae79581879b19d2c30",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 40
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848413,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 40
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "baa9b3ea5ab181e17e1b800d8a13a1b84a96e77b5fd2f0c9b084549968ccef40",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 37.000000000000014,
+   "energia_kwh": 4510.246739436065,
+   "energia_ponta_kwh": 97.1130889320009,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 40
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1092.8124799848415,
+    "energia_ponta_kwh": 20.431486490762126,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.000000000000014,
+    "energia_kwh": 1194.0422846229378,
+    "energia_ponta_kwh": 54.64849670482659,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 37.0,
+    "energia_kwh": 1166.3314294695574,
+    "energia_ponta_kwh": 1.8297673051672625,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 36.999999999999886,
+    "energia_kwh": 1057.060545358728,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 40
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -37.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   },
+   "demanda_contratada_kw": 40
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "d6d944a943ba7e0a9dc0971bc1dc19073f40f4d275ac7a6922eaddd92ca46706",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 40.50000000000003,
+   "energia_kwh": 4511.701298313203,
+   "energia_ponta_kwh": 90.50245859096061,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.50000000000002,
+    "energia_kwh": 1092.8124799848417,
+    "energia_ponta_kwh": 21.55598085169309,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.499999999996426,
+    "energia_kwh": 1195.6496783388125,
+    "energia_ponta_kwh": 48.7431393080226,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.50000000000003,
+    "energia_kwh": 1166.3314294695524,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.500000000000014,
+    "energia_kwh": 1056.9077105199956,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -41.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "b4f6571018401cbb5830a69c30b4f32b86214f68be10151a5db18ba5e9a23750",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 40.50000000000003,
+   "energia_kwh": 4511.701298313203,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.50000000000002,
+    "energia_kwh": 1092.812479984842,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.499999999996426,
+    "energia_kwh": 1195.6496783388125,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.50000000000003,
+    "energia_kwh": 1166.3314294695524,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.500000000000014,
+    "energia_kwh": 1056.9077105199956,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -41.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "12ead413e8d80a25d77aa557ed0e246687f438d3134f5f58e841bf9d75ab1168",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "demanda_contratada_kw": null,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 40.50000000000002,
+   "energia_kwh": 4511.7012983132,
+   "energia_ponta_kwh": 90.35493490633002,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 0.0
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.500000000000014,
+    "energia_kwh": 1092.8124799848417,
+    "energia_ponta_kwh": 21.40845716706331,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.49999999999815,
+    "energia_kwh": 1195.649678338812,
+    "energia_ponta_kwh": 48.743139308021775,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.50000000000002,
+    "energia_kwh": 1166.331429469551,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.500000000000014,
+    "energia_kwh": 1056.907710519995,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 0.0
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -41.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_45",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "6e2eb89ce07127682f34df41d8353273465c7696eb54d140a6073f9e181a5a9c",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 50,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 41.00000000000002,
+   "energia_kwh": 4511.7012983132145,
+   "energia_ponta_kwh": 89.35951213669088,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 50
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.000000000000014,
+    "energia_kwh": 1092.812479984842,
+    "energia_ponta_kwh": 20.66303439742727,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.0,
+    "energia_kwh": 1195.6496783388102,
+    "energia_ponta_kwh": 48.49313930801869,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.00000000000002,
+    "energia_kwh": 1166.3314294695545,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.999999999990244,
+    "energia_kwh": 1056.9077105200074,
+    "energia_ponta_kwh": 20.203338431244923,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -41.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 50
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ },
+ {
+  "agencia": "Bangkok",
+  "hash": "018e86de8087c96d161cf9c171fe1db883ee1a2a51074012357603623f2a282a",
+  "sub": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 50,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "eventos": [],
+  "valido": true,
+  "erros": [],
+  "violacoes": [],
+  "metricas": {
+   "contratos": 271,
+   "certos": 271,
+   "upgrades": 0,
+   "nao_atendidos": 0,
+   "pico_kw": 41.00000000000002,
+   "energia_kwh": 4511.7012983132145,
+   "energia_ponta_kwh": 0,
+   "atendimento_pct": 100.0,
+   "demanda_contratada_kw": 50
+  },
+  "semanas": [
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.000000000000014,
+    "energia_kwh": 1092.8124799848422,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 68,
+    "certos": 68,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.0,
+    "energia_kwh": 1195.6496783388102,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 64,
+    "certos": 64,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 41.00000000000002,
+    "energia_kwh": 1166.3314294695545,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   },
+   {
+    "contratos": 71,
+    "certos": 71,
+    "upgrades": 0,
+    "nao_atendidos": 0,
+    "pico_kw": 40.999999999990244,
+    "energia_kwh": 1056.9077105200074,
+    "energia_ponta_kwh": 0,
+    "atendimento_pct": 100.0,
+    "demanda_contratada_kw": 50
+   }
+  ],
+  "versao_motor": "1a48704c1b133ec7",
+  "valor": [
+   100.0,
+   271,
+   -41.0
+  ],
+  "envio": {
+   "agencia": "Bangkok",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   },
+   "demanda_contratada_kw": 50
+  },
+  "valor_semanas": [
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ]
+ }
+]
