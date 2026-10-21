@@ -9,7 +9,7 @@
   "n": 4,
   "rotulo": "H4"
  },
- "agora": "2026-10-21T17:07:21.678446+00:00",
+ "agora": "2026-10-21T17:09:37.253243+00:00",
  "h0": "2026-10-21T14:02:59.605683+00:00",
  "saldo": 920,
  "agencias": {
@@ -44,9 +44,9 @@
   "Zurich": {
    "aberta": true,
    "cooldown_teste_ate": null,
-   "cooldown_final_ate": null,
-   "envios": 0,
-   "vigente": false
+   "cooldown_final_ate": "2026-10-21T17:24:36.678982+00:00",
+   "envios": 1,
+   "vigente": true
   }
  },
  "cartas": [
