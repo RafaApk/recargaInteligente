@@ -2,3 +2,4 @@
 {"t": "2026-10-21T16:53:50.645863Z", "rota": "teste", "agencia": "Hanoi", "hash": "d367e68b4060a1801f8889485eb5991bac902b4753cb40ebb9c3cacb15dd38b1", "taxa": 20, "saldo": 960, "autor": "Caio"}
 {"t": "2026-10-21T16:54:16.230299Z", "rota": "teste", "agencia": "Marrakech", "hash": "884837cc9be302930163409976bbc9a21f7374e86752aeea8a66fa0530613bff", "taxa": 20, "saldo": 940, "autor": "Caio"}
 {"t": "2026-10-21T16:54:20.083872Z", "rota": "teste", "agencia": "Zurich", "hash": "77130044e470eff69f9f161aaf48506f760193d01d0653c8d5ca995a6808b8c1", "taxa": 20, "saldo": 920, "autor": "Caio"}
+{"t": "2026-10-21T18:10:14.649518Z", "rota": "teste", "agencia": "Marrakech", "hash": "884837cc9be302930163409976bbc9a21f7374e86752aeea8a66fa0530613bff", "taxa": 30, "saldo": 890, "autor": "Caio"}

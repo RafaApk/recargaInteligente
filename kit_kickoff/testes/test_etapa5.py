@@ -104,3 +104,14 @@ class Horario(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+@unittest.skipUnless(apoio.TEM_DADOS, apoio.SEM_DADOS)
+class EventoCorte(unittest.TestCase):
+    def test_corte_reduz_limite_na_janela(self):
+        # juiz em Marrakech: demanda 110 kW, corte 0.7 -> potência travada em 77 kW na janela
+        cen = apoio.cenario([apoio.veiculo(f"V{i}", "MG4 Urban Comfort", soc=10.0) for i in range(4)])
+        m = apoio.motor(cen, {"ac_22x2": 2}, entrada="a4_150", demanda=30, eventos=[["corte", "Teste", 1200, 1300, 0.5]])
+        res = m.rodar()
+        self.assertAlmostEqual(max(e for i, e in res.bins.items() if 1200 <= i * 15 and i * 15 + 15 <= 1300) * 4, 15.0, places=6)
+        self.assertAlmostEqual(max(e for i, e in res.bins.items() if 1320 <= i * 15 < 1500) * 4, 30.0, places=6)

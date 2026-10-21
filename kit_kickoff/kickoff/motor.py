@@ -498,16 +498,27 @@ class Motor:
         O significado e o formato de `params` são explicados no anúncio de cada evento; vêm de
         `eventos_ativos` de GET /status. Ex. de uso: `self.agendar(t, PRIO_ABERTURA, 'evento', params)`.
         """
-        # TODO(etapa 7)
-        pass
+        for params in eventos:
+            tipo = params[0]
+            if tipo == "corte":  # ["corte", agencia, inicio_min, fim_min, fator]: limite da agência × fator
+                _, _, ini, fim, fator = params
+                self.agendar(ini, PRIO_ABERTURA, "evento", "corte_ini", fator)
+                self.agendar(fim, PRIO_ABERTURA, "evento", "corte_fim", fator)
+            else:
+                self.violar(f"evento desconhecido: {params!r}")
 
     def on_evento(self, t: float, *params) -> None:
         """Aplica um evento no instante t (ex.: limite da concessionária, carregador fora de operação).
 
         Recalcule as potências; ao voltar um carregador, tente plugar a fila (6.3.3).
         """
-        # TODO(etapa 7)
-        pass
+        acao = params[0]
+        if acao == "corte_ini":
+            self._limite_base = self.limite_kw
+            self.limite_kw = self._limite_base * params[1]
+        elif acao == "corte_fim":
+            self.limite_kw = getattr(self, "_limite_base", self.limite_kw)
+        self.recalcular_potencias(t)
 
 
 def simular(cenario: Cenario, sub_normalizada: dict, eventos=()) -> Resultado:
