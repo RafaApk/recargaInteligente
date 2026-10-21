@@ -1,0 +1,507 @@
+[
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 2280.4,
+  "sem_evento": 2259.9,
+  "deslocado_min": -2333.5,
+  "deslocado_media": 1836.3,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2053.1,
+  "sem_evento": 2269.9,
+  "deslocado_min": -1893.4,
+  "deslocado_media": 1822.6,
+  "perdidos_evento_real": 1
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 2283.2,
+  "sem_evento": 2268.7,
+  "deslocado_min": -3518.1,
+  "deslocado_media": 1618.9,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2267.0,
+  "sem_evento": 2255.7,
+  "deslocado_min": -3966.1,
+  "deslocado_media": 1499.0,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2227.0,
+  "sem_evento": 2502.3,
+  "deslocado_min": -4260.7,
+  "deslocado_media": 1344.7,
+  "perdidos_evento_real": 1
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1996.5,
+  "sem_evento": 2486.8,
+  "deslocado_min": -4684.5,
+  "deslocado_media": 1304.3,
+  "perdidos_evento_real": 2
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 1430.2,
+  "sem_evento": 1416.1,
+  "deslocado_min": -2722.6,
+  "deslocado_media": 1011.8,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1422.8,
+  "sem_evento": 1405.2,
+  "deslocado_min": -3766.8,
+  "deslocado_media": 885.6,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 3181.4,
+  "sem_evento": 8381.2,
+  "deslocado_min": -4467.2,
+  "deslocado_media": 453.4,
+  "perdidos_evento_real": 26
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 3181.4,
+  "sem_evento": 8381.2,
+  "deslocado_min": -4467.2,
+  "deslocado_media": 453.4,
+  "perdidos_evento_real": 26
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1637.3,
+  "sem_evento": 2484.3,
+  "deslocado_min": -7133.3,
+  "deslocado_media": 105.6,
+  "perdidos_evento_real": 4
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2297.1,
+  "sem_evento": 2281.6,
+  "deslocado_min": -6082.8,
+  "deslocado_media": 78.3,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 2068.4,
+  "sem_evento": 2258.2,
+  "deslocado_min": -6085.2,
+  "deslocado_media": 45.8,
+  "perdidos_evento_real": 1
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 2111.4,
+  "sem_evento": 7761.0,
+  "deslocado_min": -5499.9,
+  "deslocado_media": -313.7,
+  "perdidos_evento_real": 27
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "ac_7": 2,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2111.4,
+  "sem_evento": 7761.0,
+  "deslocado_min": -5499.9,
+  "deslocado_media": -313.7,
+  "perdidos_evento_real": 27
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 2131.4,
+  "sem_evento": 7134.2,
+  "deslocado_min": -5671.4,
+  "deslocado_media": -495.3,
+  "perdidos_evento_real": 23
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 2,
+    "ac_7": 1,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 2131.4,
+  "sem_evento": 7134.2,
+  "deslocado_min": -5671.4,
+  "deslocado_media": -495.3,
+  "perdidos_evento_real": 23
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1871.3,
+  "sem_evento": 6237.5,
+  "deslocado_min": -6299.3,
+  "deslocado_media": -576.6,
+  "perdidos_evento_real": 20
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 3,
+    "dc_30": 1
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 1871.3,
+  "sem_evento": 6237.5,
+  "deslocado_min": -6299.3,
+  "deslocado_media": -576.6,
+  "perdidos_evento_real": 20
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1434.5,
+  "sem_evento": 1406.4,
+  "deslocado_min": -6954.1,
+  "deslocado_media": -621.8,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_11": 1,
+    "dc_30": 3
+   },
+   "entrada": "b3_75",
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 1452.5,
+  "sem_evento": 1415.5,
+  "deslocado_min": -7178.1,
+  "deslocado_media": -670.5,
+  "perdidos_evento_real": 0
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 80,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1521.4,
+  "sem_evento": 6721.2,
+  "deslocado_min": -6127.2,
+  "deslocado_media": -1206.6,
+  "perdidos_evento_real": 26
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 80,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 1521.4,
+  "sem_evento": 6721.2,
+  "deslocado_min": -6127.2,
+  "deslocado_media": -1206.6,
+  "perdidos_evento_real": 26
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "igual"
+   }
+  },
+  "com_evento_real": 1461.4,
+  "sem_evento": 6661.2,
+  "deslocado_min": -6187.2,
+  "deslocado_media": -1266.6,
+  "perdidos_evento_real": 26
+ },
+ {
+  "sub": {
+   "agencia": "Istanbul",
+   "carregadores": {
+    "ac_7": 3,
+    "dc_30": 1
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 110,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": false,
+    "divisao": "prioridade"
+   }
+  },
+  "com_evento_real": 1461.4,
+  "sem_evento": 6661.2,
+  "deslocado_min": -6187.2,
+  "deslocado_media": -1266.6,
+  "perdidos_evento_real": 26
+ }
+]

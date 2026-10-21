@@ -504,6 +504,10 @@ class Motor:
                 _, _, ini, fim, fator = params
                 self.agendar(ini, PRIO_ABERTURA, "evento", "corte_ini", fator)
                 self.agendar(fim, PRIO_ABERTURA, "evento", "corte_fim", fator)
+            elif tipo == "quebra_maiores":  # ["quebra_maiores", agencia, n, inicio_min, fim_min]: n maiores fora
+                _, _, n, ini, fim = params
+                self.agendar(ini, PRIO_ABERTURA, "evento", "quebra_ini", n)
+                self.agendar(fim, PRIO_ABERTURA, "evento", "quebra_fim", n)
             else:
                 self.violar(f"evento desconhecido: {params!r}")
 
@@ -518,6 +522,15 @@ class Motor:
             self.limite_kw = self._limite_base * params[1]
         elif acao == "corte_fim":
             self.limite_kw = getattr(self, "_limite_base", self.limite_kw)
+        elif acao == "quebra_ini":
+            # maiores por potência nominal; empate pela ordem dos pontos (id alfabético)
+            for ponto in sorted(self.pontos, key=lambda p: -p.modelo.potencia_kw)[:params[1]]:
+                ponto.quebrado = True
+        elif acao == "quebra_fim":
+            for ponto in self.pontos:
+                ponto.quebrado = False
+            self.recalcular_potencias(t)
+            self.plugar_fila(t)
         self.recalcular_potencias(t)
 
 

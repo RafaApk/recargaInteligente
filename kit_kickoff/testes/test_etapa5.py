@@ -115,3 +115,14 @@ class EventoCorte(unittest.TestCase):
         res = m.rodar()
         self.assertAlmostEqual(max(e for i, e in res.bins.items() if 1200 <= i * 15 and i * 15 + 15 <= 1300) * 4, 15.0, places=6)
         self.assertAlmostEqual(max(e for i, e in res.bins.items() if 1320 <= i * 15 < 1500) * 4, 30.0, places=6)
+
+
+@unittest.skipUnless(apoio.TEM_DADOS, apoio.SEM_DADOS)
+class EventoQuebraMaiores(unittest.TestCase):
+    def test_maior_carregador_fica_sem_potencia_na_janela(self):
+        cen = apoio.cenario([apoio.veiculo(f"V{i}", "MG4 Urban Comfort", soc=10.0) for i in range(2)])
+        m = apoio.motor(cen, {"ac_7": 1, "dc_30": 1}, eventos=[["quebra_maiores", "Teste", 1, 1200, 1500]])
+        res = m.rodar()
+        # na janela só o ac_7 carrega (7 kW); antes, dc_30 + ac_7
+        self.assertAlmostEqual(max(e for i, e in res.bins.items() if 1200 <= i * 15 and i * 15 + 15 <= 1500) * 4, 7.0, places=6)
+        self.assertGreater(max(e for i, e in res.bins.items() if 1080 <= i * 15 and i * 15 + 15 <= 1200) * 4, 30.0)
