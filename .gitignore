@@ -1,0 +1,6 @@
+.env
+__pycache__/
+kit_kickoff/dados/*/
+kit_kickoff/dados/catalogo.json
+resultados/sim/
+.superpowers/
