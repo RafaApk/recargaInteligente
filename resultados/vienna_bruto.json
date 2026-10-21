@@ -1,0 +1,290 @@
+[
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 30,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11900.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "proxima_retirada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "menor_soc",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "igual"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ },
+ {
+  "sub": {
+   "agencia": "Vienna",
+   "carregadores": {
+    "ac_7": 4
+   },
+   "entrada": "a4_150",
+   "demanda_contratada_kw": 40,
+   "politica": {
+    "prioridade": "chegada",
+    "evitar_ponta": true,
+    "divisao": "prioridade"
+   }
+  },
+  "nota": 11880.0,
+  "perdidos_por_semana": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "upgrades": 0,
+  "ponta_kwh": 0
+ }
+]
