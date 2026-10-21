@@ -370,19 +370,23 @@ class Motor:
         Com limite 80: igual -> JAC 16.45 e os outros 21.18333; prioridade -> Kwid 26.6, Geely 53.4, demais 0.
         Depois chame `agendar_fim_degrau` para cada carro.
         """
+        dividir = potencia.sequencial if self.pol["divisao"] == "prioridade" else potencia.enchimento_agua
+        ordenados = self._plugados_ordenados(t)  # ainda carregando, na ordem da `prioridade`
+        pos = {v.id: i for i, v in enumerate(ordenados)}
         for p in self.pontos:
-            carregando = []
             for v in p.conectados:
                 v.potencia_kw = 0.0
-                if v.soc < v.alvo - EPS:
-                    carregando.append(v)
+        # camada 1: potência nominal do carregador entre os carros que ainda carregam, teto na curva
+        for p in self.pontos:
+            carregando = sorted((v for v in p.conectados if v.id in pos), key=lambda v: pos[v.id])
             if p.quebrado or not carregando:
                 continue
-            # camada 1: potência nominal do carregador entre os carros que ainda carregam, teto na curva
             caps = [potencia.potencia_curva(v.modelo, v.soc, p.modelo.tipo) for v in carregando]
-            for v, kw in zip(carregando, potencia.enchimento_agua(p.modelo.potencia_kw, caps)):
+            for v, kw in zip(carregando, dividir(p.modelo.potencia_kw, caps)):
                 v.potencia_kw = kw
-        # TODO(etapa 4): camada 2 (limite da agência e `divisao`)
+        # camada 2: limite da agência; o que cada carro levou na camada 1 é o seu teto
+        for v, kw in zip(ordenados, dividir(self.limite_kw, [v.potencia_kw for v in ordenados])):
+            v.potencia_kw = kw
         for p in self.pontos:
             for v in p.conectados:
                 self.agendar_fim_degrau(v, t)
