@@ -294,9 +294,23 @@ class Motor:
         Ex. 6.3.3: A(Bronze 30%, 55.5 km), B(Prata 20%, 56.0 km), C(Ouro 55%), D(Diamante 40%) ->
         menor_soc A,B,D,C; chegada A,B,C,D; proxima_retirada C,D,B,A.
         """
-        # TODO(etapa 3): ordem básica (chegada ou menor_soc)
-        # TODO(etapa 6): as três prioridades
-        pass
+        self.fila.sort(key=lambda v: self._chave_prioridade(v, t))
+
+    def _chave_prioridade(self, v: Veiculo, t: float) -> tuple:
+        """Chave de ordenação da `prioridade` (6.3.3); vale para a fila e para `divisao: prioridade`."""
+        pr = self.pol["prioridade"]
+        if pr == "chegada":
+            return (v.entrou_fila_t, v.id)
+        if pr == "menor_soc":
+            return (v.modelo.autonomia_km * v.soc / 100.0, v.id)
+        # TODO(etapa 6): proxima_retirada
+        return (v.id,)
+
+    def _plugados_ordenados(self, t: float) -> list:
+        """Plugados que ainda carregam (SOC abaixo do alvo), na ordem da `prioridade`."""
+        carregando = [v for p in self.pontos for v in p.conectados if v.soc < v.alvo - EPS]
+        carregando.sort(key=lambda v: self._chave_prioridade(v, t))
+        return carregando
 
     def escolher_ponto(self, v: Veiculo) -> Optional[Ponto]:
         """Em qual carregador v pluga (6.3.4), ou None se não houver saída livre.
@@ -308,8 +322,17 @@ class Motor:
         Ex.: DC-60 com um Geely 30% e AC-22 vazio; chega Dolphin GS 20%: no DC-60 teria 60/2 = 30 kW,
         no AC-22 só 7 kW -> DC-60.
         """
-        # TODO(etapa 3)
-        return None
+        melhor, kw_melhor = None, -1.0
+        for p in self.pontos:
+            if p.quebrado or p.livres <= 0:
+                continue
+            tipo = p.modelo.tipo
+            caps = [potencia.potencia_curva(x.modelo, x.soc, tipo) for x in p.conectados if x.soc < x.alvo - EPS]
+            caps.append(potencia.potencia_curva(v.modelo, v.soc, tipo))
+            kw = potencia.enchimento_agua(p.modelo.potencia_kw, caps)[-1]
+            if kw > kw_melhor + EPS:
+                melhor, kw_melhor = p, kw
+        return melhor
 
     def plugar_fila(self, t: float) -> None:
         """Pluga a fila (5.2, 6.3.3): só com a agência aberta, na ordem da fila, enquanto houver saída livre.
@@ -318,8 +341,19 @@ class Motor:
         potências. Chamar quando um carro volta, termina a recarga, a agência abre ou um carregador volta.
         Respeite plugados <= saídas (`checar_ocupacao`).
         """
-        # TODO(etapa 3)
-        pass
+        if not self.aberta or not self.fila:
+            return
+        self.ordenar_fila(t)
+        plugou = False
+        for v in list(self.fila):
+            p = self.escolher_ponto(v)
+            if p is None:
+                break
+            self.plugar(v, p)
+            plugou = True
+        if plugou:
+            self.checar_ocupacao()
+            self.recalcular_potencias(t)
 
     def recalcular_potencias(self, t: float) -> None:
         """Define `v.potencia_kw` de cada plugado (5.3, 6.3.5) e reagenda os fins de degrau.
@@ -336,9 +370,22 @@ class Motor:
         Com limite 80: igual -> JAC 16.45 e os outros 21.18333; prioridade -> Kwid 26.6, Geely 53.4, demais 0.
         Depois chame `agendar_fim_degrau` para cada carro.
         """
-        # TODO(etapa 3): camada 1 (carregador), sem limite da agência
+        for p in self.pontos:
+            carregando = []
+            for v in p.conectados:
+                v.potencia_kw = 0.0
+                if v.soc < v.alvo - EPS:
+                    carregando.append(v)
+            if p.quebrado or not carregando:
+                continue
+            # camada 1: potência nominal do carregador entre os carros que ainda carregam, teto na curva
+            caps = [potencia.potencia_curva(v.modelo, v.soc, p.modelo.tipo) for v in carregando]
+            for v, kw in zip(carregando, potencia.enchimento_agua(p.modelo.potencia_kw, caps)):
+                v.potencia_kw = kw
         # TODO(etapa 4): camada 2 (limite da agência e `divisao`)
-        pass
+        for p in self.pontos:
+            for v in p.conectados:
+                self.agendar_fim_degrau(v, t)
 
     def agendar_fim_degrau(self, v: Veiculo, t: float) -> None:
         """Agenda 'fim_recarga' para quando v chega ao próximo degrau de 5% ou ao alvo (5.3, 6.3.2).
@@ -349,8 +396,14 @@ class Motor:
         `self.agendar(t + dt, PRIO_FIM_RECARGA, 'fim_recarga', v.id, v.token)`. Potência 0 -> não agende.
         Ex. 6.3.2: Dolphin GS (44.9 kWh) de 20% a 80% sozinho num DC-60 leva 36,7 min.
         """
-        # TODO(etapa 3)
-        pass
+        i = int(v.soc / 5 + 1e-9)
+        limite = min(v.alvo, (i + 1) * 5.0)
+        v.soc_limite = limite
+        v.token += 1
+        if v.potencia_kw <= 0 or v.soc >= v.alvo - EPS:
+            return
+        dt = (limite - v.soc) / 100.0 * v.modelo.bateria_kwh / v.potencia_kw * 60.0
+        self.agendar(t + dt, PRIO_FIM_RECARGA, "fim_recarga", v.id, v.token)
 
     def on_fim_recarga(self, vid: str, token: int, t: float) -> None:
         """Chegou ao fim do degrau. Ignore se `token` != `v.token` (agendamento velho).
@@ -358,8 +411,17 @@ class Motor:
         Ao atingir o alvo (80%): desplugar se a agência estiver aberta; se fechada, segura a saída até
         a abertura (5.2). Depois tente plugar a fila (`plugar_fila`) e recalcule as potências.
         """
-        # TODO(etapa 3)
-        pass
+        v = self.veiculos[vid]
+        if token != v.token or not v.plugado:
+            return
+        # token válido = potência constante desde o agendamento: o carro está no limite do degrau
+        # (fixa o valor exato para não acumular erro de ponto flutuante na troca de degrau)
+        if v.soc_limite is not None:
+            v.soc = max(v.soc, v.soc_limite)
+        if v.soc >= v.alvo - EPS and self.aberta:
+            self.desplugar(v)
+            self.plugar_fila(t)
+        self.recalcular_potencias(t)
 
     def on_devolucao(self, vid: str, soc: float, t: float) -> None:
         """Carro volta do contrato com `soc` e entra no pátio. Um carro devolvido apto pode sair no mesmo minuto (5.1)."""
@@ -372,8 +434,9 @@ class Motor:
 
         Desplugue quem está parado no alvo (80%) segurando saída, depois `plugar_fila`.
         """
-        # TODO(etapa 5)
+        # TODO(etapa 5): desplugar quem está parado no alvo segurando saída
         self.aberta = True
+        self.plugar_fila(t)
 
     def on_fechamento(self, t: float) -> None:
         """Agência fecha: ninguém retira nem pluga/despluga; a recarga continua (5.2).
